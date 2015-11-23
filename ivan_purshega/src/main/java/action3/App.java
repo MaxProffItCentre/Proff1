@@ -6,6 +6,6 @@ package action3;
  */
 public class App {
 	public static void main(String[] args) {
-		System.out.println("ggg");
+		System.out.println("g");
 	}
 }
