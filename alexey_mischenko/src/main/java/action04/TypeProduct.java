@@ -14,5 +14,6 @@ public enum TypeProduct {
 		TypeProduct [] arr = TypeProduct.values();
 		System.out.println(obj2);
 		
+		
 	}
 }
