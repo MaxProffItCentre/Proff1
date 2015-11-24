@@ -1,4 +1,4 @@
-package actoin3;
+package ection03;
 
 /**
  * Hello world!
@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello Worldets!!" );
+        System.out.println( "Hello World!" );
     }
 }

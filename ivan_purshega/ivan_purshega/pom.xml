@@ -2,15 +2,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ivan_vodyanytskyy</groupId>
-  <artifactId>ivan_vodyanytskyy</artifactId>
+  <groupId>ivan_purshega</groupId>
+  <artifactId>ivan_purshega</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ivan_vodyanytskyy</name>
+  <name>ivan_purshegah</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
+    <properties>
     	<junit.version>4.8.2</junit.version>
         <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
         <jdk.version>1.8</jdk.version>
@@ -55,3 +55,4 @@
     </build>
   
 </project>
+
