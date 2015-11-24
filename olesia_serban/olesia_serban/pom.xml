@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ivan_purshega</groupId>
-  <artifactId>ivan_purshega</artifactId>
+  <groupId>olesia_serban</groupId>
+  <artifactId>olesia_serban</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ivan_purshega</name>
+  <name>olesia_serban</name>
   <url>http://maven.apache.org</url>
 
   <properties>
