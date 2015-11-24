@@ -1,4 +1,4 @@
-package action3;
+package ectoin03;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
