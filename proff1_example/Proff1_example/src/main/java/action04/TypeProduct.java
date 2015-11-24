@@ -6,6 +6,7 @@ import java.util.Set;
 
 public enum TypeProduct {
 	Bread, Yogurt, Milk;
+	
 	public void main(String[] args) {
 		TypeProduct obj = TypeProduct.Bread;
 		String str = obj.toString();

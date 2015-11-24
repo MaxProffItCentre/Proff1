@@ -34,6 +34,11 @@ public class ProductShop {
 		shop.printReverseContructor();
 		shop.printNameProductByParty(TypeProduct.Yogurt);
 	}
+	/*
+	 1) Вывести уникальный список фирм в алфавитном порядке 
+	2) Вывести уникальный список фирм в обратном порядке
+	3) Вывести уникальные наименования товаров по типу продуктов
+	 * */
 	public void printContructor(){
 	}
 	public void printReverseContructor(){
