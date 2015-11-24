@@ -6,7 +6,7 @@
   <artifactId>proff1_example</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
+ 
   <name>proff1_example</name>
   <url>http://maven.apache.org</url>
 
