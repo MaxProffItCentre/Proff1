@@ -74,7 +74,18 @@ public class ProductShop {
 		System.out.println(revertList);
 	}
 	public void printNameProductByParty(TypeProduct type){
+		Set<Map.Entry<Product, String>> set = contructors.entrySet();
+		Set<String> uniqNames = new TreeSet<>();
+		for (Map.Entry<Product, String> entry: set) {
+			if (entry.getKey().getType().equals(type)) {
+				uniqNames.add(entry.getKey().getName());
+			}
+		}
+		System.out.println(uniqNames);
+		
+		
 	}
+	
 	
 
 }
