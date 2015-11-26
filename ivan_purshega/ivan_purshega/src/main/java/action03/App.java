@@ -6,7 +6,7 @@ package action03;
  */
 public class App {
 	public static void main(String[] args) {
-		System.out.println("Helll lo World!!!!");
+		System.out.println("H elll lo World!!!!");
 		// Не пашет ХЕЛОУ ВОРЛД )))
 	}
 }
