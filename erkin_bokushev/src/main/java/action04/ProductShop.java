@@ -3,9 +3,12 @@ package action04;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -51,27 +54,15 @@ public class ProductShop {
 	for (Map.Entry<Product, String> entry: set) {
 		uniqNames.add(entry.getValue());
 	}
-	System.out.println(uniqNames);
-	
-		
+	System.out.println(uniqNames);	
 	}
 	public void printReverseContructor(){
-		ArrayList<String> list = new ArrayList<>();
 		Set<Map.Entry<Product, String>> set = contructors.entrySet();
-		Set <String> uniqNames = new TreeSet<String>();
+		Set <String> uniqNames = new TreeSet<String>(new MySort());
 		for (Map.Entry<Product, String> entry: set) {
 			uniqNames.add(entry.getValue());
 		}
-		Iterator<String> iter = uniqNames.iterator();
-		while(iter.hasNext()) {
-			list.add(iter.next());
-		}
-		ArrayList<String> revertList = new ArrayList<>();
-		for (int k = list.size()-1; k>=0; k--) {
-			revertList.add(list.get(k));
-		}
-		
-		System.out.println(revertList);
+		System.out.println(uniqNames);
 	}
 	public void printNameProductByParty(TypeProduct type){
 		Set<Map.Entry<Product, String>> set = contructors.entrySet();
@@ -82,11 +73,14 @@ public class ProductShop {
 			}
 		}
 		System.out.println(uniqNames);
-		
-		
 	}
-	
-	
+	static class MySort implements Comparator<String> {
 
+		@Override
+		public int compare(String obj1, String obj2) {
+			// TODO Auto-generated method stub
+			return obj2.compareTo(obj1);
+		}
+	}
 }
 
