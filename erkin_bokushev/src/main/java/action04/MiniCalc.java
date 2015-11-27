@@ -56,7 +56,6 @@ public class MiniCalc {
 				count = 0;
 				if (lastSymb == '+') {
 					countPlus++;
-					count = 0;
 					temp = result;
 				} else {
 					countPlus = 0;
@@ -71,7 +70,6 @@ public class MiniCalc {
 				count = 0;
 				if (lastSymb == '-') {
 					countMinus++;
-					count = 0;
 					temp = result;
 				} else {
 					countMinus = 0;
@@ -86,7 +84,6 @@ public class MiniCalc {
 				count = 0;
 				if (lastSymb == '*') {
 					countMultip++;
-					count = 0;
 					temp = result;
 				} else {
 					countMultip = 0;
@@ -101,7 +98,6 @@ public class MiniCalc {
 				count = 0;
 				if (lastSymb == '/') {
 					countDivis++;
-					count = 0;
 					temp = result;
 				} else {
 					countDivis = 0;
