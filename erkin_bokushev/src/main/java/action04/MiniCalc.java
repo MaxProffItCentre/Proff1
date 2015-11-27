@@ -123,7 +123,6 @@ public class MiniCalc {
 			lastSymb = p;
 		}
 		}
-		
 	}
 	public void getStarted () {
 		Scanner scan = new Scanner(System.in);
