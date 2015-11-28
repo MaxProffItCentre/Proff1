@@ -41,29 +41,15 @@ public class ProductShop {
 		shop.printNameProductByParty(TypeProduct.Yogurt);
 	}
 	/*
-	+	 1) Вывести уникальный список фирм в алфавитном порядке 
-	+	2) Вывести уникальный список фирм в обратном порядке
-	+	3) Вывести уникальные наименования товаров по типу продуктов
+	+	 1) пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
+	+	2) пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	+	3) пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	+	 * */
 	public void printContructor(){
-		Set<String> set = new TreeSet<String>(contructors.values());
-		System.out.println(set);
 	}
 	public void printReverseContructor(){
-		Set<String> set = new HashSet<String>(contructors.values());
-		List<String> list = new ArrayList<String>(set);
-		Collections.sort(list,Collections.reverseOrder());
-		System.out.println(list);
 	}
 	public void printNameProductByParty(TypeProduct type){
-		Set<Map.Entry<Product, String>> set = contructors.entrySet();
-		
-		Set<String> products = new HashSet<String>();
-		for(Map.Entry<Product, String> entry:set){
-			Product product = entry.getKey();
-			if(product.getType() == type)products.add(product.getName());
-		}
-		System.out.println(products);
 	}
 }
 
