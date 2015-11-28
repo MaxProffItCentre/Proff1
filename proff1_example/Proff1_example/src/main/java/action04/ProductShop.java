@@ -1,7 +1,13 @@
 package action04;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 
 public class ProductShop {
@@ -40,10 +46,24 @@ public class ProductShop {
 	3) Вывести уникальные наименования товаров по типу продуктов
 	 * */
 	public void printContructor(){
+		Set<String> set = new TreeSet<String>(contructors.values());
+		System.out.println(set);
 	}
 	public void printReverseContructor(){
+		Set<String> set = new HashSet<String>(contructors.values());
+		List<String> list = new ArrayList<String>(set);
+		Collections.sort(list,Collections.reverseOrder());
+		System.out.println(list);
 	}
 	public void printNameProductByParty(TypeProduct type){
+		Set<Map.Entry<Product, String>> set = contructors.entrySet();
+		
+		Set<String> products = new HashSet<String>();
+		for(Map.Entry<Product, String> entry:set){
+			Product product = entry.getKey();
+			if(product.getType() == type)products.add(product.getName());
+		}
+		System.out.println(products);
 	}
 }
 
