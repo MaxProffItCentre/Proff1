@@ -1,4 +1,4 @@
-package action4;
+package action04;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class MainMiniCalc {
 	
 	MiniCalc Calc = new MiniCalc();
 	
-	System.out.println("Калькулятор запущен");
+	System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	
 	Scanner scan = new Scanner(System.in);
 	String str=scan.nextLine();

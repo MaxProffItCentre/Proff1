@@ -1,4 +1,4 @@
-package action4;
+package action04;
 
 import java.util.Scanner;
 
