@@ -52,7 +52,7 @@ public class MiniCalc {
 			if (countOper == 0) result = temp;
 			if (countOper > 0 && p != '=') {
 				if (temp != 0) {
-				switch (p) {
+				switch (lastSymb) {
 				case '+':
 					result +=temp;
 					break;
@@ -66,7 +66,7 @@ public class MiniCalc {
 					result /=temp;
 					break;
 				}
-				}
+				} 
 			}
 			if (p == '=' && lastSymb != '=') {
 				tempLastSymb = lastSymb;
