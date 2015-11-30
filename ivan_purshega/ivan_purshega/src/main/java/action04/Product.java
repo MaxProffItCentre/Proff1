@@ -13,6 +13,11 @@ public class Product {
 		this.type = type;
 		this.party = party;
 	}
+	public Product(String name, TypeProduct type) {
+		super();
+		this.name = name;
+		this.type = type;
+	}
 	@Override
 	public String toString() {
 		return name + " " + party;

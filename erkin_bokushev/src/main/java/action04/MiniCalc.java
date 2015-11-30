@@ -15,16 +15,15 @@ import java.util.Scanner;
 	4) корректного введения знака "=".*/
 
 public class MiniCalc {
-	private static int result;
+	private static int result=0;
 	private static int temp;
 	private static int count=0;
-	private static int countPlus=0;
-	private static int countMinus=0;
-	private static int countMultip=0;
-	private static int countDivis=0;
-	private static char lastSymb;
-	
-	private static char [] oper = {'+','-', '*', '/', '='};
+	private static int tempRavno;
+	private static int countOper=0;
+	private char lastSymb;
+	private char tempLastSymb;
+	public int countNull;
+	//=============================================================================
 	private static char [] numbers = {'0','1','2','3','4','5','6','7','8','9'};
 	public int getMulti (int a, int b) {
 		int aCopy = a/2;
@@ -38,90 +37,95 @@ public class MiniCalc {
 		if (p != '+' && p != '-' && p != '*' && p != '/' && p != '=') {
 		for (char c: numbers) {
 			if (c == p && count == 0) {
-				result = c - '0';
-				count++;
+				temp = c - '0';
+				if(c == '0') {
+					count = 0;
+					countNull++;
+				} else {
+					count++;
+				}
 			} else if (c == p && count != 0) {
-				result = result*10 + (c - '0');
+				temp = temp*10 + (c - '0');
 			}
 		}
-		} else {
-		for (char c: oper) {
-			//Операция добавления
-			if (c == p && p == '+' && countPlus ==0) {
-				countPlus++;
-				count = 0;
-				temp = result;
-			} else if (c == p && p == '+' && countPlus !=0) {
-				result = temp + result;
-				count = 0;
-				if (lastSymb == '+') {
-					countPlus++;
-					temp = result;
-				} else {
-					countPlus = 0;
-				}	
-			} //Операция отнимания 
-			else if (c == p && p == '-' && countMinus ==0) {
-				countMinus++;
-				count = 0;
-				temp = result;
-			} else if (c == p && p == '-' && countMinus !=0) {
-				result = temp - result;
-				count = 0;
-				if (lastSymb == '-') {
-					countMinus++;
-					temp = result;
-				} else {
-					countMinus = 0;
+		} else if (p == '+' || p == '-' || p == '*' || p == '/' || p == '=') {
+			if (countOper == 0) result = temp;
+			if (countOper > 0 && p != '=') {
+				if (temp != 0) {
+				switch (lastSymb) {
+				case '+':
+					result +=temp;
+					break;
+				case '-':
+					result -=temp;
+					break;
+				case '*':
+					result *=temp;
+					break;
+				case '/':
+					result /=temp;
+					break;
 				}
-			} //Операция умножения
-			else if (c == p && p == '*' && countMultip ==0) {
-				countMultip++;
-				count = 0;
-				temp = result;
-			} else if (c == p && p == '*' && countMultip !=0) {
-				result = temp * result;
-				count = 0;
-				if (lastSymb == '*') {
-					countMultip++;
-					temp = result;
-				} else {
-					countMultip = 0;
-				}
-			} //Операция деления
-			else if (c == p && p == '/' && countDivis ==0) {
-				countDivis++;
-				count = 0;
-				temp = result;
-			} else if (c == p && p == '/' && countDivis !=0) {
-				result = temp / result;
-				count = 0;
-				if (lastSymb == '/') {
-					countDivis++;
-					temp = result;
-				} else {
-					countDivis = 0;
-				}
-			}//Операция Равно
-			else if (c == p && p == '=' && countPlus != 0) {
-				result = temp + result;
-				count = 0;
-				countPlus = 0;
-			} else if (c == p && p == '=' && countMinus != 0) {
-				result = temp - result;
-				count = 0;
-				countMinus = 0;
-			} else if (c == p && p == '=' && countMultip != 0) {
-				result = temp * result;
-				count = 0;
-				countMultip = 0;
-			} else if (c == p && p == '=' && countDivis != 0) {
-				result = temp / result;
-				count = 0;
-				countDivis = 0;
+				} 
 			}
+			if (p == '=' && lastSymb != '=') {
+				tempLastSymb = lastSymb;
+				if (temp != 0) {
+				switch (lastSymb) {
+				case '+':
+					result +=temp;
+					break;
+				case '-':
+					result -=temp;
+					break;
+				case '*':
+					result *=temp;
+					break;
+				case '/':
+					result /=temp;
+					break;
+				}
+				tempRavno = temp;
+				}
+				if (temp == 0) {
+				tempRavno = result;
+				switch (lastSymb) {
+				case '+':
+					result +=result;
+					break;
+				case '-':
+					result -=result;
+					break;
+				case '*':
+					result *=result;
+					break;
+				case '/':
+					result /=result;
+					break;
+				}
+				} 
+			}
+			if (p == '=' && lastSymb == '=' ) {
+				switch (tempLastSymb) {
+				case '+':
+					result +=tempRavno;
+					break;
+				case '-':
+					result -=tempRavno;
+					break;
+				case '*':
+					result *=tempRavno;
+					break;
+				case '/':
+					result /=tempRavno;
+					break;
+				}
+			}
+			temp = 0;
+			count = 0;
 			lastSymb = p;
-		}
+			countOper ++;
+			countNull = 0;
 		}
 	}
 	public void getStarted () {
@@ -133,14 +137,11 @@ public class MiniCalc {
 			break;
 		}
 		inChar(str.charAt(0));
-		if (str.charAt(0) == '=') printResult();
-		if (str.charAt(0) == '-' && countMinus > 1) printResult();
-		if (str.charAt(0) == '+' && countPlus > 1) printResult();
-		if (str.charAt(0) == '*' && countMultip > 1) printResult();
-		if (str.charAt(0) == '/' && countDivis > 1) printResult();
-		if (str.charAt(0) == 's') break;
+		if (str.charAt(0) == '=' || str.charAt(0) == '+' || str.charAt(0) == '-' || str.charAt(0) == '*' || str.charAt(0) == '/') {
+			printResult();
+//			break;
 		}
-		
+		}
 	}
 	public static void main(String[] args) {
 		MiniCalc calc = new MiniCalc();
