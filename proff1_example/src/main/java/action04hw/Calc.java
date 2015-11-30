@@ -20,14 +20,14 @@ public class Calc {
 				temp = result;
 				result = 0;
 			}
-				result = result*10+p-'0';
+				result = result*10 + p-'0';
 		} else {
 			operation = p;
 		}
 	}
 	public static void main(String[] args) {
 		Calc calc = new Calc();
-		String str = "12*5=";
+		String str = "00*225=";
 		char[] buttons = str.toCharArray();
 		for(char p: buttons){
 			calc.inChar(p);
