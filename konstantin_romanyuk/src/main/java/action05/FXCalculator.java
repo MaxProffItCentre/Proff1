@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /*Задача4: Калькулятор:
@@ -21,7 +22,8 @@ TextField ( number2)
 Button ( =)
 TextField ( result)*/
 public class FXCalculator extends Application {
-
+      private String resD="";
+      TextField text;
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -43,7 +45,7 @@ public class FXCalculator extends Application {
 		label1.setLayoutX(5);
 		label1.setLayoutY(14);
 		//
-		TextField text = new TextField("");
+		text = new TextField("");
 		text.setLayoutX(20);
 		text.setLayoutY(5);
 		text.setMinWidth(80);
@@ -58,33 +60,31 @@ public class FXCalculator extends Application {
 			}});
 		
 		//
-		
+		Button b2=new MyButton("1");
 		//text.setEditable(false);
 		//
 		grid.add(text, 0, 0);
 		grid.add(button1, 1, 1);
 		
-		grid.add(new Button("1"), 1, 2);
-		grid.add(new Button("2"), 1, 3);
-		grid.add(new Button("3"), 1, 4);
+		grid.add(b2, 1, 2);
+		grid.add(new MyButton("2"), 1, 3);
+		grid.add(new MyButton("3"), 1, 4);
 		
 		//		
 		Scene scene = new Scene(grid, 200, 200);
 		return scene;
+	}
 
-}
-	/*public class MyButton extends Button{
+	 class MyButton extends Button{
 		Button bb;
 		
 		public MyButton(String txt){
 			bb= new Button(txt);
 			bb.setOnAction(new EventHandler(){			
 				public void handle(Event arg0) {
-					result=txt;
-				}});*/
-
-				
+					text.appendText(bb.getText());
+				}});
 			
-		//}
-	//}
+	
 }
+	}}
