@@ -1,6 +1,10 @@
 package action05;
 
-public class JavaFxExample extends Application{
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class JavaFxExample extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
