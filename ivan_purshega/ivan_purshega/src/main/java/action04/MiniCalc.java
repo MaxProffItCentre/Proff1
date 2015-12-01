@@ -4,26 +4,33 @@ import java.util.Scanner;
 
 public class MiniCalc {
 	private int result;
-	private String previousResult = "";
+	private int previousResult;
 	private char action = ' ';
 
-	public int printResult() {
+	public String printResult() {
 
-		return result;
+		return result+"";
 	}
 
+;
+		
 	public void inChar(char p) {
 		if (action == ' ') {
 			if (p != '+' && p != '-' && p != '/' && p != '*')
-				result=new Integer(Integer.toString(result) + p);
+				previousResult=new Integer(Integer.toString(previousResult) + p);
 			else  action = p;
 		} else {
-			if (p != '=') previousResult+=p;
+			if (p != '=') result=new Integer(Integer.toString(result) + p);
 			else {
-				if(action=='-')result -= new Integer(previousResult);
-				if(action=='+')result += new Integer(previousResult);
-				if(action=='/')result /= new Integer(previousResult);
-				if(action=='*')result *= new Integer(previousResult);
+				if(action=='+') result = previousResult + result;
+				if(action=='-') result = previousResult - result;
+				if(action=='*') result = previousResult * result;
+				if(action=='/') {
+					if(result==0)result = 0;
+					else result=previousResult / result;
+				}
+				action=' ';
+				previousResult=0;
 			}
 		}
 	}
