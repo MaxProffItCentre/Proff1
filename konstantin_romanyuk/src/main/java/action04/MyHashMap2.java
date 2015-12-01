@@ -26,7 +26,8 @@ public class MyHashMap2 {
 		while (!(temp==null)){
 		if (temp.party==number) {index=-1;return false;}
 		else temp=temp.next; index++;}
-		if(index>-1){map[hh]=new Entry(hh,number,prod); return true;}
+		if(index>-1){
+			map[hh].next = new Entry(hh,number,prod); return true;}
 		else return false;
 		
 		/*if (map[hh].next==null)
@@ -69,5 +70,9 @@ public class MyHashMap2 {
 				this.party=party;
 				this.prod=prod;
 				}
+		 public  Entry index(int index){
+				Entry entr=new Entry(this.hash,this.party,this.prod,this.next);
+				for(int i=0; i<index;i++){entr=entr.next;}
+			return entr;}
 	}
 	}
