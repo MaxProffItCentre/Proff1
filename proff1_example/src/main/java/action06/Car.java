@@ -7,6 +7,10 @@ public class Car {
 		number = builder.getNumber();
 		color = builder.getColor();
 	}
+	public static void main(String[] args) {
+		Car car = new BuilderCar().setNumber("aa").
+				setColor("bb").build();
+	}
 }
 class BuilderCar{
 	private String number;
