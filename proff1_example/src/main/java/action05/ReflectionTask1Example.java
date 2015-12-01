@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /* 
-	Написать метод принимающий любой объект.
+ 	Написать метод принимающий любой объект.
 Метод возвращает все классы в иерархию которых входит данный объект. 
 */
 public class ReflectionTask1Example {
