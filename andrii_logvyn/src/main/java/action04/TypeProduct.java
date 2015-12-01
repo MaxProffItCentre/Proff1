@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 public enum TypeProduct {
-	Bread, Yogurt, Milk;
+	Bread, Yogurt, Milk, RRRR;
 	
 	
 	/*public static void main(String[] args) {
