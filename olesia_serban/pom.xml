@@ -10,7 +10,7 @@
   <name>olesia_serban</name>
   <url>http://maven.apache.org</url>
 
-    <properties>
+   <properties>
     	<junit.version>4.8.2</junit.version>
         <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
         <jdk.version>1.8</jdk.version>

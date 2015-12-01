@@ -10,7 +10,7 @@ public class JavaFxExample extends Application{
 	}
 	@Override
 	public void start(Stage stage) throws Exception {
-		stage.setTitle("My first app");
+		stage.setTitle("Первое приложение");
 		stage.setScene(createScene());
 		stage.show();
 	}
