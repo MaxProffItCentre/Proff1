@@ -41,7 +41,7 @@ public class ProductShop {
 		shop.printNameProductByParty(TypeProduct.Yogurt);
 	}
 	public void printContructor(){
-		Collection<String> set = new TreeSet(contructors.values());
+		Collection<String> set = new TreeSet<String>(contructors.values());
 		Iterator<String> iter = set.iterator();
 		while(iter.hasNext()){
 			System.out.println(iter.next());
@@ -49,7 +49,7 @@ public class ProductShop {
 	}
 			
 	public void printReverseContructor(){
-		Collection<String> set = new TreeSet(contructors.values());
+		Collection<String> set = new TreeSet<String>(contructors.values());
 		Iterator<String> iter = set.iterator();
 		ArrayList<String> arr = new ArrayList<String>();
 		while(iter.hasNext()){
