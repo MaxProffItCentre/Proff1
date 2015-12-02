@@ -7,7 +7,10 @@ import java.util.List;
 public class ReflectionTask1Example {
 	public static void main(String[] args) {
 		Class[] classes = getAllClasses(new ArrayList());
-		System.out.println(Arrays.toString(classes));
+		System.out.println(Arrays.asList(classes));
+		for(Class v: classes){
+			System.out.println(v.getSimpleName());
+		}
 	}
 	public static Class[] getAllClasses(Object obj){
 		List<Class> classes = new ArrayList<Class>();

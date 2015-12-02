@@ -2,30 +2,34 @@ package action06;
 
 public class BuilderCar {
 	private String number;
-	private String Color;
+	private String color;
+	
+	
+	
+	public Car build(){
+		return new Car(this);
+	}
 	
 	
 	public BuilderCar() {
-		
+	
 	}
 	
-	public Car buildcar(){
-		return new Car(number,Color);
-	}
 	
 	public String getNumber() {
 		return number;
 	}
-	public void setNumber(String number) {
-		BuilderCar.this.number = number;
+	public BuilderCar setNumber(String number) {
+		this.number = number;
+		return this;
 	}
 	public String getColor() {
-		return Color;
+		return color;
 	}
-	public void setColor(String color) {
-		BuilderCar.this.Color = color;
+	public BuilderCar setColor(String color) {
+		this.color = color;
+		return this;
 	}
-	
 	
 	
 }
