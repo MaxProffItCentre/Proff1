@@ -1,5 +1,5 @@
 package Ministry;
 
-public class MinisterPrototype {
+public class MinisterPrototype implements Ministry{
 
 }

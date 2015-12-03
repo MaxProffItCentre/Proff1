@@ -1,5 +1,5 @@
 package Ministry;
 
-public class MinisterSingleTon {
+public class MinisterSingleTon implements Ministry {
 
 }
