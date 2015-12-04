@@ -4,13 +4,17 @@ package Ministry;
 import java.util.ArrayList;
 import java.util.List;
 
+import action06.BuilderCar;
+import action06.Car;
+
 public class MainMinistry {
 	public static void main(String[] args) {
 		Budget budget=Budget.CreatBudget(1000000);
 		
 	
 	IMinister iMinister1 = MinisterSingleTon.addMinistr("Azarov", 5000);
-//	IMinister iMinister2 = new MinisterBuilder();
+	IMinister iMinister2 = new MinisterBuilderBuilder().setName("Yanukovich").setTarif(6000).newMinisterBuilder();
+	
 //	Ministry iMinister3 = new MinisterPrototype();
 	ArrayList <Assistants> list = new ArrayList <Assistants>();
 	list.add(iMinister1.newAssistant());

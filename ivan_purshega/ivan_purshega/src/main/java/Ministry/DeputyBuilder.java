@@ -2,14 +2,13 @@ package Ministry;
 
 public class DeputyBuilder implements Assistants {
 	
-	private static DeputySingleTon dno;
 	private String nameMinister;
 	private int tarif;
 	private int summaGrub;
 	
-	public DeputyBuilder(String string, int i, IMinister ministr) {
-		 nameMinister=string;
-		 tarif=i;
+	public DeputyBuilder(DeputyBuilderBuilder builder, IMinister ministr) {
+		 nameMinister=builder.getName();
+		 tarif=builder.getTarif();
 		 ministr.setGrub(tarif/2);
 		 summaGrub=tarif/2;
 		 Budget bablo=Budget.CreatBudget(0);

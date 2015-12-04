@@ -28,7 +28,7 @@ public class MinisterSingleTon implements IMinister{
 		int type=(int)(1+3*Math.random());
 		if (type==1)
 		assistentu.add(DeputySingleTon.addDeputySingleTon(this.name+assistentu.size(),this.tarif/2,this));
-		else if (type==2)assistentu.add(new DeputyBuilder(this.name+assistentu.size(),this.tarif/2,this));
+		else if (type==2)assistentu.add(new DeputyBuilderBuilder().setNameMinister(this.name+assistentu.size()).setTarif(this.tarif/2).newDeputyBuilder(this));
 		else assistentu.add(new DeputyPrototype(this.name+assistentu.size(),this.tarif/2,this));
 		return assistentu.get(0) ;
 	}
