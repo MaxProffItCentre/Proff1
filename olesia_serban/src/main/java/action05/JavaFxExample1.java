@@ -19,10 +19,10 @@ public class JavaFxExample1 extends Application{
 	@Override
 	public void start(Stage stage) throws Exception {
 		stage.setTitle("JavaFxExample1");
-		stage.setScene(createScene3());
+		stage.setScene(createScene4());
 		stage.show();
 	}
-	public Scene createScene1(){
+	public Scene createScene(){
 		Group root = new Group();
 		//
 		Label label1 = new Label("Comment 1");

@@ -13,6 +13,7 @@ public class JavaFxExample extends Application{
 		stage.setTitle("My first app");
 		stage.setScene(createScene());
 		stage.show();
+		
 	}
 	public Scene createScene(){
 		return null;

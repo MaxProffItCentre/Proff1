@@ -20,7 +20,7 @@ public class JavaFxExample2 extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		stage.setTitle("РўСЂРµС‚РёР№ РїСЂРёРјРµСЂ");
+		stage.setTitle("Java Fx Example 2");
 		stage.setScene(createScene());
 		stage.show();
 	}
