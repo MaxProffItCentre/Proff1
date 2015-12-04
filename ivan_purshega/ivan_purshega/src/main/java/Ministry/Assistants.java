@@ -1,5 +1,6 @@
 package Ministry;
 
-public class Assistants {
-	
+public interface Assistants {
+	public String getName();
+	public int Grub();
 }
