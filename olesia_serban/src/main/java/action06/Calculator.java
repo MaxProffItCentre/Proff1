@@ -1,6 +1,6 @@
 package action06;
 
-import com.sun.prism.paint.Paint;
+
 
 import javafx.application.Application;
 import javafx.event.Event;
@@ -19,7 +19,9 @@ import javafx.stage.Stage;
 
 public class Calculator extends Application {
 	public static void main(String[] args) {
+
 		launch(args);
+		
 	}
 
 	@Override
@@ -31,9 +33,9 @@ public class Calculator extends Application {
 
 	public Scene scene() {
 		final Text actiontarget = new Text();
-		//text just for Fun
+		//text just for Fun Tahoma Tolkien,
 		Text scenetitle = new Text("Calculator");
-		scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+		scenetitle.setFont(Font.font("Tahoma", FontWeight.BOLD, 20));
 		scenetitle.setFill(Color.CORNFLOWERBLUE);
 		
 		
@@ -120,11 +122,12 @@ public class Calculator extends Application {
 		grid.add(btn, 3, 1);
 		grid.add(result, 4, 1);
 		grid.add(actiontarget, 4, 2);
-
+		
 		// setting button on action
 		btn.setOnAction(new MyEvent(number1, operation, number2, result));
 
 		Scene scene = new Scene(grid, 550, 200);
+		
 		
 		return scene;
 
