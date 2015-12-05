@@ -1,5 +1,7 @@
 package action06;
 
+import com.sun.prism.paint.Paint;
+
 import javafx.application.Application;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -9,7 +11,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Calculator extends Application {
@@ -25,12 +30,18 @@ public class Calculator extends Application {
 	}
 
 	public Scene scene() {
-
+		final Text actiontarget = new Text();
+		//text just for Fun
+		Text scenetitle = new Text("Calculator");
+		scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+		scenetitle.setFill(Color.CORNFLOWERBLUE);
+		
+		
 		// text field for the first number
 		TextField number1 = new TextField();
 		number1.setMaxSize(100, 20);
 		number1.setEditable(true);
-
+		
 		// text field for operation sign
 		TextField operation = new TextField();
 		operation.setMaxSize(50, 20);
@@ -44,6 +55,8 @@ public class Calculator extends Application {
 		// Button for "="
 		Button btn = new Button("=");
 		btn.setMaxSize(60, 20);
+		btn.setTextFill(Color.DARKBLUE);
+		
 
 		// text field for result
 		TextField result = new TextField();
@@ -53,6 +66,7 @@ public class Calculator extends Application {
 
 		// Event for my button
 		class MyEvent<T> implements EventHandler {
+			
 			TextField num1;
 			TextField action;
 			TextField num2;
@@ -67,6 +81,7 @@ public class Calculator extends Application {
 			}
 
 			public String result(String num1, String num2, String action) {
+
 				if (action.equals("+")) {
 					return new Double(num1) + new Double(num2) + "";
 				} else if (action.equals("-")) {
@@ -79,10 +94,14 @@ public class Calculator extends Application {
 					return "Invalid operation";
 				}
 
+
 			}
 
 			public void handle(Event event) {
 				result.setText(result(num1.getText(), num2.getText(), action.getText()));
+				actiontarget.setFill(Color.FIREBRICK);
+		        actiontarget.setText("=)");
+		        actiontarget.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
 				System.out.println("=)");
 
 			}
@@ -91,18 +110,22 @@ public class Calculator extends Application {
 		// add all elements to grid
 		GridPane grid = new GridPane();
 		grid.setPadding(new Insets(10, 10, 10, 10));
-		grid.setAlignment(Pos.CENTER_LEFT);
+		grid.setAlignment(Pos.CENTER);
 		grid.setHgap(20);
-		grid.add(number1, 0, 0);
-		grid.add(operation, 1, 0);
-		grid.add(number2, 2, 0);
-		grid.add(btn, 3, 0);
-		grid.add(result, 4, 0);
+		grid.setVgap(20);
+		grid.add(scenetitle, 0, 0);
+		grid.add(number1, 0, 1);
+		grid.add(operation, 1, 1);
+		grid.add(number2, 2, 1);
+		grid.add(btn, 3, 1);
+		grid.add(result, 4, 1);
+		grid.add(actiontarget, 4, 2);
 
 		// setting button on action
 		btn.setOnAction(new MyEvent(number1, operation, number2, result));
 
 		Scene scene = new Scene(grid, 550, 200);
+		
 		return scene;
 
 	}
