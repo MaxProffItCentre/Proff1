@@ -2,12 +2,19 @@ package Ministry;
 
 public class DeputyPrototype implements Assistants {
 	
-	private static DeputySingleTon dno;
+	
 	private String nameMinister;
 	private int tarif;
 	private int summaGrub;
+	boolean isReg=false;
 	
-	public DeputyPrototype(String string, int i, IMinister ministr) {
+	public DeputyPrototype(String string, int i, IMinister ministr) throws InterruptedException {
+		 if (isReg==false){
+			 	isReg=true;
+				System.out.println("Registration(Prototype) ......");
+				Thread.sleep(10000);
+				System.out.println("Registration compleat! Bablo spi...no!!!");
+			}
 		 nameMinister=string;
 		 tarif=i;
 		 ministr.setGrub(tarif/2);
@@ -18,17 +25,11 @@ public class DeputyPrototype implements Assistants {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return nameMinister;
 	}
 
 	@Override
 	public int Grub() {
-		// TODO Auto-generated method stub
-		return 0;
+		return summaGrub;
 	}
-
 }
-
-
-

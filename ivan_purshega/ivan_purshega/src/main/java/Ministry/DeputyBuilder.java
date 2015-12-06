@@ -5,8 +5,15 @@ public class DeputyBuilder implements Assistants {
 	private String nameMinister;
 	private int tarif;
 	private int summaGrub;
+	boolean isReg=false;
 	
-	public DeputyBuilder(DeputyBuilderBuilder builder, IMinister ministr) {
+	public DeputyBuilder(DeputyBuilderBuilder builder, IMinister ministr) throws InterruptedException {
+		 if (isReg==false){
+			 	isReg=true;
+				System.out.println("Registration(Builder) ......");
+				Thread.sleep(10000);
+				System.out.println("Registration compleat! Bablo spi...no!!!");
+			}
 		 nameMinister=builder.getName();
 		 tarif=builder.getTarif();
 		 ministr.setGrub(tarif/2);
@@ -17,14 +24,12 @@ public class DeputyBuilder implements Assistants {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return nameMinister;
 	}
 
 	@Override
 	public int Grub() {
-		// TODO Auto-generated method stub
-		return 0;
+		return summaGrub;
 	}
 
 }

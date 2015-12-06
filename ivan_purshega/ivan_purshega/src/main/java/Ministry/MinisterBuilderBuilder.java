@@ -7,7 +7,7 @@ public class MinisterBuilderBuilder {
 	private String name;
 	private int tarif;
 	
-	public MinisterBuilder newMinisterBuilder(){
+	public MinisterBuilder newMinisterBuilder() throws InterruptedException{
 		return new MinisterBuilder(this);
 	}
 	
@@ -19,7 +19,7 @@ public class MinisterBuilderBuilder {
 		return name;
 	}
 	
-	public MinisterBuilderBuilder setName(String nsme){
+	public MinisterBuilderBuilder setName(String name){
 		this.name=name;
 		return this;
 	}

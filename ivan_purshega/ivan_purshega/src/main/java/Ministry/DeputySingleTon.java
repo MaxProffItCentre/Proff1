@@ -8,8 +8,15 @@ public class DeputySingleTon implements Assistants {
 	private String nameMinister;
 	private int tarif;
 	private int summaGrub;
+	static boolean isReg=false;
 	
-	private DeputySingleTon(String string, int i, IMinister ministr) {
+	private DeputySingleTon(String string, int i, IMinister ministr) throws InterruptedException {
+		if (isReg==false){
+		 	isReg=true;
+			System.out.println("Registration(Single) ......");
+			Thread.sleep(10000);
+			System.out.println("Registration compleat! Bablo spi...no!!!");
+		}
 		 nameMinister=string;
 		 tarif=i;
 		 ministr.setGrub(tarif/2);
@@ -19,7 +26,7 @@ public class DeputySingleTon implements Assistants {
 		}
 		
 	
-	public static DeputySingleTon addDeputySingleTon(String string, int i, IMinister ministr) {
+	public static DeputySingleTon addDeputySingleTon(String string, int i, IMinister ministr) throws InterruptedException {
 	 if (dno==null){
 		  dno=new DeputySingleTon(string,i,ministr);
 		  

@@ -24,7 +24,7 @@ public class MinisterSingleTon implements IMinister{
 	}
 
 	@Override
-	public Assistants newAssistant() {
+	public Assistants newAssistant() throws InterruptedException {
 		int type=(int)(1+3*Math.random());
 		if (type==1)
 		assistentu.add(DeputySingleTon.addDeputySingleTon(this.name+assistentu.size(),this.tarif/2,this));
@@ -59,6 +59,11 @@ public class MinisterSingleTon implements IMinister{
 	public int getTarif() {
 		
 		return tarif;
+	}
+
+	@Override
+	public MinisterPrototype clone() {
+		return null;
 	}
 
 	

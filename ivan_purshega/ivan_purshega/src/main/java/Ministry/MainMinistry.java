@@ -8,37 +8,28 @@ import action06.BuilderCar;
 import action06.Car;
 
 public class MainMinistry {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException, InterruptedException {
 		Budget budget=Budget.CreatBudget(1000000);
 		
 	
-	IMinister iMinister1 = MinisterSingleTon.addMinistr("Azarov", 5000);
-	IMinister iMinister2 = new MinisterBuilderBuilder().setName("Yanukovich").setTarif(6000).newMinisterBuilder();
-	
-//	Ministry iMinister3 = new MinisterPrototype();
+	IMinister iMinister1 = MinisterSingleTon.addMinistr("Azarov", (int)(5000+10000*Math.random()));
+	IMinister iMinister2 = new MinisterBuilderBuilder().setName("Yanukovich").setTarif((int)(5000+10000*Math.random())).newMinisterBuilder();
+	MinisterPrototype iMinister3= (MinisterPrototype) iMinister2.clone();
+	iMinister3.setName("Poroshenko");
+	iMinister3.setTarif((int)(5000+10000*Math.random()));
 	ArrayList <Assistants> list = new ArrayList <Assistants>();
-	list.add(iMinister1.newAssistant());
 	
 	while(budget.getBudget()>0){
-		list.add(iMinister1.newAssistant());
-		System.out.println(iMinister1.Grub());
-		System.out.println(budget.getBudget());
+		int numberOfMinister=(int)(1+3*Math.random());
+		if (numberOfMinister==1)list.add(iMinister1.newAssistant());
+		else if (numberOfMinister==2)list.add(iMinister2.newAssistant());
+		else list.add(iMinister3.newAssistant());
+//		System.out.println("Buget =" + budget.getBudget());
 	}
+	System.out.println(((MinisterSingleTon) iMinister1).getName()+" Spi...il!! "+iMinister1.Grub());
+	System.out.println(((MinisterBuilder) iMinister2).getName()+" Spi...il!! "+iMinister2.Grub());
+	System.out.println(((MinisterPrototype) iMinister3).getName()+" Spi...il!! "+iMinister3.Grub());
 	
-	
-	
-//	System.out.println(iMinister1.Grub());
-//	System.out.println(list.get(0).Grub());
-//	list.add(iMinister1.newAssistant());
-//	System.out.println(iMinister1.Grub());
-//	System.out.println(list.get(1).Grub());
-//	list.add(iMinister1.newAssistant());
-//	System.out.println(iMinister1.Grub());
-//	System.out.println(list.get(2).Grub());
-//	for(int i=0; i<iMinister1.getAssistentu().size();i++){
-//		System.out.println(iMinister1.getAssistentu().get(i).getClass().getName());
-//	}
-    
 	
 	}
 }

@@ -4,7 +4,7 @@ public class DeputyBuilderBuilder {
 	private String nameMinister;
 	private int tarif;
 	
-	public DeputyBuilder newDeputyBuilder(IMinister ministr){
+	public DeputyBuilder newDeputyBuilder(IMinister ministr) throws InterruptedException{
 		return new DeputyBuilder(this,ministr);
 	}
 	
