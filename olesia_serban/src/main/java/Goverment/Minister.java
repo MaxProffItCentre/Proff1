@@ -18,7 +18,7 @@ public abstract class Minister {
 
 	public void newAssistant(Deputy dep, String numberOfAsist) {
 
-		dep.setName(name + " " + numberOfAsist);
+		dep.setName(name + " helper " + numberOfAsist);
 		listOfAsistents.add(dep);
 		dep.registrate(true);
 		dep.setTarif(tarif/2);
@@ -39,5 +39,10 @@ public abstract class Minister {
 
 	public double getTarif() {
 		return tarif;
+	}
+	@Override
+	public String toString() {
+		
+		return "name of Minister is: "+ name+", the list of Deputies: "+listOfAsistents;
 	}
 }

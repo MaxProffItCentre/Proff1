@@ -1,7 +1,7 @@
 package Goverment;
 
 public class Budget {
-	private static double money = 150000000;
+	private static double money = 1500000;
 	private static Budget uniqueInstance = new Budget();
 
 	private Budget() {

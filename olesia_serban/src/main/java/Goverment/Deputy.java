@@ -41,4 +41,9 @@ public abstract class Deputy {
 		}
 
 	}
+	@Override
+	public String toString() {
+		
+		return name;
+	}
 }
