@@ -1,5 +1,6 @@
 package action06hw;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*Задача про министров.
@@ -30,46 +31,148 @@ public class MinistersGrub{
 	public static void main(String[] args) {
 		Budget.setBudget();
 		System.out.println(Budget.getSumBudget());
+		GrubMinSingle gr1=new GrubMinSingle();
+		Thread th1=new Thread(gr1);
+		GrubMinBuilder gr2=new GrubMinBuilder();
+		Thread th2=new Thread(gr2);
+		th1.setPriority(2);
+		th2.setPriority(9);
+		th1.start();
+		th2.start();
 			}
 	
-	
+	public static class GrubMinSingle implements Runnable{
+
+		public void run() {
+			MinisterSingleton min1=new MinisterSingleton("Single",5000);	
+			Budget budget = Budget.setBudget();
+			
+			while (budget.summBudget>0){
+				DeputySingleton deputy=min1.newDeputy();
+				deputy.register();
+				min1.grub();
+				budget.summBudget=budget.summBudget-min1.tarif-deputy.tarif;
+			}System.out.println(min1.summGrub);
+		}
+		
+	}
 	public interface Minister{
 		
 		public Deputy newDeputy();
 		
 		
 	}
-    class MinisterSingleton implements Minister{
+    static class MinisterSingleton implements Minister{
        private String name;
        private int tarif;
-       private List<Deputy> list;
+       private DeputySingleton deputy=null;
+       private int num=0;
        private int summGrub;
+      
 		public MinisterSingleton(String name, int tarif){
 			this.name=name;
 			this.tarif=tarif;
 		}
-       public Deputy newDeputy() {
-			
-			return null;
+       public DeputySingleton newDeputy() {
+			if (deputy==null) {num++; deputy=new DeputySingleton(this.name,this.tarif/2, this.num);}
+			return deputy;
 		}
 	
 	public void grub() {
-		summGrub=summGrub+tarif;		
+		int payment = tarif+deputy.tarif/2;
+		summGrub=summGrub+payment;	
+		
 	}}
-    class MinisterBuilder implements Minister{
+   static class DeputySingleton implements Deputy{
+			private String mName;
+			private int tarif;
+	      	private boolean isReg=false;
+	        private int summGrub;
+	        private int number;
+	        public DeputySingleton(String mName, int tarif, int number){
+	        	this.mName=mName;
+	        	this.tarif=tarif;
+	        	this.number=number;
+	        }
+	        public int getTarif(){
+	        	return tarif;
+	        }
+		public boolean register(){
+			if(isReg=false)
+				try {
+					this.wait(100); isReg=true;
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		return true;}
+		}
+  static  class MinisterBuilder implements Minister{
     	private String name;
         private int tarif;
-        private List<Deputy> list;
+        private ArrayList<DeputyBuilder> list=new ArrayList<DeputyBuilder>();
         private int summGrub;
+        private int num=0;
+        
         public MinisterBuilder(String name, int tarif){
 			this.name=name;
 			this.tarif=tarif;
 		}
-		public Deputy newDeputy() {
+		public DeputyBuilder newDeputy() {
+			num++; 
+			DeputyBuilder deputy=new DeputyBuilder(this.name,this.tarif/2, this.num);
+			list.add(deputy);
+			return deputy;
+			}
+		public void grub() {int deputyTarif=0;
+			for (DeputyBuilder db:list) 
+			deputyTarif=deputyTarif+db.tarif;
+			int payment = tarif+deputyTarif/2;
+			summGrub=summGrub+payment;	
 			
-			return null;
-		}}
-    class MinisterPrototype implements Minister{
+		}	
+  }
+
+	static class DeputyBuilder implements Deputy{
+		private String mName;
+		private int tarif;
+        private boolean isReg=false;
+        private int summGrub;
+        private int number;
+        
+        public DeputyBuilder(String mName, int tarif, int number){
+        	this.mName=mName;
+        	this.tarif=tarif;
+        	this.number=number;
+	}
+        public boolean register(){
+		if(isReg=false)
+			try {
+				this.wait(100); isReg=true;
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	return true;}}
+	
+    public static class GrubMinBuilder implements Runnable{
+
+		public void run() {
+			MinisterBuilder min2=new MinisterBuilder("Builder",10000);	
+			Budget budget = Budget.setBudget();
+			while (budget.summBudget>0){
+				DeputyBuilder deputy=min2.newDeputy();
+				deputy.register();
+				min2.grub();
+				int deputyTarif=0;
+				for (DeputyBuilder db:min2.list) 
+				deputyTarif+=db.tarif;
+				budget.summBudget=budget.summBudget-min2.tarif-deputyTarif;
+			}System.out.println(min2.summGrub);
+		}
+		
+	}
+   static class MinisterPrototype implements Minister{
     	private String name;
         private int tarif;
         private List<Deputy> list;
@@ -82,27 +185,16 @@ public class MinistersGrub{
 			
 			return null;
 		}}
+    
 	public interface Deputy{
 		}
-		class DeputySingleton implements Deputy{
-			private String Mname;
-			private int tarif;
-	        private boolean isReg=false;
-	        private int summGrub;
-	        private DeputySingleton(String name){}
-		}
-		class DeputyBuilder implements Deputy{
-			private String name;
-			private int tarif;
-	        private boolean isReg=false;
-	        private int summGrub;
-		}
+		
+		
 		class DeputyPrototype implements Deputy{
 			private String name;
 			private int tarif;
 	        private boolean isReg=false;
 	        private int summGrub;
 		}
-	
 	
 }
