@@ -14,6 +14,7 @@ public class Main {
 		Car car = Car.newBuilderCar().setColor("Red").setNumber("AAAA").build();
 		System.out.println(car);
 		
+		Three map 
 	}
 
 }
