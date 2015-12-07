@@ -5,13 +5,16 @@ import java.util.Arrays;
 import java.util.List;
 
 /* 
-	РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ РїСЂРёРЅРёРјР°СЋС‰РёР№ Р»СЋР±РѕР№ РѕР±СЉРµРєС‚.
-РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РІСЃРµ РєР»Р°СЃСЃС‹ РІ РёРµСЂР°СЂС…РёСЋ РєРѕС‚РѕСЂС‹С… РІС…РѕРґРёС‚ РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚. 
+	Написать метод принимающий любой объект.
+Метод возвращает все классы в иерархию которых входит данный объект. 
 */
 public class ReflectionTask1Example {
 	public static void main(String[] args) {
 		Class[] classes = getAllClasses(new ArrayList());
 		System.out.println(Arrays.toString(classes));
+		
+		
+		
 	}
 	public static Class[] getAllClasses(Object obj){
 		List<Class> classes = new ArrayList<Class>();
