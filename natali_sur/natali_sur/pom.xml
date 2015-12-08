@@ -9,10 +9,13 @@
 
   <name>natali_sur</name>
   <url>http://maven.apache.org</url>
+  
+
 
       <properties>
     	<junit.version>4.8.2</junit.version>
         <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+        <mysql.connector.version>5.1.38</mysql.connector.version>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -25,6 +28,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+<dependency>
+   <groupId>mysql</groupId>
+   <artifactId>mysql-connector-java</artifactId>
+   <version>${mysql.connector.version}</version>
+  </dependency>
 
   </dependencies>
   
@@ -55,3 +63,5 @@
     </build>
   
 </project>
+
+

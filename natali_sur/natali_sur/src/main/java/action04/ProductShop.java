@@ -1,7 +1,10 @@
 package action04;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,9 +50,15 @@ public class ProductShop {
 	}
 
 	public void printContructor() {
+		Set<String> set = new TreeSet<String>(contructors.values());
+		System.out.println(set);
 	}
 
 	public void printReverseContructor() {
+		Set<String>set = new HashSet<String>(contructors.values());
+		List<String> list = new ArrayList<String>(set);
+		Collections.sort(list,Collections.reverseOrder());
+		System.out.println(list);
 	}
 
 	public void printNameProductByParty(TypeProduct type) {
