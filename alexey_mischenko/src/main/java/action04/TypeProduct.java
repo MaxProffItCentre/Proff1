@@ -1,12 +1,13 @@
 package action04;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public enum TypeProduct {
-	Bread, Yoqurt, Milk;
+	Bread, Yogurt, Milk;
 	
-	public static void main(String[] args){
+/*	public static void main(String[] args){
 		
 		TypeProduct obj = TypeProduct.Bread;
 		String str = obj.toString();
@@ -25,8 +26,8 @@ public enum TypeProduct {
 		Set<Map.Entry<Integer, String>> set = map.entrySet();
 		for(Map.Entry<Integer, String> entry: set){
 			System.out.println(entry.getKey() +"="+ entry.getValue());
-		}
+		}*/
 		
 		
-	}
+//	}
 }

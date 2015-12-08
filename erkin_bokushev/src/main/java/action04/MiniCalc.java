@@ -30,7 +30,7 @@ public class MiniCalc {
 		return aCopy * 2 * b;
 	}
 	public String printResult() {
-		System.out.println("Result = " + result);
+//		System.out.println("Result = " + result);
 		return Integer.toString(result);
 	}
 	public void inChar(char p) {
@@ -142,6 +142,15 @@ public class MiniCalc {
 //			break;
 		}
 		}
+	}
+	public void close () {
+		result = 0;
+		temp = 0;
+		count = 0;
+		countOper = 0;
+		lastSymb = ' ';
+		tempLastSymb = ' ';
+		tempRavno = 0;
 	}
 	public static void main(String[] args) {
 		MiniCalc calc = new MiniCalc();
