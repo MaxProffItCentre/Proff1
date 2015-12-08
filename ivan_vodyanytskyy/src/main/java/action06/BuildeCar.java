@@ -27,8 +27,6 @@ public class BuildeCar {
 		this.color = color;
 	}
 	
-	
-
 	@Override
 	public String toString() {
 		return "Car [number=" + number + ", color=" + color + "]";
