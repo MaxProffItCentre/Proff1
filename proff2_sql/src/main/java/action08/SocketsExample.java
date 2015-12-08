@@ -70,8 +70,9 @@ class ClientSocketExample extends Thread{
 		this.port = port;
 	}
 	public void run() {
+		Socket socket = null;
 		try {
-			Socket socket = new Socket("localhost", port);
+			socket = new Socket("localhost", port);
 			System.out.println("Client started!");
 			
 			InputStream in = socket.getInputStream();
@@ -93,6 +94,14 @@ class ClientSocketExample extends Thread{
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally{
+			if(socket!=null){
+				try {
+					socket.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 
 	}
