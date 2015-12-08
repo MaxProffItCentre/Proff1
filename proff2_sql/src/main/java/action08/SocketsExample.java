@@ -14,8 +14,8 @@ import java.net.UnknownHostException;
 public class SocketsExample {
 	public static void main(String[] args) {
 		int port = 3129;
-		new Starter(new ServerSocketExample(port));
-		new Starter(new ClientSocketExample(port));
+		new Starter<ServerSocketExample>(new ServerSocketExample(port));
+		new Starter<ClientSocketExample>(new ClientSocketExample(port));
 	}
 }
 class Starter<T extends Thread>{
