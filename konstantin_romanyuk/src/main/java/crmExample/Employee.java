@@ -2,20 +2,25 @@ package crmExample;
 
 public class Employee {
 	private String name;
-	private String salary;
+	private double salary;
 	
-	public Employee(){}
-	
+		
+	public Employee(String name, double d) {
+		super();
+		this.name = name;
+		this.salary = d;
+	}
+
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getSalary() {
+	public double getSalary() {
 		return salary;
 	}
-	public void setSalary(String salary) {
+	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 	

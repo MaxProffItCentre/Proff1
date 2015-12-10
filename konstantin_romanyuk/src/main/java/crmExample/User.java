@@ -6,6 +6,21 @@ public class User {
 	private String pass;
 	private Employee employee;
 	
+	public User(String name, String login, String pass, Employee employee) {
+		super();
+		this.name = name;
+		this.login = login;
+		this.pass = pass;
+		this.employee = employee;
+	}
+
+	public User(String name, String login, String pass) {
+		super();
+		this.name = name;
+		this.login = login;
+		this.pass = pass;
+	}
+
 	public User(){}
 	
 	public String getName() {
@@ -31,6 +46,11 @@ public class User {
 	}
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
+	}
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", login=" + login + ", pass=" + pass + "]";
 	}
 
 }

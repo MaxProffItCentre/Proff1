@@ -14,5 +14,10 @@ public class Contructor {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "Contructor [name=" + name + "]";
+	}
 	
 }
