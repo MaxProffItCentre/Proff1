@@ -134,16 +134,16 @@ public static ArrayList <Orders> getOrders(String log){
 	e.printStackTrace();
 }
 
-String query = "select distinct* from users left join employees on users.employee_id=employees.id, orders,contructors where orders.user_id=users.id and contructors.id=orders.contructor_id and users.login='"+log+"';";
+String query = "select distinct* from users left join employees on users.employee_id=employees.id, orders,contructors where orders.user_id=users.id and contructors.id=orders.contructor_id and users.login=?;";
 		
 Connection connect = null;
 try {
 	connect = DriverManager.getConnection(url, login, pass);
-	/*PreparedStatement statement = connect.prepareStatement(query);
-	statement.setString(1, role);
+	PreparedStatement statement = connect.prepareStatement(query);
+	statement.setString(1, log);
+	ResultSet rs = statement.executeQuery();
+	/*Statement statement = connect.createStatement();
 	ResultSet rs = statement.executeQuery(query);*/
-	Statement statement = connect.createStatement();
-	ResultSet rs = statement.executeQuery(query);
 	while (rs.next()) {
 		tmp=new Orders(rs.getString("orders.number"), new Contructor(rs.getString("contructors.name")),new User(rs.getString("users.name"),rs.getString("users.login"),rs.getString("users.pass"),new Employee(rs.getString("employees.name"),rs.getDouble("employees.salary"))),rs.getDouble("orders.summa"));
 			ordersList.add(tmp);}
