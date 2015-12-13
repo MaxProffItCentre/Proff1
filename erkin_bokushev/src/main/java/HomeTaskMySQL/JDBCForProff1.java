@@ -53,7 +53,6 @@ public class JDBCForProff1 {
 	}
 	
 	//Написать метод, которому на вход дается строка с именем роли, метод должен вернуть список пользователей, это роли.
-	
 	public static ArrayList<User> getUsersOfRole (String role) {
 		ArrayList<User> users = new ArrayList<User>();
 		
