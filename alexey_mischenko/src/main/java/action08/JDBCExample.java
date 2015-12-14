@@ -19,7 +19,7 @@ public class JDBCExample {
 			e.printStackTrace();
 		}
 
-		String query = "select * from orders";
+		String query = "select * from users";
 		Connection connect = null;
 		try {
 			connect = DriverManager.getConnection(url, login, pass);
@@ -28,8 +28,7 @@ public class JDBCExample {
 			while (rs.next()) {
 				System.out.print(rs.getString(1) + ", ");
 				System.out.print(rs.getString(2) + ", ");
-				if(rs.getObject(3)==null)System.out.print("null0,");
-					else System.out.print(rs.getInt(3) + ", ");
+				System.out.print(rs.getString(3) + ", ");
 				System.out.print(rs.getString(4) + ", ");
 				System.out.print(rs.getString(5) + ", ");
 				System.out.println();
