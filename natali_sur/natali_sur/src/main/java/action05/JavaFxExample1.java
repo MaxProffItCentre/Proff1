@@ -1,4 +1,5 @@
 package action05;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -18,11 +19,11 @@ public class JavaFxExample1 extends Application{
 	}
 	@Override
 	public void start(Stage stage) throws Exception {
-		stage.setTitle("JavaFxExample1");
-		stage.setScene(createScene());
+		stage.setTitle("РќРµСЃРєРѕР»СЊРєРѕ РїСЂРёРјРµСЂРѕРІ");
+		stage.setScene(createScene3());
 		stage.show();
 	}
-	public Scene createScene(){
+	public Scene createScene1(){
 		Group root = new Group();
 		//
 		Label label1 = new Label("Comment 1");
