@@ -10,7 +10,7 @@ public class JDBCExample {
 	private static String nameDriver = "com.mysql.jdbc.Driver";
 	private static String url = "jdbc:mysql://localhost:3306/proff1";
 	private static String login = "root";
-	private static String pass = "root";
+	private static String pass = "avrora276";
 
 	public static void main(String[] args) {
 		try {
