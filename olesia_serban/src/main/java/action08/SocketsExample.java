@@ -89,7 +89,7 @@ class ClientSocketExample extends Thread{
 				dos.flush();
 				String backMassage = dis.readUTF();
 				System.out.println("Client. I get message from server[" + backMassage+"] ");				
-			}
+			} 
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
