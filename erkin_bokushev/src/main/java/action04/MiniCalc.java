@@ -24,7 +24,7 @@ public class MiniCalc {
 	private char tempLastSymb;
 	public int countNull;
 	//=============================================================================
-	private static char [] numbers = {'0','1','2','3','4','5','6','7','8','9'};
+	private static char [] numbers = {'0','1','2','3','4','5','6','7','8','9','.'};
 	public int getMulti (int a, int b) {
 		int aCopy = a/2;
 		return aCopy * 2 * b;
@@ -36,7 +36,7 @@ public class MiniCalc {
 	public void inChar(char p) {
 		if (p != '+' && p != '-' && p != '*' && p != '/' && p != '=') {
 		for (char c: numbers) {
-			if (c == p && count == 0) {
+			if (c == p && count == 0 && p != '.') {
 				temp = c - '0';
 				if(c == '0') {
 					count = 0;
@@ -44,9 +44,9 @@ public class MiniCalc {
 				} else {
 					count++;
 				}
-			} else if (c == p && count != 0) {
+			} else if (c == p && count != 0 && p != '.') {
 				temp = temp*10 + (c - '0');
-			}
+			} 
 		}
 		} else if (p == '+' || p == '-' || p == '*' || p == '/' || p == '=') {
 			if (countOper == 0) result = temp;
