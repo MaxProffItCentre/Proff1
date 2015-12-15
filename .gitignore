@@ -1,7 +1,6 @@
-/proff1_example/
-<<<<<<< HEAD
-/natali_sur/
-=======
-.DS_Store
->>>>>>> branch 'master' of https://github.com/MaxProffItCentre/Proff1.git
-/proff2_sql/
+.gitignore
+.settings/*
+target/
+
+*.classpath
+*.project
