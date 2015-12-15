@@ -5,6 +5,11 @@ public class Product{
 	private TypeProduct type;
 	private int party;
 	
+	public Product(String name, TypeProduct type) {
+		this.name = name;
+		this.type = type;
+	}
+	
 	public Product(String name, TypeProduct type, int party) {
 		this.name = name;
 		this.type = type;
