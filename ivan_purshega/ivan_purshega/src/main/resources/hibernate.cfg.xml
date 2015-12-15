@@ -18,6 +18,8 @@
 		<property name="connection.pool_size">1</property>
 
 		<mapping class="data.Product" />
+		<mapping class="data.contructor" />
+		<mapping class="data.Employee" />
 
 	</session-factory>
 </hibernate-configuration>

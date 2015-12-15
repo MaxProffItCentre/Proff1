@@ -60,8 +60,8 @@ public class Product {
   this.barcode = barcode;
  }
 
- public Product(String name) {
-  this(name,0);
- }
+// public contructor(String name) {
+//  this(name,0);
+// }
  
 }
