@@ -76,3 +76,983 @@
 2015-12-14 21:06:42,934 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2015-12-14 21:06:42,948 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
 2015-12-14 21:06:43,035 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 14:27:46,191 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 14:27:46,237 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 14:27:46,256 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 14:27:46,276 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 14:27:46,440 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 14:27:46,441 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 14:27:46,861 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 14:27:47,310 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 14:27:47,310 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 14:27:47,326 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 14:27:47,357 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 14:27:47,434 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 14:27:47,435 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 14:27:47,435 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 14:27:47,447 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 14:27:48,931 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 14:27:49,618 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 14:27:49,671 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 14:27:50,092 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 14:29:02,468 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 14:29:02,482 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 14:29:02,486 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 14:29:02,491 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 14:29:02,562 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 14:29:02,562 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 14:29:02,747 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 14:29:02,956 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 14:29:02,957 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 14:29:02,969 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 14:29:02,985 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 14:29:03,002 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 14:29:03,003 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 14:29:03,004 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 14:29:03,007 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 14:29:03,906 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 14:29:04,222 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 14:29:04,230 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 14:29:04,335 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 14:29:05,565 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 14:29:43,176 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 14:29:43,190 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 14:29:43,193 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 14:29:43,196 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 14:29:43,239 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 14:29:43,240 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 14:29:43,406 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 14:29:43,657 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 14:29:43,657 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 14:29:43,669 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 14:29:43,687 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 14:29:43,702 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 14:29:43,702 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 14:29:43,703 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 14:29:43,705 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 14:29:44,568 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 14:29:44,898 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 14:29:44,906 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 14:29:45,005 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:04:40,007 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:04:40,024 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:04:40,029 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:04:40,034 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:04:40,101 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:04:40,101 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:04:40,278 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:04:40,487 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:04:40,488 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:04:40,500 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:04:40,515 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:04:40,531 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:04:40,532 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:04:40,533 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:04:40,536 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:04:41,402 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:04:41,719 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:04:41,727 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:04:41,844 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:05:40,263 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:05:40,277 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:05:40,281 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:05:40,286 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:05:40,351 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:05:40,351 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:05:40,530 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:05:40,718 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:05:40,719 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:05:40,730 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:05:40,748 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:05:40,766 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:05:40,767 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:05:40,768 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:05:40,771 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:05:41,635 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:05:41,967 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:05:41,976 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:05:42,084 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:05:43,307 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:07:06,011 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:07:06,027 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:07:06,032 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:07:06,038 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:07:06,131 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:07:06,131 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:07:06,339 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:07:06,560 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:07:06,560 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:07:06,572 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:07:06,591 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:07:06,609 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:07:06,610 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:07:06,611 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:07:06,615 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:07:07,496 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:07:07,793 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:07:07,802 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:07:07,915 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:07:09,177 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:08:24,599 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:08:24,614 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:08:24,618 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:08:24,621 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:08:24,676 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:08:24,676 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:08:24,851 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:08:25,041 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:08:25,041 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:08:25,052 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:08:25,067 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:08:25,086 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:08:25,087 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:08:25,088 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:08:25,091 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:08:25,965 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:08:26,281 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:08:26,290 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:08:26,391 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:08:27,667 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:09:43,000 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:09:43,014 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:09:43,019 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:09:43,024 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:09:43,086 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:09:43,087 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:09:43,258 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:09:43,442 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:09:43,442 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:09:43,456 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:09:43,471 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:09:43,489 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:09:43,490 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:09:43,490 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:09:43,493 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:09:44,410 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:09:44,735 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:09:44,743 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:09:44,842 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:09:46,083 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:09:56,906 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:09:56,919 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:09:56,924 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:09:56,933 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:09:57,029 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:09:57,030 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:09:57,216 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:09:57,421 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:09:57,422 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:09:57,434 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:09:57,452 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:09:57,470 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:09:57,472 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:09:57,472 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:09:57,475 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:09:58,348 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:09:58,698 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:09:58,708 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:09:58,808 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:10:00,092 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:10:22,917 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:10:22,934 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:10:22,937 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:10:22,942 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:10:23,019 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:10:23,020 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:10:23,203 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:10:23,410 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:10:23,411 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:10:23,422 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:10:23,438 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:10:23,454 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:10:23,455 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:10:23,456 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:10:23,459 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:10:24,396 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:10:24,721 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:10:24,730 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:10:24,849 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:10:26,121 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:10:35,912 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:10:35,927 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:10:35,930 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:10:35,933 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:10:35,992 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:10:35,992 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:10:36,184 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:10:36,377 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:10:36,377 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:10:36,389 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:10:36,406 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:10:36,420 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:10:36,420 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:10:36,421 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:10:36,424 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:10:37,317 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:10:37,650 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:10:37,659 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:10:37,757 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:10:38,997 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:12:14,983 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:12:14,998 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:12:15,002 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:12:15,008 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:12:15,079 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:12:15,079 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:12:15,278 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:12:15,471 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:12:15,471 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:12:15,486 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:12:15,505 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:12:15,524 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:12:15,525 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:12:15,525 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:12:15,528 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:12:16,416 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:12:16,730 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:12:16,739 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:12:16,839 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:12:18,082 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:12:30,214 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:12:30,228 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:12:30,231 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:12:30,236 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:12:30,283 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:12:30,284 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:12:30,502 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:12:30,703 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:12:30,704 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:12:30,715 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:12:30,731 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:12:30,747 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:12:30,749 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:12:30,749 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:12:30,752 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:12:31,623 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:12:31,943 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:12:31,952 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:12:32,051 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:12:33,298 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:16:49,399 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:16:49,413 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:16:49,416 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:16:49,421 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:16:49,505 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:16:49,505 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:16:49,711 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:16:49,892 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:16:49,892 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:16:49,904 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:16:49,923 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:16:49,943 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:16:49,944 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:16:49,944 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:16:49,947 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:16:50,816 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:16:51,127 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:16:51,136 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:16:51,232 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:16:52,448 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:18:24,589 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:18:24,603 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:18:24,606 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:18:24,609 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:18:24,670 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:18:24,670 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:18:24,850 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:18:25,042 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:18:25,043 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:18:25,068 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:18:25,087 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:18:25,103 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:18:25,105 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:18:25,105 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:18:25,108 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:18:26,012 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:18:26,355 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:18:26,364 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:18:26,465 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:18:27,758 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:18:39,134 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:18:39,154 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:18:39,158 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:18:39,163 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:18:39,224 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:18:39,224 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:18:39,425 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:18:39,621 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:18:39,622 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:18:39,634 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:18:39,652 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:18:39,669 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:18:39,670 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:18:39,670 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:18:39,673 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:18:40,574 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:18:40,872 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:18:40,880 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:18:40,984 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:18:42,180 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:20:46,679 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:20:46,690 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:20:46,693 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:20:46,699 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:20:46,764 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:20:46,764 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:20:46,909 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:20:47,070 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:20:47,070 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:20:47,081 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:20:47,094 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:20:47,108 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:20:47,109 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:20:47,110 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:20:47,112 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:20:47,793 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:20:48,121 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:20:48,129 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:20:48,258 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:20:49,376 [main] ERROR dao.ProductDaoImpl - query failed!
+2015-12-15 15:21:09,829 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:21:09,839 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:21:09,841 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:21:09,844 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:21:09,878 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:21:09,878 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:21:10,005 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:21:10,155 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:21:10,155 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:21:10,167 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:21:10,180 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:21:10,194 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:21:10,195 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:21:10,195 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:21:10,197 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:21:10,867 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:21:11,105 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:21:11,112 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:21:11,184 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:21:12,113 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:37:21,719 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:37:21,735 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:37:21,738 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:37:21,743 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:37:21,794 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:37:21,794 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:37:21,934 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:37:22,075 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:37:22,075 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:37:22,084 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:37:22,096 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:37:22,109 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:37:22,110 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:37:22,110 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:37:22,113 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:37:22,794 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:37:23,105 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:37:23,114 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:37:23,208 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:37:55,323 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:37:55,340 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:37:55,344 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:37:55,349 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:37:55,416 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:37:55,416 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:37:55,566 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:37:55,721 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:37:55,721 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:37:55,731 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:37:55,746 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:37:55,762 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:37:55,763 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:37:55,763 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:37:55,765 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:37:56,385 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:37:56,585 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:37:56,591 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:37:56,653 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:37:57,446 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:38:15,939 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:38:15,956 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:38:15,960 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:38:15,967 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:38:16,030 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:38:16,031 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:38:16,209 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:38:16,374 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:38:16,374 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:38:16,386 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:38:16,402 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:38:16,417 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:38:16,418 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:38:16,418 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:38:16,421 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:38:17,186 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:38:17,444 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:38:17,450 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:38:17,528 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:38:18,549 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:39:04,498 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:39:04,511 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:39:04,515 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:39:04,520 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:39:04,593 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:39:04,593 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:39:04,773 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:39:04,941 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:39:04,941 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:39:04,949 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:39:04,960 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:39:04,972 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:39:04,972 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:39:04,973 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:39:04,975 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:39:05,604 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:39:05,836 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:39:05,843 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:39:05,924 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:39:06,851 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:39:19,225 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:39:19,238 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:39:19,240 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:39:19,244 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:39:19,288 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:39:19,288 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:39:19,419 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:39:19,572 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:39:19,572 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:39:19,580 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:39:19,592 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:39:19,604 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:39:19,604 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:39:19,604 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:39:19,606 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:39:20,174 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:39:20,386 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:39:20,393 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:39:20,458 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:39:21,269 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:41:46,781 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:41:46,793 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:41:46,796 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:41:46,801 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:41:46,862 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:41:46,862 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:41:46,999 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:41:47,139 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:41:47,139 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:41:47,147 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:41:47,160 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:41:47,174 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:41:47,175 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:41:47,175 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:41:47,177 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:41:47,933 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:41:48,248 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:41:48,257 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:41:48,358 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:41:49,940 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:42:29,155 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:42:29,172 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:42:29,175 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:42:29,180 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:42:29,230 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:42:29,230 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:42:29,367 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:42:29,511 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:42:29,512 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:42:29,522 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:42:29,533 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:42:29,547 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:42:29,548 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:42:29,548 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:42:29,550 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:42:30,312 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:42:30,627 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:42:30,635 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:42:30,720 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:42:31,448 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener - HHH000114: Handling transient entity in delete processing
+2015-12-15 15:42:31,756 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:50:48,732 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:50:48,745 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:50:48,750 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:50:48,754 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:50:48,813 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:50:48,813 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:50:48,976 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:50:49,151 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:50:49,151 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:50:49,160 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:50:49,174 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:50:49,189 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:50:49,189 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:50:49,190 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:50:49,192 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:50:49,915 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:50:50,223 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:50:50,233 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:50:50,304 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:50:51,356 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 15:52:01,768 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 15:52:01,779 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 15:52:01,782 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 15:52:01,785 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 15:52:01,823 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 15:52:01,823 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 15:52:01,962 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:52:02,127 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 15:52:02,128 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 15:52:02,138 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 15:52:02,149 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 15:52:02,163 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 15:52:02,164 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 15:52:02,164 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 15:52:02,166 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 15:52:02,940 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 15:52:03,263 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 15:52:03,271 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 15:52:03,370 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 15:52:04,279 [main] ERROR dao.ProductDaoImpl - Transaction faild!
+2015-12-15 15:52:04,603 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 16:03:38,331 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 16:03:38,344 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 16:03:38,348 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 16:03:38,352 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 16:03:38,397 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 16:03:38,398 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 16:03:38,534 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 16:03:38,675 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 16:03:38,675 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 16:03:38,686 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 16:03:38,700 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 16:03:38,713 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 16:03:38,714 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 16:03:38,714 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 16:03:38,716 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 16:03:39,358 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 16:03:39,589 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 16:03:39,595 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 16:03:39,671 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 20:37:59,070 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 20:37:59,128 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 20:37:59,140 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 20:37:59,148 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 20:37:59,297 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 20:37:59,297 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 20:37:59,995 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:38:00,477 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 20:38:00,477 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 20:38:00,492 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:38:00,573 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 20:38:00,656 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 20:38:00,657 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 20:38:00,657 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 20:38:00,670 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 20:38:02,692 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 20:38:03,339 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 20:38:03,382 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 20:38:03,726 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 20:38:05,707 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+2015-12-15 20:38:05,708 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id = 7' at line 1
+2015-12-15 20:38:05,711 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 1064, SQLState: 42000
+2015-12-15 20:38:05,711 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id = 7' at line 1
+2015-12-15 20:38:05,711 [main] ERROR dao.ProductDaoImpl - Transaction failed!
+2015-12-15 20:38:06,227 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 20:42:41,855 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 20:42:41,871 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 20:42:41,875 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 20:42:41,881 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 20:42:41,929 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 20:42:41,931 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 20:42:42,118 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:42:42,345 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 20:42:42,346 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 20:42:42,360 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:42:42,375 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 20:42:42,396 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 20:42:42,397 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 20:42:42,398 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 20:42:42,401 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 20:42:43,296 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 20:42:43,638 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 20:42:43,647 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 20:42:43,753 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 20:42:44,904 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+2015-12-15 20:42:44,904 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id = 7' at line 1
+2015-12-15 20:42:44,908 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 1064, SQLState: 42000
+2015-12-15 20:42:44,908 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id = 7' at line 1
+2015-12-15 20:42:44,908 [main] ERROR dao.ProductDaoImpl - Transaction failed!
+2015-12-15 20:42:45,178 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 20:43:36,155 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 20:43:36,171 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 20:43:36,175 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 20:43:36,180 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 20:43:36,271 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 20:43:36,272 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 20:43:36,490 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:43:36,727 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 20:43:36,728 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 20:43:36,741 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:43:36,756 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 20:43:36,774 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 20:43:36,775 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 20:43:36,775 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 20:43:36,778 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 20:43:37,644 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 20:43:38,014 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 20:43:38,023 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 20:43:38,123 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 20:43:39,669 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 20:44:19,044 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 20:44:19,060 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 20:44:19,064 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 20:44:19,070 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 20:44:19,150 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 20:44:19,150 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 20:44:19,356 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:44:19,575 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 20:44:19,575 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 20:44:19,587 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:44:19,604 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 20:44:19,622 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 20:44:19,623 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 20:44:19,624 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 20:44:19,626 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 20:44:20,506 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 20:44:20,832 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 20:44:20,841 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 20:44:20,937 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 20:44:22,291 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 20:46:34,014 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 20:46:34,032 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 20:46:34,037 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 20:46:34,043 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 20:46:34,121 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 20:46:34,121 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 20:46:34,330 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:46:34,543 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 20:46:34,544 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 20:46:34,555 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:46:34,581 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 20:46:34,597 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 20:46:34,598 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 20:46:34,598 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 20:46:34,602 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 20:46:35,495 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 20:46:35,872 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 20:46:35,881 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 20:46:35,983 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 20:46:37,409 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 20:47:39,295 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 20:47:39,311 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 20:47:39,318 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 20:47:39,328 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 20:47:39,414 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 20:47:39,414 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 20:47:39,671 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:47:39,867 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 20:47:39,868 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 20:47:39,880 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 20:47:39,895 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 20:47:39,914 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 20:47:39,915 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 20:47:39,915 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 20:47:39,918 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 20:47:40,873 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 20:47:41,273 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 20:47:41,283 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 20:47:41,388 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 20:47:43,132 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 21:03:54,480 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:03:54,494 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:03:54,499 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:03:54,504 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:03:54,568 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:03:54,569 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:03:54,771 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:03:54,978 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:03:54,978 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:03:54,991 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:03:55,008 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:03:55,027 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:03:55,028 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:03:55,029 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:03:55,032 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:03:55,890 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:03:56,213 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:03:56,222 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:03:56,333 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:03:57,833 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 21:28:48,906 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:28:48,922 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:28:48,927 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:28:48,932 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:28:49,000 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:28:49,001 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:28:49,208 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:28:49,395 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:28:49,396 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:28:49,408 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:28:49,426 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:28:49,445 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:28:49,446 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:28:49,447 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:28:49,449 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:28:50,302 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:28:50,651 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:28:50,659 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:28:50,769 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:28:51,796 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+2015-12-15 21:28:51,796 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'proff1.contructurs' doesn't exist
+2015-12-15 21:28:51,800 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 1146, SQLState: 42S02
+2015-12-15 21:28:51,800 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'proff1.contructurs' doesn't exist
+2015-12-15 21:28:51,801 [main] ERROR dao.ContractorDaoImpl - Transaction failed!
+2015-12-15 21:30:30,548 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:30:30,564 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:30:30,568 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:30:30,612 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:30:30,686 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:30:30,687 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:30:30,869 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:30:31,096 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:30:31,096 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:30:31,109 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:30:31,124 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:30:31,142 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:30:31,143 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:30:31,143 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:30:31,146 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:30:32,044 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:30:32,378 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:30:32,387 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:30:32,490 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:32:34,729 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:32:34,744 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:32:34,748 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:32:34,753 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:32:34,829 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:32:34,829 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:32:34,969 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:32:35,137 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:32:35,137 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:32:35,146 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:32:35,159 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:32:35,173 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:32:35,174 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:32:35,174 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:32:35,176 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:32:35,993 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:32:36,314 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:32:36,323 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:32:36,422 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:33:25,849 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:33:25,865 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:33:25,869 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:33:25,877 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:33:25,930 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:33:25,930 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:33:26,101 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:33:26,269 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:33:26,269 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:33:26,280 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:33:26,295 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:33:26,308 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:33:26,308 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:33:26,309 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:33:26,311 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:33:27,047 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:33:27,335 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:33:27,343 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:33:27,424 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:34:16,288 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:34:16,300 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:34:16,303 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:34:16,309 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:34:16,363 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:34:16,364 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:34:16,535 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:34:16,701 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:34:16,702 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:34:16,713 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:34:16,727 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:34:16,743 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:34:16,744 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:34:16,744 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:34:16,747 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:34:17,507 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:34:17,810 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:34:17,822 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:34:17,907 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:34:40,739 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:34:40,749 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:34:40,752 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:34:40,755 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:34:40,809 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:34:40,810 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:34:40,947 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:34:41,104 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:34:41,104 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:34:41,113 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:34:41,125 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:34:41,139 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:34:41,140 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:34:41,140 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:34:41,142 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:34:41,903 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:34:42,213 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:34:42,222 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:34:42,324 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:37:59,746 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:37:59,760 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:37:59,765 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:37:59,769 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:37:59,818 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:37:59,818 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:37:59,953 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:38:00,094 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:38:00,095 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:38:00,104 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:38:00,115 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:38:00,129 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:38:00,130 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:38:00,130 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:38:00,132 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:38:00,798 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:38:01,034 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:38:01,041 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:38:01,125 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:38:54,502 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 21:38:54,515 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 21:38:54,519 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 21:38:54,524 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 21:38:54,589 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 21:38:54,590 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 21:38:54,756 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:38:54,925 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 21:38:54,925 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 21:38:54,938 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 21:38:54,955 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 21:38:54,972 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 21:38:54,972 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 21:38:54,973 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 21:38:54,975 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 21:38:55,670 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 21:38:55,905 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 21:38:55,912 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 21:38:55,975 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 21:38:56,892 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-15 23:20:36,270 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 23:20:36,288 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 23:20:36,293 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 23:20:36,299 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 23:20:36,365 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 23:20:36,365 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 23:20:36,699 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:20:36,924 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 23:20:36,924 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 23:20:36,940 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:20:36,958 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 23:20:36,975 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 23:20:36,977 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 23:20:36,977 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 23:20:36,980 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 23:20:37,904 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 23:20:38,228 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 23:20:38,240 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 23:20:38,344 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 23:22:19,204 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 23:22:19,218 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 23:22:19,223 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 23:22:19,228 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 23:22:19,280 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 23:22:19,280 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 23:22:19,488 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:22:19,670 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 23:22:19,671 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 23:22:19,687 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:22:19,706 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 23:22:19,726 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 23:22:19,728 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 23:22:19,728 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 23:22:19,732 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 23:22:20,608 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 23:22:20,950 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 23:22:20,959 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 23:22:21,058 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 23:22:56,587 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 23:22:56,601 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 23:22:56,605 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 23:22:56,611 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 23:22:56,696 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 23:22:56,697 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 23:22:56,885 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:22:57,118 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 23:22:57,118 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 23:22:57,133 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:22:57,149 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 23:22:57,168 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 23:22:57,169 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 23:22:57,170 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 23:22:57,172 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 23:22:58,060 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 23:22:58,395 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 23:22:58,405 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 23:22:58,519 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 23:23:56,598 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 23:23:56,613 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 23:23:56,617 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 23:23:56,622 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 23:23:56,740 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 23:23:56,740 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 23:23:56,935 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:23:57,192 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 23:23:57,193 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 23:23:57,204 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:23:57,218 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 23:23:57,237 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 23:23:57,238 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 23:23:57,238 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 23:23:57,241 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 23:23:58,232 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 23:23:58,602 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 23:23:58,613 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 23:23:58,715 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 23:25:55,487 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 23:25:55,501 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 23:25:55,506 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 23:25:55,511 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 23:25:55,598 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 23:25:55,598 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 23:25:55,781 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:25:56,020 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 23:25:56,020 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 23:25:56,034 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:25:56,049 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 23:25:56,064 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 23:25:56,065 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 23:25:56,066 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 23:25:56,068 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 23:25:57,018 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 23:25:57,350 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 23:25:57,362 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 23:25:57,476 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 23:27:06,963 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-15 23:27:06,979 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-15 23:27:06,983 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-15 23:27:06,988 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-15 23:27:07,051 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-15 23:27:07,051 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-15 23:27:07,237 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:27:07,451 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-15 23:27:07,452 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-15 23:27:07,467 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-15 23:27:07,484 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-15 23:27:07,504 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-15 23:27:07,505 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-15 23:27:07,506 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-15 23:27:07,509 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-15 23:27:08,484 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-15 23:27:08,821 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-15 23:27:08,830 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-15 23:27:08,942 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-15 23:27:10,257 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]

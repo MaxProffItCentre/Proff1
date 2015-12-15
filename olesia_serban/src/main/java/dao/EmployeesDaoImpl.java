@@ -7,25 +7,26 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import data.Contractor;
+import data.Employees;
 import util.HibernateUtil;
 
-public class ContractorDaoImpl implements ContractorDao {
-	private static Logger log = Logger.getLogger(ContractorDaoImpl.class);
+public class EmployeesDaoImpl implements EmployeesDao {
+	private static Logger log = Logger.getLogger(EmployeesDaoImpl.class);
 
 	@Override
-	public Long create(Contractor contractor) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
+	public Long create(Employees employee) {
+		Session session = HibernateUtil.getSession();
 		Long id = null;
 		try {
 			session.beginTransaction();
-			id = (Long) session.save(contractor);
+			id = (Long) session.save(employee);
 			session.getTransaction().commit();
+
 		} catch (HibernateException e) {
 			log.error("Transaction failed!");
 			session.getTransaction().rollback();
 		} finally {
-			if (session != null) {
+			if (session.isOpen()) {
 				session.close();
 			}
 		}
@@ -33,31 +34,34 @@ public class ContractorDaoImpl implements ContractorDao {
 	}
 
 	@Override
-	public Contractor read(Long id) {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		Contractor contractor = null;
+	public Employees read(Long id) {
+		Session session = HibernateUtil.getSession();
+		Employees emp = null;
 		try {
-			contractor = (Contractor) session.get(Contractor.class, id);
+
+			emp = (Employees) session.get(Employees.class, id);
+
 		} catch (HibernateException e) {
-			log.error("Transaction faild!");
+			log.error("Transaction Failed!");
 		} finally {
-			if (session != null) {
+			if (session.isOpen()) {
 				session.close();
 			}
+
 		}
-		return contractor;
+		return emp;
 	}
 
 	@Override
-	public void update(Contractor contractor) {
+	public void update(Employees employee) {
 		Session session = HibernateUtil.getSession();
-
 		try {
 			session.beginTransaction();
-			session.update(contractor);
+			session.update(employee);
 			session.getTransaction().commit();
+
 		} catch (HibernateException e) {
-			log.error("Transaction Failed");
+			log.error("Transaction failed!");
 			session.getTransaction().rollback();
 		} finally {
 			if (session.isOpen()) {
@@ -67,15 +71,15 @@ public class ContractorDaoImpl implements ContractorDao {
 	}
 
 	@Override
-	public void delete(Contractor contractor) {
+	public void delete(Employees employee) {
 		Session session = HibernateUtil.getSession();
-
 		try {
 			session.beginTransaction();
-			session.delete(contractor);
+			session.delete(employee);
 			session.getTransaction().commit();
+
 		} catch (HibernateException e) {
-			log.error("Transaction Failed");
+			log.error("Transaction failed!");
 			session.getTransaction().rollback();
 		} finally {
 			if (session.isOpen()) {
@@ -87,17 +91,17 @@ public class ContractorDaoImpl implements ContractorDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Contractor> findAll() {
+	public List<Employees> findAll() {
 		Session session = HibernateUtil.getSession();
-		Query query = session.createQuery("FROM Contractor");
+		Query query = session.createQuery("FROM Employees");
 		return query.list();
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Contractor> findContractorsByBeginString(String begin) {
+	public List<Employees> findContractorsByBeginString(String begin) {
 		Session session = HibernateUtil.getSession();
-		Query query = session.createQuery("FROM Contractor C WHERE C.name LIKE '" + begin + "%'");
+		Query query = session.createQuery("FROM Employees E WHERE E.name LIKE '" + begin + "%'");
 		return query.list();
 	}
 

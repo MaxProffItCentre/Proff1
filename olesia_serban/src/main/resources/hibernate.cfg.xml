@@ -19,6 +19,7 @@
 
 		<mapping class="data.Product" />
 		<mapping class="data.Contractor"/>
+		<mapping class="data.Employees"/>
 
 	</session-factory>
 </hibernate-configuration>

@@ -40,31 +40,71 @@ public class ProductDaoImpl implements ProductDao {
 		} catch (HibernateException e) {
 			log.error("Transaction failed");
 		} finally {
-			session.close();
+			if (session != null)
+				session.close();
 		}
 		return product;
 	}
 
 	@Override
 	public void update(Product product) {
-		// update(product)
+		String nameTmp = product.getName();
+		Long idTmp = product.getId();
+		int codeTmp = product.getBarcode();
+		String str = "UPDATE product SET name = '" + nameTmp + "', code = " + codeTmp + " WHERE id = " + idTmp;
+		Session session = HibernateUtil.getSession();
+		try {
+			session.beginTransaction();
+			Query query = session.createSQLQuery(str);
+			query.executeUpdate();
+			session.getTransaction().commit();
+		} catch (HibernateException e) {
+			log.error("Transaction failed!");
+			session.getTransaction().rollback();
+		} finally {
+			if (session != null) {
+				session.close();
+			}
+		}
 	}
 
 	@Override
 	public void delete(Product product) {
-		// delete(product)
+		Long idTmp = product.getId();
+		Session session = HibernateUtil.getSession();
+		String str = "DELETE FROM product WHERE id = " + idTmp;
+		try {
+			session.beginTransaction();
+			Query query = session.createSQLQuery(str);
+			query.executeUpdate();
+			session.getTransaction().commit();
+
+		} catch (HibernateException e) {
+			log.error("Transaction failed");
+			session.getTransaction().rollback();
+		} finally {
+			if (session != null) {
+				session.close();
+			}
+		}
 	}
 
 	@Override
 	public List<Product> findAll() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		Query query = session.createQuery("from Product");
+
+		Query query = session.createQuery("FROM Product");
+
 		return query.list();
 	}
 
 	@Override
 	public List<Product> findProductsByBeginString(String begin) {
-		return null;
+		Session session = HibernateUtil.getSession();
+		String str = "FROM Product P WHERE P.name LIKE '" + begin + "%'";
+		Query query = session.createQuery(str);
+
+		return query.list();
 	}
 
 }
