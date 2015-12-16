@@ -9,18 +9,18 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="product")
+@Table(name = "product")
 public class Product {
 	@Id
 	@GeneratedValue(generator = "increment1")
 	@GenericGenerator(name = "increment1", strategy = "increment")
-	@Column(name="id")
+	@Column(name = "id")
 	private Long id;
-	
-	@Column(name="name")
+
+	@Column(name = "name")
 	private String name;
-	
-	@Column(name="code")
+
+	@Column(name = "code")
 	private int barcode = 0;
 
 	public Long getId() {
@@ -47,6 +47,11 @@ public class Product {
 		this.barcode = barcode;
 	}
 
+	public int getIntegerId() {
+		return id.intValue();
+
+	}
+
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", barcode=" + barcode + "]";
@@ -61,7 +66,7 @@ public class Product {
 	}
 
 	public Product(String name) {
-		this(name,0);
+		this(name, 0);
 	}
-	
+
 }
