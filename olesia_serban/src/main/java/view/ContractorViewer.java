@@ -35,7 +35,7 @@ public class ContractorViewer {
 	}
 	//changes List into ObservableList
 	public static ObservableList<ContractorViewer> 
-	createListOfContractorsFromData(List<Contractor> list) {
+	obsListFromData(List<Contractor> list) {
 		ObservableList<ContractorViewer> listObserve = FXCollections.observableArrayList();
 		list.forEach(contr -> listObserve.add(new ContractorViewer(contr.getId()
 				.intValue(), contr.getName())));

@@ -1,8 +1,10 @@
 package appFX;
 
 import dao.ContractorDaoImpl;
+import dao.EmployeesDaoImpl;
 import dao.ProductDaoImpl;
 import data.Contractor;
+import data.Employees;
 import data.Product;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -28,6 +30,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import view.ContractorViewer;
+import view.EmployeeViewer;
 import view.ProductViewer;
 
 public class MyApp extends Application {
@@ -199,7 +202,8 @@ public class MyApp extends Application {
 
 		ProductDaoImpl daoPr = new ProductDaoImpl();
 		// create Observable list for Table
-		ObservableList<ProductViewer> list2 = ProductViewer.createListOfProductsFromData(daoPr.findAll());
+
+		ObservableList<ProductViewer> list2 = ProductViewer.obsListFromData(daoPr.findAll());
 
 		table.setItems(list2);
 
@@ -257,7 +261,7 @@ public class MyApp extends Application {
 
 		ContractorDaoImpl contrDao = new ContractorDaoImpl();
 		// create Observable list for Table
-		ObservableList<ContractorViewer> list = ContractorViewer.createListOfContractorsFromData(contrDao.findAll());
+		ObservableList<ContractorViewer> list = ContractorViewer.obsListFromData(contrDao.findAll());
 
 		table.setItems(list);
 
@@ -297,7 +301,57 @@ public class MyApp extends Application {
 	}
 
 	public Group createGroupForTab4() {
-		return null;
+		// create group
+		Group group = new Group();
+		// create table
+		TableView<EmployeeViewer> table = new TableView<>();
+		table.setEditable(true);
+		
+		//create columns
+		TableColumn<EmployeeViewer, Integer> firstColumn = new TableColumn<>("id");
+		TableColumn<EmployeeViewer, String> secondColumn = new TableColumn<>("name");
+		TableColumn<EmployeeViewer, Integer> thirdColumn = new TableColumn<>("salary");
+		
+		firstColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+		secondColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+		thirdColumn.setCellValueFactory(new PropertyValueFactory<>("salary"));
+		
+		//taking Employees from data
+		EmployeesDaoImpl dao = new EmployeesDaoImpl();
+		ObservableList<EmployeeViewer> list = EmployeeViewer.obsListFromData(dao.findAll());
+		
+		//add columns
+		table.getColumns().add(firstColumn);
+		table.getColumns().add(secondColumn);
+		table.getColumns().add(thirdColumn);
+		
+		//add rows
+		table.setItems(list);
+		
+		//set name column on edit
+		secondColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+		secondColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<EmployeeViewer,String>>() {
+
+			@Override
+			public void handle(CellEditEvent<EmployeeViewer, String> event) {
+				String newValue = event.getNewValue();
+				
+				int row = event.getTablePosition().getRow();
+				
+				//Employee id for updating
+				int id = event.getTableView().getItems().get(row).getId();
+				Employees emp = dao.read((long)id);
+				emp.setName(newValue);
+				dao.update(emp);
+				
+				//change name in column
+				event.getTableView().getItems().get(row).setName(newValue);
+			}
+		});
+		
+		group.getChildren().add(table);
+		
+		return group;
 
 	}
 

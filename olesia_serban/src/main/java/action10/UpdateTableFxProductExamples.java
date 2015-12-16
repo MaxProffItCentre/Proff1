@@ -52,7 +52,7 @@ public class UpdateTableFxProductExamples extends Application {
 		
 		ProductDaoImpl daoPr = new ProductDaoImpl();
 		//create Observable list for Table
-		ObservableList<ProductViewer> list2 = ProductViewer.createListOfProductsFromData(daoPr.findAll());
+		ObservableList<ProductViewer> list2 = ProductViewer.obsListFromData(daoPr.findAll());
 		
 		table.setItems(list2);
 

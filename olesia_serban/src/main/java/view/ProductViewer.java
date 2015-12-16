@@ -38,7 +38,7 @@ public class ProductViewer {
     }  
     
     //changes List into ObservableList
-    public static ObservableList<ProductViewer> createListOfProductsFromData(List<Product> list){
+    public static ObservableList<ProductViewer> obsListFromData(List<Product> list){
     	ObservableList<ProductViewer> listObserve = FXCollections.observableArrayList();
     	for (int i = 0; i < list.size(); i++) {
     		Product pr = list.get(i);
