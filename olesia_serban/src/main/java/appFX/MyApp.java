@@ -191,8 +191,6 @@ public class MyApp extends Application {
 	public Group createGroupForTab2() {
 		// create group
 		Group group = new Group();
-		
-		
 
 		// create table
 		TableView<ProductViewer> table = new TableView<ProductViewer>();
@@ -283,26 +281,25 @@ public class MyApp extends Application {
 		addBtn.setTooltip(btnTip);
 		// hBox for fields
 		HBox boxik = new HBox();
-		
+
 		boxik.setLayoutX(250);
 		boxik.setLayoutY(350);
 		boxik.setSpacing(20);
-		//fields for adding
+		// fields for adding
 		TextField nameField = new TextField();
 		nameField.setMaxWidth(90);
 		Tooltip tooltipName = new Tooltip();
-		tooltipName.setText("Write new product name");
+		tooltipName.setText("Write Product name");
 		nameField.setTooltip(tooltipName);
-		
-		
+
 		TextField codeField = new IntegerTextField();
 		codeField.setMaxWidth(50);
 		Tooltip tooltipCode = new Tooltip();
-		tooltipCode.setText("Write new product code and press Enter");
+		tooltipCode.setText("Write Product code and press Enter");
 		codeField.setTooltip(tooltipCode);
-		
-//		boxik.getChildren().addAll(nameField, codeField);
-		//button on action
+
+		// boxik.getChildren().addAll(nameField, codeField);
+		// button on action
 		addBtn.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -310,18 +307,20 @@ public class MyApp extends Application {
 
 				boxik.getChildren().addAll(nameField, codeField);
 				group.getChildren().add(boxik);
-								
+
 				addBtn.setMouseTransparent(true);
 
 			}
 		});
-		//second field on action
+		// second field on action
 		codeField.setOnAction(new EventHandler<ActionEvent>() {
-			//add new item to data and table View
+			// add new item to data and table View
 			@Override
 			public void handle(ActionEvent event) {
 				String str = nameField.getText();
+				if(str.equals("")) return;
 				String tmp = codeField.getText();
+				if(tmp.equals("")) return;
 				int code = Integer.parseInt(tmp);
 				Product pr = new Product(str, code);
 				daoPr.create(pr);
@@ -329,17 +328,13 @@ public class MyApp extends Application {
 				table.getItems().add(prView);
 				nameField.clear();
 				codeField.clear();
-//				group.getChildren().remove(boxik);
-				
-				
+				// group.getChildren().remove(boxik);
 
 			}
 		});
-		//add button to group
+		// add button to group
 		group.getChildren().add(addBtn);
-//		group.getChildren().add(boxik);
-		
-		
+		// group.getChildren().add(boxik);
 
 		return group;
 
@@ -349,9 +344,9 @@ public class MyApp extends Application {
 
 		// create group
 		Group group = new Group();
-		//create border pane
-//		BorderPane border = new BorderPane();
-		
+		// create border pane
+		// BorderPane border = new BorderPane();
+
 		// create table
 		TableView<ContractorViewer> table = new TableView<ContractorViewer>();
 		table.setEditable(true);
@@ -400,9 +395,9 @@ public class MyApp extends Application {
 			}
 		});
 
-//		 add table to group
+		// add table to group
 		group.getChildren().add(table);
-//		border.setCenter(table);
+		// border.setCenter(table);
 
 		return group;
 
