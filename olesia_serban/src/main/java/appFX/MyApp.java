@@ -25,7 +25,6 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
@@ -54,7 +53,7 @@ public class MyApp extends Application {
 
 	public Scene createScene() {
 		TabPane tabPane = new TabPane();
-
+		
 		Tab tab1 = new Tab("Main page");
 		tab1.setContent(createGroupForTab1());
 		tab1.setClosable(false);
@@ -208,13 +207,23 @@ public class MyApp extends Application {
 		firstNameCol.setCellValueFactory(new PropertyValueFactory<ProductViewer, Integer>("id"));
 		secondNameCol.setCellValueFactory(new PropertyValueFactory<ProductViewer, String>("name"));
 		thirdNameCol.setCellValueFactory(new PropertyValueFactory<ProductViewer, Integer>("code"));
-
+		// thread for data connecting
 		ProductDaoImpl daoPr = new ProductDaoImpl();
-		// create Observable list for Table
+		Thread thr = new Thread(new Runnable() {
 
-		ObservableList<ProductViewer> list2 = ProductViewer.obsListFromData(daoPr.findAll());
+			@Override
+			public void run() {
 
-		table.setItems(list2);
+				// create Observable list for Table
+
+				ObservableList<ProductViewer> list2 = ProductViewer.obsListFromData(daoPr.findAll());
+
+				table.setItems(list2);
+
+			}
+		});
+
+		thr.start();
 
 		// table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol);
 		table.getColumns().add(firstNameCol);
@@ -297,9 +306,20 @@ public class MyApp extends Application {
 		Tooltip tooltipCode = new Tooltip();
 		tooltipCode.setText("Write Product code and press Enter");
 		codeField.setTooltip(tooltipCode);
+		// Labels
+		HBox labelBox = new HBox();
+		labelBox.setLayoutX(250);
+		labelBox.setLayoutY(330);
+		labelBox.setSpacing(80);
+
+		Label lbName = new Label("name:");
+		lbName.setMaxSize(90, 20);
+		Label lbCode = new Label("code:");
+		lbCode.setMaxSize(50, 20);
 
 		// boxik.getChildren().addAll(nameField, codeField);
 		// button on action
+
 		addBtn.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -307,6 +327,9 @@ public class MyApp extends Application {
 
 				boxik.getChildren().addAll(nameField, codeField);
 				group.getChildren().add(boxik);
+
+				labelBox.getChildren().addAll(lbName, lbCode);
+				group.getChildren().add(labelBox);
 
 				addBtn.setMouseTransparent(true);
 
@@ -318,11 +341,14 @@ public class MyApp extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				String str = nameField.getText();
-				if(str.equals("")) return;
+				if (str.equals(""))
+					return;
 				String tmp = codeField.getText();
-				if(tmp.equals("")) return;
+				if (tmp.equals(""))
+					return;
 				int code = Integer.parseInt(tmp);
 				Product pr = new Product(str, code);
+
 				daoPr.create(pr);
 				ProductViewer prView = new ProductViewer(pr.getIntegerId(), pr.getName(), pr.getBarcode());
 				table.getItems().add(prView);
@@ -363,13 +389,28 @@ public class MyApp extends Application {
 
 		ContractorDaoImpl contrDao = new ContractorDaoImpl();
 		// create Observable list for Table
-		ObservableList<ContractorViewer> list = ContractorViewer.obsListFromData(contrDao.findAll());
 
-		table.setItems(list);
+		Thread thr = new Thread(new Runnable() {
 
+			@Override
+			public void run() {
+				ObservableList<ContractorViewer> list = ContractorViewer.obsListFromData(contrDao.findAll());
+				table.setItems(list);
+			}
+		});
+		thr.start();
 		// table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol);
-		table.getColumns().add(firstNameCol);
-		table.getColumns().add(secondNameCol);
+		Thread th2 = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+
+				table.getColumns().add(firstNameCol);
+				table.getColumns().add(secondNameCol);
+
+			}
+		});
+		th2.start();
 
 		// set name on edit
 		secondNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -424,15 +465,28 @@ public class MyApp extends Application {
 
 		// taking Employees from data
 		EmployeesDaoImpl dao = new EmployeesDaoImpl();
-		ObservableList<EmployeeViewer> list = EmployeeViewer.obsListFromData(dao.findAll());
 
+		Thread thr = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				ObservableList<EmployeeViewer> list = EmployeeViewer.obsListFromData(dao.findAll());
+				table.setItems(list);
+			}
+		});
+		thr.start();
 		// add columns
-		table.getColumns().add(firstColumn);
-		table.getColumns().add(secondColumn);
-		table.getColumns().add(thirdColumn);
+		Thread th2 = new Thread(new Runnable() {
 
-		// add rows
-		table.setItems(list);
+			@Override
+			public void run() {
+				table.getColumns().add(firstColumn);
+				table.getColumns().add(secondColumn);
+				table.getColumns().add(thirdColumn);
+
+			}
+		});
+		th2.start();
 
 		// set name column on edit
 		secondColumn.setCellFactory(TextFieldTableCell.forTableColumn());
