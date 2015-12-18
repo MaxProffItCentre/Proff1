@@ -48,6 +48,7 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public void update(Product product) {
+
 		String nameTmp = product.getName();
 		Long idTmp = product.getId();
 		int codeTmp = product.getBarcode();
@@ -66,6 +67,7 @@ public class ProductDaoImpl implements ProductDao {
 				session.close();
 			}
 		}
+
 	}
 
 	@Override

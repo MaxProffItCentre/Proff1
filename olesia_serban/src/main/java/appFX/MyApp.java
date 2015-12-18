@@ -8,6 +8,7 @@ import data.Employees;
 import data.Product;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -20,15 +21,19 @@ import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.converter.IntegerStringConverter;
+import util.HibernateUtil;
 import view.ContractorViewer;
 import view.EmployeeViewer;
 import view.ProductViewer;
@@ -36,7 +41,7 @@ import view.ProductViewer;
 public class MyApp extends Application {
 	public static void main(String[] args) {
 		launch(args);
-
+		HibernateUtil.getSessionFactory().close();
 	}
 
 	@Override
@@ -186,10 +191,16 @@ public class MyApp extends Application {
 	public Group createGroupForTab2() {
 		// create group
 		Group group = new Group();
+		
+		
 
 		// create table
 		TableView<ProductViewer> table = new TableView<ProductViewer>();
 		table.setEditable(true);
+		table.setPrefWidth(450);
+		table.setPrefHeight(300);
+		table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+		table.setLayoutX(100);
 
 		// create table columns
 		TableColumn<ProductViewer, Integer> firstNameCol = new TableColumn<ProductViewer, Integer>("id");
@@ -230,14 +241,105 @@ public class MyApp extends Application {
 				Product pr = daoPr.read(idLong);
 				pr.setName(str);
 				daoPr.update(pr);
-				// change value of name i row
+				// change value of name in row
 				event.getTableView().getItems().get(activeRow).setName(str);
+
+			}
+		});
+		// set code on edit
+		thirdNameCol.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+		thirdNameCol.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<ProductViewer, Integer>>() {
+
+			@Override
+			public void handle(CellEditEvent<ProductViewer, Integer> event) {
+				// get new value for code
+				int val = event.getNewValue();
+				// find active row
+				int activeRow = event.getTablePosition().getRow();
+				// find id of product for data
+				int id = event.getTableView().getItems().get(activeRow).getId();
+				// cast id into Long value
+				Long idLong = (long) id;
+				// find product in data and update it
+				Product pr = daoPr.read(idLong);
+				pr.setBarcode(val);
+				daoPr.update(pr);
+				// change value of code in row
+				event.getTableView().getItems().get(activeRow).setCode(val);
+				;
 
 			}
 		});
 
 		// add table to group
 		group.getChildren().add(table);
+
+		// create add button
+		Button addBtn = new Button("add new product");
+		addBtn.setLayoutX(100);
+		addBtn.setLayoutY(350);
+		Tooltip btnTip = new Tooltip();
+		btnTip.setText("press to add new Product");
+		addBtn.setTooltip(btnTip);
+		// hBox for fields
+		HBox boxik = new HBox();
+		
+		boxik.setLayoutX(250);
+		boxik.setLayoutY(350);
+		boxik.setSpacing(20);
+		//fields for adding
+		TextField nameField = new TextField();
+		nameField.setMaxWidth(90);
+		Tooltip tooltipName = new Tooltip();
+		tooltipName.setText("Write new product name");
+		nameField.setTooltip(tooltipName);
+		
+		
+		TextField codeField = new IntegerTextField();
+		codeField.setMaxWidth(50);
+		Tooltip tooltipCode = new Tooltip();
+		tooltipCode.setText("Write new product code and press Enter");
+		codeField.setTooltip(tooltipCode);
+		
+//		boxik.getChildren().addAll(nameField, codeField);
+		//button on action
+		addBtn.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+
+				boxik.getChildren().addAll(nameField, codeField);
+				group.getChildren().add(boxik);
+								
+				addBtn.setMouseTransparent(true);
+
+			}
+		});
+		//second field on action
+		codeField.setOnAction(new EventHandler<ActionEvent>() {
+			//add new item to data and table View
+			@Override
+			public void handle(ActionEvent event) {
+				String str = nameField.getText();
+				String tmp = codeField.getText();
+				int code = Integer.parseInt(tmp);
+				Product pr = new Product(str, code);
+				daoPr.create(pr);
+				ProductViewer prView = new ProductViewer(pr.getIntegerId(), pr.getName(), pr.getBarcode());
+				table.getItems().add(prView);
+				nameField.clear();
+				codeField.clear();
+//				group.getChildren().remove(boxik);
+				
+				
+
+			}
+		});
+		//add button to group
+		group.getChildren().add(addBtn);
+//		group.getChildren().add(boxik);
+		
+		
 
 		return group;
 
@@ -247,10 +349,15 @@ public class MyApp extends Application {
 
 		// create group
 		Group group = new Group();
-
+		//create border pane
+//		BorderPane border = new BorderPane();
+		
 		// create table
 		TableView<ContractorViewer> table = new TableView<ContractorViewer>();
 		table.setEditable(true);
+		table.setPrefWidth(450);
+		table.setPrefHeight(300);
+		table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
 		// create table columns
 		TableColumn<ContractorViewer, Integer> firstNameCol = new TableColumn<ContractorViewer, Integer>("id");
@@ -293,8 +400,9 @@ public class MyApp extends Application {
 			}
 		});
 
-		// add table to group
+//		 add table to group
 		group.getChildren().add(table);
+//		border.setCenter(table);
 
 		return group;
 
@@ -306,51 +414,75 @@ public class MyApp extends Application {
 		// create table
 		TableView<EmployeeViewer> table = new TableView<>();
 		table.setEditable(true);
-		
-		//create columns
+		table.setPrefWidth(450);
+		table.setPrefHeight(300);
+		table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+		// create columns
 		TableColumn<EmployeeViewer, Integer> firstColumn = new TableColumn<>("id");
 		TableColumn<EmployeeViewer, String> secondColumn = new TableColumn<>("name");
 		TableColumn<EmployeeViewer, Integer> thirdColumn = new TableColumn<>("salary");
-		
+
 		firstColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
 		secondColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 		thirdColumn.setCellValueFactory(new PropertyValueFactory<>("salary"));
-		
-		//taking Employees from data
+
+		// taking Employees from data
 		EmployeesDaoImpl dao = new EmployeesDaoImpl();
 		ObservableList<EmployeeViewer> list = EmployeeViewer.obsListFromData(dao.findAll());
-		
-		//add columns
+
+		// add columns
 		table.getColumns().add(firstColumn);
 		table.getColumns().add(secondColumn);
 		table.getColumns().add(thirdColumn);
-		
-		//add rows
+
+		// add rows
 		table.setItems(list);
-		
-		//set name column on edit
+
+		// set name column on edit
 		secondColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-		secondColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<EmployeeViewer,String>>() {
+		secondColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<EmployeeViewer, String>>() {
 
 			@Override
 			public void handle(CellEditEvent<EmployeeViewer, String> event) {
 				String newValue = event.getNewValue();
-				
+
 				int row = event.getTablePosition().getRow();
-				
-				//Employee id for updating
+
+				// Employee id for updating
 				int id = event.getTableView().getItems().get(row).getId();
-				Employees emp = dao.read((long)id);
+				Employees emp = dao.read((long) id);
 				emp.setName(newValue);
 				dao.update(emp);
-				
-				//change name in column
+
+				// change name in column
 				event.getTableView().getItems().get(row).setName(newValue);
 			}
 		});
-		
+		// set salary on edit
+		thirdColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+		thirdColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<EmployeeViewer, Integer>>() {
+
+			@Override
+			public void handle(CellEditEvent<EmployeeViewer, Integer> event) {
+				int newValue = event.getNewValue();
+
+				int row = event.getTablePosition().getRow();
+
+				// Employee id for updating
+				int id = event.getTableView().getItems().get(row).getId();
+				Employees emp = dao.read((long) id);
+				emp.setSalary(newValue);
+				dao.update(emp);
+
+				// change name in column
+				event.getTableView().getItems().get(row).setSalary(newValue);
+
+			}
+		});
+
 		group.getChildren().add(table);
-		
+
 		return group;
 
 	}
