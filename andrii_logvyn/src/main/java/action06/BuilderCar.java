@@ -1,5 +1,7 @@
 package action06;
 
+import java.util.ArrayList;
+
 public class BuilderCar {
 	private int number;
 	private String color;
@@ -48,6 +50,8 @@ public class BuilderCar {
 			return this;
 		}
 		
+		
+		
 		public BuilderCar build(){
 			return BuilderCar.this;
 		}
@@ -58,6 +62,7 @@ public class BuilderCar {
 	public static void main(String[] args) {
 		BuilderCar car = new BuilderCar().newBuild().setNumber(1111).setColor("red").build();
 		System.out.println(car.toString());
+	
 	}
 }
 

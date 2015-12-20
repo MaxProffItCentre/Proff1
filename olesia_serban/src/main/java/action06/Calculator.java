@@ -2,6 +2,7 @@ package action06;
 
 
 
+import appFX.IntegerTextField;
 import javafx.application.Application;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -40,17 +41,17 @@ public class Calculator extends Application {
 		
 		
 		// text field for the first number
-		TextField number1 = new TextField();
+		TextField number1 = new IntegerTextField();
 		number1.setMaxSize(100, 20);
 		number1.setEditable(true);
 		
 		// text field for operation sign
-		TextField operation = new TextField();
+		TextField operation = new MathOperationTextField();
 		operation.setMaxSize(50, 20);
 		operation.setEditable(true);
 
 		// text field for the second number
-		TextField number2 = new TextField();
+		TextField number2 = new IntegerTextField();
 		number2.setMaxSize(100, 20);
 		number2.setEditable(true);
 
@@ -100,11 +101,25 @@ public class Calculator extends Application {
 			}
 
 			public void handle(Event event) {
+				if(action.getText().equals("")|| num1.getText().equals("")||num2.getText().equals("")){
+					result.setText("Invalid Operation");
+					return;
+				}
 				result.setText(result(num1.getText(), num2.getText(), action.getText()));
-				actiontarget.setFill(Color.FIREBRICK);
-		        actiontarget.setText("=)");
-		        actiontarget.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
 				System.out.println("=)");
+		        Thread th = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						actiontarget.setFill(Color.FIREBRICK);
+				        actiontarget.setText("=)");
+				        actiontarget.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
+						
+						
+					}
+				});
+		        th.start();
+				
 
 			}
 
