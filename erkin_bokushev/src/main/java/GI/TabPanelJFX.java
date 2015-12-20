@@ -51,7 +51,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 	ProductDaoImpl prodImpl = new ProductDaoImpl();
 	List<Product> productsDB;
 	ObservableList<ProductViewer> list;
-	private static Stage primaryStage = new Stage();
+	public static Stage primaryStage = new Stage();
 
 	public static void main(String[] args) {
 		launch(args);
@@ -71,17 +71,19 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 		TabPane tabPane = new TabPane();
 		//Вкладки
 		Tab tab1 = new Tab("Product");
-		tab1.setContent(createPane1());
+		tab1.setContent(createPane());
 		Tab tab2 = new Tab("Contructors");
+		tab2.setContent(ContructorsTab.createPane());
 		Tab tab3 = new Tab("Employees");
+		tab3.setContent(EmployeesTab.createPane());
 		
 		tabPane.getTabs().addAll(tab1, tab2, tab3);
-		Scene scene = new Scene(tabPane, 940, 600);
+		Scene scene = new Scene(tabPane, 1040, 600);
 		
 		return scene;
 	}
 	
-	public Group createPane1 () {
+	public Group createPane () {
 		Group group = new Group();
 		VBox vbox = new VBox();
 		Label label = new Label("List of products");
@@ -114,31 +116,34 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 		  	nameProduct.setPromptText("new name of product");
 			TextField codeProduct = new TextField();
 			codeProduct.setPromptText("new code of product");
-			Text textEdit = new Text("Edit operation is open");
-			textEdit.setFont(new Font(15));
 			Button add = new Button("Add");
 			Button close = new Button("Close");
-			
+			Text textEdit = new Text("Edit operation is open");
+			textEdit.setFont(new Font(15));
+		
 		//Создание кнопок 
 		HBox btns = new HBox();
 		btns.setStyle("-fx-background-color:#E6EFF5"); 
 		btns.setMinHeight(60);
 		Button[] buttons = new Button[12];
-		String [] commands = new String[]{"HELP", "SAVE", "", "EDIT", "", "", "ADD POSITION", "DELETE POSITION", "", "EXIT", "IMPORT", "EXPORT"};
+		String [] commands = new String[]{"HELP", "SAVE", "", "EDIT", "", "", "ADD", "DELETE", "REFRESH", "EXIT", "IMPORT", "EXPORT"};
 		for (int i = 0; i<buttons.length; i++) {
 			buttons[i] = new Button("F" +Integer.toString(i+1) + "\n" + commands[i]);
 			buttons[i].setTooltip(new Tooltip(commands[i]));
 			buttons[i].setStyle("-fx-background-color:#C2CCCF");
-			buttons[i].setMinSize(50, 50);
+			buttons[i].setMaxSize(70, 60);
+			buttons[i].setMinSize(70, 60);
 		}
 		btns.getChildren().addAll(buttons);
 		btns.setSpacing(15);
+		btns.setPadding(new Insets(10, 0, 0, 0));
 		btns.setAlignment(Pos.CENTER);
 		
 		//		Добавления таблицы и кнопок на панель
 		vbox.getChildren().setAll(table, btns);
 		vbox.setMinWidth(800);
 		vbox.setMaxHeight(500);
+//		vbox.setAlignment(Pos.CENTER);
 		vbox.setPadding(new Insets(100, 20, 20, 20));
 		
 		//==========EDIT============================
@@ -235,7 +240,6 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 				});
 			}
 		});
-		  
 		//==========DELETE POSITION============================
 		buttons[7].setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -256,6 +260,16 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 				}
 			}
 		});	
+		//==========REFRESH============================
+		buttons[8].setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				list = getList();
+				table.setItems(list);
+			}
+		});
 		//==========SAVE=============================================	
 		list = table.getItems();
 		buttons[1].setOnAction(new EventHandler<ActionEvent>() {
