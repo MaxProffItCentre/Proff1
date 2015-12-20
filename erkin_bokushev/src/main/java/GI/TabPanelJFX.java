@@ -331,7 +331,6 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 			stage.setTitle("Alert");
 			stage.setScene(sc(message));
 			stage.show();
-			
 		}
 		public Scene sc (String message) {
 			GridPane gp = new GridPane();
