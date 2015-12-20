@@ -185,8 +185,6 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 			}
 		});
 //		==========ADD POSITION============================
-		
-		
 		buttons[6].setOnAction(new EventHandler<ActionEvent>() {
 			int i = 0;
 			@Override
@@ -224,12 +222,10 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 								e.printStackTrace();
 							}
 						}
-					}
-					
+					}	
 				});
 				i++;
 				close.setOnAction(new EventHandler<ActionEvent>() {
-
 					@Override
 					public void handle(ActionEvent event) {
 						// TODO Auto-generated method stub
@@ -242,7 +238,6 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 		  
 //		==========DELETE POSITION============================
 		buttons[7].setOnAction(new EventHandler<ActionEvent>() {
-
 			@Override
 			public void handle(ActionEvent event) {
 				int selectedInd = table.getSelectionModel().getSelectedIndex(); 
@@ -260,9 +255,8 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 					}
 				}
 			}
-		});
-			
-//		==========SAVE============================	
+		});	
+//		==========SAVE=============================================	
 		list = table.getItems();
 		buttons[1].setOnAction(new EventHandler<ActionEvent>() {
 
@@ -280,8 +274,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 				}
 			}
 		});
-//		==========EXIT============================
-		
+//		==========EXIT=====================================================
 		buttons[9].setOnAction(eventExit-> TabPanelJFX.primaryStage.close());
 			
 //		Добавление панели в группу
@@ -356,7 +349,6 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 		}
 	}
 	
-
 	@Override
 	public void handle(MouseEvent event) {
 		// TODO Auto-generated method stub
