@@ -135,7 +135,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 		btns.setSpacing(15);
 		btns.setAlignment(Pos.CENTER);
 		
-//		Добавления таблицы и кнопок на панель
+		//		Добавления таблицы и кнопок на панель
 		vbox.getChildren().setAll(table, btns);
 		vbox.setMinWidth(800);
 		vbox.setMaxHeight(500);
@@ -184,7 +184,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 			  i++;
 			}
 		});
-//		==========ADD POSITION============================
+		//==========ADD POSITION============================
 		buttons[6].setOnAction(new EventHandler<ActionEvent>() {
 			int i = 0;
 			@Override
@@ -236,7 +236,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 			}
 		});
 		  
-//		==========DELETE POSITION============================
+		//==========DELETE POSITION============================
 		buttons[7].setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
@@ -256,7 +256,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 				}
 			}
 		});	
-//		==========SAVE=============================================	
+		//==========SAVE=============================================	
 		list = table.getItems();
 		buttons[1].setOnAction(new EventHandler<ActionEvent>() {
 
@@ -274,16 +274,16 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 				}
 			}
 		});
-//		==========EXIT=====================================================
+		//==========EXIT=====================================================
 		buttons[9].setOnAction(eventExit-> TabPanelJFX.primaryStage.close());
 			
-//		Добавление панели в группу
+		//		Добавление панели в группу
 		group.getChildren().addAll(label, vbox, hb);
 		
 		return group;
 	}
 	
-	// Список данных с базы
+		// Список данных с базы
 	public ObservableList<ProductViewer> getList () {
 		productsDB = prodImpl.findAll();
 		ObservableList<ProductViewer> listProducts = FXCollections.observableArrayList();
@@ -294,7 +294,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 		}
 		return listProducts;
 	}
-	//Сохранение в базу данных
+		//Сохранение в базу данных
 	public void setList (ObservableList<ProductViewer>list) {
 		if (list.size() == productsDB.size()) {
 		for (int i =0; i<list.size(); i++) {
