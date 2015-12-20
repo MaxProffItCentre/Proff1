@@ -2,12 +2,13 @@ package GI;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observer;
 import java.util.function.Consumer;
 
-import org.omg.CORBA.CharSeqHolder;
-
-import dao.ProductDaoImpl;
+import GI.TabPanelJFX.MyAlert;
+import dao.ContructorDaoImpl;
+import dao.EmployeeDaoImpl;
+import data.Contructor;
+import data.Employee;
 import data.Product;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -20,87 +21,48 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.SelectionModel;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.TableColumn.CellEditEvent;
-import javafx.scene.control.TablePosition;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.BorderWidths;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.StringConverter;
 import javafx.util.converter.IntegerStringConverter;
-import util.HibernateUtil;
+import view.ContructorViewer;
+import view.EmployeeViewer;
 import view.ProductViewer;
 
-public class TabPanelJFX extends Application implements EventHandler<MouseEvent>{
-	ProductDaoImpl prodImpl = new ProductDaoImpl();
-	List<Product> productsDB;
-	ObservableList<ProductViewer> list;
-	public static Stage primaryStage = new Stage();
-
-	public static void main(String[] args) {
-		launch(args);
-		HibernateUtil.getSessionFactory().close();
-	}
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		// TODO Auto-generated method stub
-		primaryStage.setTitle("Table");
-		primaryStage.setScene(createScene());
-		primaryStage.show();
-		this.primaryStage = primaryStage;
-	}
+public class EmployeesTab {
+	static EmployeeDaoImpl emplImpl = new EmployeeDaoImpl();
+	static List<Employee> employeesDB;
+	static ObservableList<EmployeeViewer> list;
 	
-	public Scene createScene () {
-		TabPane tabPane = new TabPane();
-		//Вкладки
-		Tab tab1 = new Tab("Product");
-		tab1.setContent(createPane());
-		Tab tab2 = new Tab("Contructors");
-		tab2.setContent(ContructorsTab.createPane());
-		Tab tab3 = new Tab("Employees");
-		tab3.setContent(EmployeesTab.createPane());
-		
-		tabPane.getTabs().addAll(tab1, tab2, tab3);
-		Scene scene = new Scene(tabPane, 1040, 600);
-		
-		return scene;
-	}
-	
-	public Group createPane () {
+	public static Group createPane () {
 		Group group = new Group();
 		VBox vbox = new VBox();
-		Label label = new Label("List of products");
+		Label label = new Label("List of employees");
 		label.setFont(new Font("Arial", 20));
 		label.setPadding(new Insets(50, 0, 0, 100));
 		//Create TableView
-		TableView<ProductViewer> table = new TableView<ProductViewer>();
+		TableView<EmployeeViewer> table = new TableView<EmployeeViewer>();
 		table.setEditable(true);
 		table.setMinWidth(800);
 		table.setMaxHeight(500);
-		TableColumn<ProductViewer, Integer> firstNameCol = new TableColumn<ProductViewer, Integer>("id");
-		TableColumn<ProductViewer, String> secondNameCol = new TableColumn<ProductViewer, String>("name");
-		TableColumn<ProductViewer, Integer> thirdNameCol = new TableColumn<ProductViewer, Integer>("code");
-		  firstNameCol.setCellValueFactory(new PropertyValueFactory<ProductViewer, Integer>("id"));
+		TableColumn<EmployeeViewer, Integer> firstNameCol = new TableColumn<EmployeeViewer, Integer>("id");
+		TableColumn<EmployeeViewer, String> secondNameCol = new TableColumn<EmployeeViewer, String>("name");
+		TableColumn<EmployeeViewer, Integer> thirdNameCol = new TableColumn<EmployeeViewer, Integer>("salary");
+		  firstNameCol.setCellValueFactory(new PropertyValueFactory<EmployeeViewer, Integer>("id"));
 		  firstNameCol.setMinWidth(100);
-		  secondNameCol.setCellValueFactory(new PropertyValueFactory<ProductViewer, String>("name"));
+		  secondNameCol.setCellValueFactory(new PropertyValueFactory<EmployeeViewer, String>("name"));
 		  secondNameCol.setMinWidth(400);
-		  thirdNameCol.setCellValueFactory(new PropertyValueFactory<ProductViewer, Integer>("code"));
+		  thirdNameCol.setCellValueFactory(new PropertyValueFactory<EmployeeViewer, Integer>("salary"));
 		  thirdNameCol.setMinWidth(100);
 		  
 		  //Добавление колонок в таблицу
@@ -111,10 +73,10 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 		  HBox hb = new HBox();
 		  hb.setPadding(new Insets(40, 0, 20, 300));
 		  hb.setSpacing(10);
-		  	TextField nameProduct = new TextField();
-		  	nameProduct.setPromptText("new name of product");
-			TextField codeProduct = new TextField();
-			codeProduct.setPromptText("new code of product");
+		  	TextField nameEmployee = new TextField();
+		  	nameEmployee.setPromptText("new name of employee");
+			TextField salEmployee = new TextField();
+			salEmployee.setPromptText("new salary of employee");
 			Button add = new Button("Add");
 			Button close = new Button("Close");
 			Text textEdit = new Text("Edit operation is open");
@@ -156,12 +118,12 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 				 //Открытие на редактирование колонка NAME
 			  secondNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
 			  	//Cобытие на изменение ячейки
-			  secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<ProductViewer, String>>() {
+			  secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<EmployeeViewer, String>>() {
 				   @Override
-				   public void handle(CellEditEvent<ProductViewer, String> value) {
+				   public void handle(CellEditEvent<EmployeeViewer, String> value) {
 				    int activeRow = value.getTablePosition().getRow();
 				    if (value.getNewValue().isEmpty()) {
-				    	MyAlert er = new MyAlert ("ERROR! Please try again." + "\n" +  "Input name of product");
+				    	MyAlert er = new MyAlert ("ERROR! Please try again." + "\n" +  "Input name of employee");
 						Stage primaryStage = new Stage();
 						try {
 							er.start(primaryStage);
@@ -178,11 +140,11 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 			  	//Открытие на редактирование колонка CODE
 			  thirdNameCol.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
 			  //Cобытие на изменение ячейки
-			  thirdNameCol.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<ProductViewer, Integer>>() {	
+			  thirdNameCol.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<EmployeeViewer, Integer>>() {	
 				@Override
-				public void handle(CellEditEvent<ProductViewer, Integer> value) {
+				public void handle(CellEditEvent<EmployeeViewer, Integer> value) {
 					int activeRow = value.getTablePosition().getRow();
-						value.getTableView().getItems().get(activeRow).setCode(value.getNewValue());
+						value.getTableView().getItems().get(activeRow).setSalary(value.getNewValue());
 				}
 			  }); 
 			  i++;
@@ -194,15 +156,15 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
-			if (i==0) hb.getChildren().addAll(nameProduct, codeProduct, add, close);
+			if (i==0) hb.getChildren().addAll(nameEmployee, salEmployee, add, close);
 			
 				add.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
 						// TODO Auto-generated method stub
-						if (!nameProduct.getText().isEmpty()) {
-							if (!codeProduct.getText().matches("\\d" +"\\d" + "\\d" + "\\d")) {
-								MyAlert  er = new MyAlert ("ERROR! Please try again." + "\n" +  "Сode must have 4 digits");
+						if (!nameEmployee.getText().isEmpty()) {
+							if (salEmployee.getText().isEmpty()) {
+								MyAlert  er = new MyAlert ("ERROR! Please try again." + "\n" +  "Salary not be null");
 								Stage primaryStage = new Stage();
 								try {
 									er.start(primaryStage);
@@ -211,13 +173,27 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 									e1.printStackTrace();
 								}	
 							}else {
-								int cod = Integer.parseInt(codeProduct.getText());
-								list.add(new ProductViewer(list.size()+1, nameProduct.getText(), cod));
-								nameProduct.clear();
-								codeProduct.clear();
+								try {
+									Integer.parseInt(salEmployee.getText());
+								} catch (NumberFormatException e) {
+									// TODO: handle exception
+									MyAlert  er = new MyAlert ("ERROR! Please try again." + "\n" +  "Salary incorrect");
+									Stage primaryStage = new Stage();
+									try {
+										er.start(primaryStage);
+									} catch (Exception e1) {
+										// TODO Auto-generated catch block
+										e1.printStackTrace();
+									}
+									e.printStackTrace();
+								}
+								int salary = Integer.parseInt(salEmployee.getText());
+								list.add(new EmployeeViewer(list.size()+1, nameEmployee.getText(), salary));
+								nameEmployee.clear();
+								salEmployee.clear();
 							}
 						} else {
-							MyAlert er = new MyAlert ("ERROR! Please try again." + "\n" +  "Input name of product");
+							MyAlert er = new MyAlert ("ERROR! Please try again." + "\n" +  "Input name of employee");
 							Stage primaryStage = new Stage();
 							try {
 								er.start(primaryStage);
@@ -233,7 +209,7 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 					@Override
 					public void handle(ActionEvent event) {
 						// TODO Auto-generated method stub
-					 hb.getChildren().removeAll(nameProduct, codeProduct, add, close);
+					 hb.getChildren().removeAll(nameEmployee, salEmployee, add, close);
 					 i=0;
 					}
 				});
@@ -297,40 +273,40 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 	}
 	
 		// Список данных с базы
-	public ObservableList<ProductViewer> getList () {
-		productsDB = prodImpl.findAll();
-		ObservableList<ProductViewer> listProducts = FXCollections.observableArrayList();
-		for (int i = 0; i<productsDB.size(); i++) {
-			Product pr = productsDB.get(i);
-			ProductViewer viewer = new ProductViewer(i+1, pr.getName(), pr.getBarcode());
-			listProducts.add(viewer);
+	public static ObservableList<EmployeeViewer> getList () {
+		employeesDB = emplImpl.findAll();
+		ObservableList<EmployeeViewer> listEmployees = FXCollections.observableArrayList();
+		for (int i = 0; i<employeesDB.size(); i++) {
+			Employee em = employeesDB.get(i);
+			EmployeeViewer viewer = new EmployeeViewer(i+1, em.getName(), em.getSalary());
+			listEmployees.add(viewer);
 		}
-		return listProducts;
+		return listEmployees;
 	}
 		//Сохранение в базу данных
-	public void setList (ObservableList<ProductViewer>list) {
-		if (list.size() == productsDB.size()) {
+	public static void setList (ObservableList<EmployeeViewer>list) {
+		if (list.size() == employeesDB.size()) {
 		for (int i =0; i<list.size(); i++) {
-			productsDB.get(i).setName(list.get(i).getName());
-			productsDB.get(i).setBarcode(list.get(i).getCode());
+			employeesDB.get(i).setName(list.get(i).getName());
+			employeesDB.get(i).setSalary(list.get(i).getSalary());
 		}
-		productsDB.forEach(product->prodImpl.update(product));
+		employeesDB.forEach(employee->emplImpl.update(employee));
 		} else {
-			List<Product> productsDBNEW = new ArrayList<Product>();
-			list.forEach(new Consumer<ProductViewer>() {
+			List<Employee> employeesDBNEW = new ArrayList<Employee>();
+			list.forEach(new Consumer<EmployeeViewer>() {
 
 				@Override
-				public void accept(ProductViewer prod) {
+				public void accept(EmployeeViewer empl) {
 					// TODO Auto-generated method stub
-					productsDBNEW.add(new Product(prod.getName(), prod.getCode()));
+					employeesDBNEW.add(new Employee(empl.getName(), empl.getSalary()));
 				}
 			});
-			productsDB.forEach(product->prodImpl.delete(product));
-			productsDBNEW.forEach(product-> prodImpl.create(product));
+			employeesDB.forEach(em->emplImpl.delete(em));
+			employeesDBNEW.forEach(em-> emplImpl.create(em));
 		}
 	}
 	
-	public class MyAlert extends Application {
+	public static class MyAlert extends Application {
 		String message;
 		Stage stage;
 		public MyAlert (String message) {
@@ -359,11 +335,5 @@ public class TabPanelJFX extends Application implements EventHandler<MouseEvent>
 			return sc;
 			
 		}
-	}
-	
-	@Override
-	public void handle(MouseEvent event) {
-		// TODO Auto-generated method stub
-		
 	}
 }
