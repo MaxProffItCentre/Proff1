@@ -81,12 +81,12 @@ public class TableProduct extends Application{
         	    System.out.println(str);
         	    int activeRow = value.getTablePosition().getRow();
         	    value.getTableView().getItems().get(activeRow).setName(str);
-        	    int id=value.getTableView().getItems().get(activeRow).get
+        	    Long id=value.getTableView().getItems().get(activeRow).getId();
         	    Session session = HibernateUtil.getSessionFactory().openSession();
       		  try {
-      		  
+
       		   session.beginTransaction();
-      		   Query query = session.createQuery("update Product set name='"+ "lalala" + "' where id=" + product.getId());
+      		   Query query = session.createQuery("update Product set name='"+ str + "' where id=" + id);
       		   query.executeUpdate();
       		   session.getTransaction().commit();
       		   } catch (HibernateException e) {
@@ -109,9 +109,15 @@ public class TableProduct extends Application{
 
            btn.setOnAction(new MyEvent(product,list,text1,text2));
            
+           Button delete = new Button("delete");
+           delete.setOnAction(new MyEvent2(product,list,table));
+           
+          
+           
            grid.add(btn,1,0);
            grid.add(text1, 2, 0);
            grid.add(text2, 3, 0);
+           grid.add(delete, 0, 1);
            group.getChildren().add(grid);
            
            return new Scene(group,600,400);
@@ -136,5 +142,45 @@ public MyEvent(ProductDaoImpl product, ObservableList<Product> list, TextField t
     list.add(newProduct); 
    }
   }      
+       class MyEvent2 implements EventHandler{
+    	   ProductDaoImpl product;
+    	   ObservableList<Product> list;
+    	   TableView table;
+    	 
+    	   
+public MyEvent2(ProductDaoImpl product, ObservableList<Product> list,TableView table) {
+			super();
+			this.table=table;
+			this.product = product;
+			this.list = list;
+		
+		}
+@Override
+   public void handle(Event event) {
+	int row = table.getSelectionModel().getSelectedIndex();
+	Long id=list.get(row).getId();
+	table.getItems().remove(row);
+//	DELETE FROM `proff1`.`product` WHERE `id`='12';
+	Session session = HibernateUtil.getSessionFactory().openSession();
+	  try {
+
+	   session.beginTransaction();
+	   Query query = session.createQuery("DELETE FROM  Product where id="+id);
+	   query.executeUpdate();
+	   session.getTransaction().commit();
+	   } catch (HibernateException e) {
+         log.error("Transaction failed");
+         session.getTransaction().rollback();
+     } finally {
+         session.close();
+     } 
+   }
+  }      
 }
+
+
+
+
+
+
 
