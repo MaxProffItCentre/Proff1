@@ -10,6 +10,7 @@ public class HibernateMainProduct {
 	
 	public static void main(String[] args) {
 		ProductDaoImpl ProductImpl = new ProductDaoImpl();
+		ProductImpl.create(new Product("Productik",222));
 //		Product[] arr = new Product[]{
 //				new Product("Table",17),
 //				new Product("Computer",18),

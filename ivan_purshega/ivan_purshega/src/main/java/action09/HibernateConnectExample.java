@@ -14,8 +14,13 @@ import data.Product;
 
 public class HibernateConnectExample {
     private static Logger log = Logger.getLogger(HibernateConnectExample.class);
-
-    public static void main(String[] args) {
+    
+//    public static void main(String[] args) {
+//    	
+//    	addProduct();
+//    	
+//    	}
+    	public static void addProduct(String str, int code){
         Locale.setDefault(Locale.ENGLISH);
         
         Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
@@ -32,15 +37,15 @@ public class HibernateConnectExample {
             session.beginTransaction();
             
             
-//            Product product = new Product("Automobil",35);
-//            session.save(product);
+            Product product = new Product(str,code);
+            session.save(product);
             
             
-            Product product = (Product)session.get(Product.class, 1L);
-            System.out.println(product);
-            product.setBarcode(15);
-            System.out.println(product);
-            session.update(product);
+//            Product product = (Product)session.get(Product.class, 1L);
+//            System.out.println(product);
+//            product.setBarcode(15);
+//            System.out.println(product);
+//            session.update(product);
             
             
 //            session.delete(product);
