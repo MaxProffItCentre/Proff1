@@ -1,11 +1,12 @@
 package MyTablesFX;
 
-
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import dao.ProductDaoImpl;
+
+import dao.EmployeeDaoImpl;
+import data.Employee;
 import data.Product;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -27,12 +28,12 @@ import util.HibernateUtil;
 
  
 
-public class TableProduct extends Application{
-	private static Logger log = Logger.getLogger(TableProduct.class);
-	  ProductDaoImpl product=new ProductDaoImpl();
-      ObservableList<Product> list = 
+public class TableEmployee extends Application{
+	private static Logger log = Logger.getLogger(TableEmployee.class);
+	  EmployeeDaoImpl employee=new EmployeeDaoImpl();
+      ObservableList<Employee> list = 
         FXCollections.observableArrayList(
-       		 product.findAll()
+        		employee.findAll()
           );
        public static void main(String[] args) {
     	  
@@ -40,7 +41,7 @@ public class TableProduct extends Application{
        }
        @Override
        public void start(Stage stage) throws Exception {
-             stage.setTitle("Table Example Application");
+             stage.setTitle("Table of employees");
              stage.setScene(createScene());
              stage.show();      
        }
@@ -60,18 +61,18 @@ public class TableProduct extends Application{
           
            TableColumn firstNameCol = new TableColumn("id");
            TableColumn secondNameCol = new TableColumn("name");
-           TableColumn thirdNameCol = new TableColumn("code");
+           TableColumn thirdNameCol = new TableColumn("salary");
           
   
                    
-           firstNameCol.setCellValueFactory(new PropertyValueFactory<Product,Integer>("id"));
-           secondNameCol.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
-           thirdNameCol.setCellValueFactory(new PropertyValueFactory<Product,Integer>("barcode"));
+           firstNameCol.setCellValueFactory(new PropertyValueFactory<Employee,Integer>("id"));
+           secondNameCol.setCellValueFactory(new PropertyValueFactory<Employee,String>("name"));
+           thirdNameCol.setCellValueFactory(new PropertyValueFactory<Employee,Integer>("salary"));
           
            secondNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
-           secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<Product, String>>() {
+           secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<Employee, String>>() {
         	   @Override
-        	   public void handle(CellEditEvent<Product, String> value) {
+        	   public void handle(CellEditEvent<Employee, String> value) {
         	    String str = value.getNewValue();
         	    System.out.println(str);
         	    int activeRow = value.getTablePosition().getRow();
@@ -81,7 +82,7 @@ public class TableProduct extends Application{
       		  try {
 
       		   session.beginTransaction();
-      		   Query query = session.createQuery("update Product set name='"+ str + "' where id=" + id);
+      		   Query query = session.createQuery("update Employee set name='"+ str + "' where id=" + id);
       		   query.executeUpdate();
       		   session.getTransaction().commit();
       		   } catch (HibernateException e) {
@@ -102,10 +103,10 @@ public class TableProduct extends Application{
          
            Button btn = new Button("add");
 
-           btn.setOnAction(new MyEvent(product,list,text1,text2));
+           btn.setOnAction(new MyEvent(employee,list,text1,text2));
            
            Button delete = new Button("delete");
-           delete.setOnAction(new MyEvent2(product,list,table));
+           delete.setOnAction(new MyEvent2(employee,list,table));
            
           
            
@@ -118,32 +119,32 @@ public class TableProduct extends Application{
            return new Scene(group,600,400);
      }     
        class MyEvent implements EventHandler{
-    	   ProductDaoImpl product;
-    	   ObservableList<Product> list;
+    	   EmployeeDaoImpl employee;
+    	   ObservableList<Employee> list;
     	   TextField text1;
     	   TextField text2;
     	   
-public MyEvent(ProductDaoImpl product, ObservableList<Product> list, TextField text1, TextField text2) {
+public MyEvent(EmployeeDaoImpl employee, ObservableList<Employee> list, TextField text1, TextField text2) {
 			super();
-			this.product = product;
+			this.employee = employee;
 			this.list = list;
 			this.text1 = text1;
 			this.text2 = text2;
 		}
 @Override
    public void handle(Event event) {
-	Product newProduct=new Product(text1.getText(),new Integer(text2.getText()));
-	product.create(newProduct);
+	Employee newProduct=new Employee(text1.getText(),new Integer(text2.getText()));
+	employee.create(newProduct);
     list.add(newProduct); 
    }
   }      
        class MyEvent2 implements EventHandler{
-    	   ProductDaoImpl product;
-    	   ObservableList<Product> list;
+    	   EmployeeDaoImpl product;
+    	   ObservableList<Employee> list;
     	   TableView table;
     	 
     	   
-public MyEvent2(ProductDaoImpl product, ObservableList<Product> list,TableView table) {
+public MyEvent2(EmployeeDaoImpl product, ObservableList<Employee> list,TableView table) {
 			super();
 			this.table=table;
 			this.product = product;
@@ -159,7 +160,7 @@ public MyEvent2(ProductDaoImpl product, ObservableList<Product> list,TableView t
 	  try {
 
 	   session.beginTransaction();
-	   Query query = session.createQuery("DELETE FROM  Product where id="+id);
+	   Query query = session.createQuery("DELETE FROM  Employee where id="+id);
 	   query.executeUpdate();
 	   session.getTransaction().commit();
 	   } catch (HibernateException e) {

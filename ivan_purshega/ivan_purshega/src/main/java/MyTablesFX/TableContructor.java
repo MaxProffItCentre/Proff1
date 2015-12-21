@@ -1,12 +1,15 @@
 package MyTablesFX;
 
-
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import dao.ProductDaoImpl;
+
+import dao.ContructorDaoImpl;
+import dao.EmployeeDaoImpl;
+import data.Employee;
 import data.Product;
+import data.contructor;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,12 +30,12 @@ import util.HibernateUtil;
 
  
 
-public class TableProduct extends Application{
-	private static Logger log = Logger.getLogger(TableProduct.class);
-	  ProductDaoImpl product=new ProductDaoImpl();
-      ObservableList<Product> list = 
+public class TableContructor extends Application{
+	private static Logger log = Logger.getLogger(TableContructor.class);
+	ContructorDaoImpl contruct=new ContructorDaoImpl();
+      ObservableList<contructor> list = 
         FXCollections.observableArrayList(
-       		 product.findAll()
+        		contruct.findAll()
           );
        public static void main(String[] args) {
     	  
@@ -40,7 +43,7 @@ public class TableProduct extends Application{
        }
        @Override
        public void start(Stage stage) throws Exception {
-             stage.setTitle("Table Example Application");
+             stage.setTitle("Table of contructors");
              stage.setScene(createScene());
              stage.show();      
        }
@@ -51,7 +54,7 @@ public class TableProduct extends Application{
            
            GridPane grid=new GridPane();
            TextField text1=new TextField();
-           TextField text2=new TextField();
+           
            
           
        
@@ -60,18 +63,18 @@ public class TableProduct extends Application{
           
            TableColumn firstNameCol = new TableColumn("id");
            TableColumn secondNameCol = new TableColumn("name");
-           TableColumn thirdNameCol = new TableColumn("code");
+         
           
   
                    
-           firstNameCol.setCellValueFactory(new PropertyValueFactory<Product,Integer>("id"));
-           secondNameCol.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
-           thirdNameCol.setCellValueFactory(new PropertyValueFactory<Product,Integer>("barcode"));
+           firstNameCol.setCellValueFactory(new PropertyValueFactory<contructor,Integer>("id"));
+           secondNameCol.setCellValueFactory(new PropertyValueFactory<contructor,String>("name"));
+           
           
            secondNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
-           secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<Product, String>>() {
+           secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<contructor, String>>() {
         	   @Override
-        	   public void handle(CellEditEvent<Product, String> value) {
+        	   public void handle(CellEditEvent<contructor, String> value) {
         	    String str = value.getNewValue();
         	    System.out.println(str);
         	    int activeRow = value.getTablePosition().getRow();
@@ -81,7 +84,7 @@ public class TableProduct extends Application{
       		  try {
 
       		   session.beginTransaction();
-      		   Query query = session.createQuery("update Product set name='"+ str + "' where id=" + id);
+      		   Query query = session.createQuery("update Contructors set name='"+ str + "' where id=" + id);
       		   query.executeUpdate();
       		   session.getTransaction().commit();
       		   } catch (HibernateException e) {
@@ -95,58 +98,58 @@ public class TableProduct extends Application{
            
            table.setItems(list);
           
-           table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol);
+           table.getColumns().addAll(firstNameCol,secondNameCol);
           
 
            grid.add(table,0,0);
          
            Button btn = new Button("add");
 
-           btn.setOnAction(new MyEvent(product,list,text1,text2));
+           btn.setOnAction(new MyEvent(contruct,list,text1));
            
            Button delete = new Button("delete");
-           delete.setOnAction(new MyEvent2(product,list,table));
+           delete.setOnAction(new MyEvent2(contruct,list,table));
            
           
            
            grid.add(btn,1,0);
            grid.add(text1, 2, 0);
-           grid.add(text2, 3, 0);
+           
            grid.add(delete, 0, 1);
            group.getChildren().add(grid);
            
            return new Scene(group,600,400);
      }     
        class MyEvent implements EventHandler{
-    	   ProductDaoImpl product;
-    	   ObservableList<Product> list;
+    	   ContructorDaoImpl contructor;
+    	   ObservableList<contructor> list;
     	   TextField text1;
-    	   TextField text2;
+    	  
     	   
-public MyEvent(ProductDaoImpl product, ObservableList<Product> list, TextField text1, TextField text2) {
+public MyEvent(ContructorDaoImpl contructor, ObservableList<contructor> list, TextField text1) {
 			super();
-			this.product = product;
+			this.contructor = contructor;
 			this.list = list;
 			this.text1 = text1;
-			this.text2 = text2;
+			
 		}
 @Override
    public void handle(Event event) {
-	Product newProduct=new Product(text1.getText(),new Integer(text2.getText()));
-	product.create(newProduct);
-    list.add(newProduct); 
+	contructor newContructor=new contructor(text1.getText());
+	contructor.create(newContructor);
+    list.add(newContructor); 
    }
   }      
        class MyEvent2 implements EventHandler{
-    	   ProductDaoImpl product;
-    	   ObservableList<Product> list;
+    	   ContructorDaoImpl contructor;
+    	   ObservableList<contructor> list;
     	   TableView table;
     	 
     	   
-public MyEvent2(ProductDaoImpl product, ObservableList<Product> list,TableView table) {
+public MyEvent2(ContructorDaoImpl contructor, ObservableList<contructor> list,TableView table) {
 			super();
 			this.table=table;
-			this.product = product;
+			this.contructor = contructor;
 			this.list = list;
 		
 		}
@@ -154,12 +157,14 @@ public MyEvent2(ProductDaoImpl product, ObservableList<Product> list,TableView t
    public void handle(Event event) {
 	int row = table.getSelectionModel().getSelectedIndex();
 	Long id=list.get(row).getId();
+	System.out.println("id"+id);
+	
 	table.getItems().remove(row);
 	Session session = HibernateUtil.getSessionFactory().openSession();
 	  try {
 
 	   session.beginTransaction();
-	   Query query = session.createQuery("DELETE FROM  Product where id="+id);
+	   Query query = session.createQuery("DELETE FROM  contructor where id="+id);
 	   query.executeUpdate();
 	   session.getTransaction().commit();
 	   } catch (HibernateException e) {
