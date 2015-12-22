@@ -69,7 +69,20 @@ public class ProductDaoImpl implements ProductDao{
 
 	@Override
 	public void delete(Product product) {
-		// delete(product)
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		  try {
+
+		   session.beginTransaction();
+		   Query query = session.createQuery("DELETE FROM  Product where id="+product.getId());
+		   query.executeUpdate();
+		   session.getTransaction().commit();
+		   } catch (HibernateException e) {
+	         log.error("Transaction failed");
+	         session.getTransaction().rollback();
+	     } finally {
+	         session.close();
+	     
+	   }
 	}
 
 	@Override

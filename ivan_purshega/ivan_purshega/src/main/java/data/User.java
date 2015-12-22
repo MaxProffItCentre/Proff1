@@ -36,10 +36,10 @@ public class User {
  private String login;
 
  @Column(name = "pass")
- private String pass;
+ private int pass;
  
  @Column(name = "employee_id")
- private String employee_id;
+ private int employee_id;
  
 
 
@@ -48,13 +48,21 @@ public class User {
  @JoinColumn(name="employee_id")   
  private Employee employee;
 
- public User(Long id, String name, String pass,String employee_id, Employee employee) {
-  this.id = id;
+ public User(String name, String login, int pass,int employee_id, Employee employee) {
+  
   this.name = name;
   this.pass = pass;
   this.employee = employee;
   this.employee_id=employee_id;
  }
+ 
+ public User(String name, String login,int pass,int employee_id) {
+	
+	  this.name = name;
+	  this.login=login;
+	  this.pass = pass;
+	  this.employee_id=employee_id;
+	 }
 
  public User() {
  }
@@ -71,7 +79,15 @@ public class User {
   return id;
  }
 
- public void setId(Long id) {
+ public int getEmployee_id() {
+	return employee_id;
+}
+
+public void setEmployee_id(int employee_id) {
+	this.employee_id = employee_id;
+}
+
+public void setId(Long id) {
   this.id = id;
  }
 
@@ -83,11 +99,11 @@ public class User {
   this.name = name;
  }
 
- public String getPass() {
+ public int getPass() {
   return pass;
  }
 
- public void setPass(String pass) {
+ public void setPass(int pass) {
   this.pass = pass;
  }
 

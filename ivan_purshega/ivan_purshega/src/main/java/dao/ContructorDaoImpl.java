@@ -54,8 +54,22 @@ import util.HibernateUtil;
 
 		@Override
 		public void delete(contructor contruct) {
-			// delete(product)
+			Session session = HibernateUtil.getSessionFactory().openSession();
+			  try {
+
+			   session.beginTransaction();
+			   Query query = session.createQuery("DELETE FROM  contructor where id="+contruct.getId());
+			   query.executeUpdate();
+			   session.getTransaction().commit();
+			   } catch (HibernateException e) {
+		         log.error("Transaction failed");
+		         session.getTransaction().rollback();
+		     } finally {
+		         session.close();
+		     
+		   }
 		}
+		
 
 		@Override
 		public List<contructor> findAll() {

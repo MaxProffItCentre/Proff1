@@ -56,7 +56,20 @@ import data.Employee;
 
 		@Override
 		public void delete(Employee employee) {
-			// delete(product)
+			Session session = HibernateUtil.getSessionFactory().openSession();
+			  try {
+
+			   session.beginTransaction();
+			   Query query = session.createQuery("DELETE FROM  Employee where id="+employee.getId());
+			   query.executeUpdate();
+			   session.getTransaction().commit();
+			   } catch (HibernateException e) {
+		         log.error("Transaction failed");
+		         session.getTransaction().rollback();
+		     } finally {
+		         session.close();
+		     
+		   }
 		}
 
 		@Override

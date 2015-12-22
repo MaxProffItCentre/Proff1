@@ -2128,3 +2128,270 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'pro
 2015-12-21 21:52:27,495 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
 2015-12-21 21:52:27,559 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
 2015-12-21 21:52:28,388 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-22 10:04:38,656 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 10:04:38,796 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 10:04:38,812 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 10:04:38,812 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 10:04:39,031 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 10:04:39,031 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 10:04:39,656 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:04:40,156 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 10:04:40,156 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 10:04:40,187 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:04:40,265 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 10:04:40,343 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 10:04:40,343 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 10:04:40,343 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 10:04:40,359 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 10:04:42,390 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 10:04:43,265 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 10:04:43,343 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 10:04:43,781 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 10:09:46,734 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 10:09:46,812 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 10:09:46,828 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 10:09:46,843 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 10:09:46,984 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 10:09:46,984 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 10:09:47,578 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:09:48,359 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 10:09:48,359 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 10:09:48,390 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:09:48,421 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 10:09:48,437 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 10:09:48,437 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 10:09:48,437 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 10:09:48,437 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 10:09:49,781 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 10:09:50,796 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 10:09:50,828 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 10:09:51,000 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 10:11:10,968 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 10:11:10,984 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 10:11:10,984 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 10:11:10,984 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 10:11:11,062 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 10:11:11,062 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 10:11:11,250 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:11:11,500 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 10:11:11,500 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 10:11:11,515 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:11:11,546 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 10:11:11,562 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 10:11:11,578 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 10:11:11,578 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 10:11:11,578 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 10:11:12,156 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 10:11:12,593 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 10:11:12,593 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 10:11:12,734 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 10:16:21,656 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 10:16:21,687 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 10:16:21,687 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 10:16:21,687 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 10:16:21,750 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 10:16:21,750 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 10:16:21,921 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:16:22,156 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 10:16:22,156 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 10:16:22,171 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:16:22,187 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 10:16:22,203 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 10:16:22,203 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 10:16:22,203 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 10:16:22,203 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 10:16:22,796 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 10:16:23,218 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 10:16:23,218 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 10:16:23,343 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 10:16:56,140 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 10:16:56,156 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 10:16:56,156 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 10:16:56,171 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 10:16:56,218 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 10:16:56,218 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 10:16:56,406 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:16:56,625 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 10:16:56,625 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 10:16:56,656 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 10:16:56,671 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 10:16:56,687 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 10:16:56,687 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 10:16:56,687 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 10:16:56,687 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 10:16:57,265 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 10:16:57,718 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 10:16:57,718 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 10:16:57,843 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 11:59:50,125 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 11:59:50,265 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 11:59:50,296 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 11:59:50,312 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 11:59:50,500 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 11:59:50,500 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 11:59:51,750 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 11:59:54,312 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 11:59:54,328 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 11:59:54,343 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 11:59:54,906 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 11:59:55,062 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 11:59:55,062 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 11:59:55,062 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 11:59:55,109 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 12:00:00,734 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 12:00:01,781 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 12:00:01,859 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 12:00:02,312 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 12:01:53,578 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 12:01:53,625 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 12:01:53,640 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 12:01:53,640 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 12:01:53,781 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 12:01:53,781 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 12:01:54,046 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 12:01:54,375 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 12:01:54,375 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 12:01:54,406 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 12:01:54,421 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 12:01:54,468 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 12:01:54,468 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 12:01:54,468 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 12:01:54,484 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 12:01:55,375 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 12:01:55,906 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 12:01:55,921 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 12:01:56,062 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 12:05:58,234 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 12:05:58,250 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 12:05:58,265 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 12:05:58,265 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 12:05:58,359 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 12:05:58,359 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 12:05:58,546 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 12:05:58,796 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 12:05:58,796 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 12:05:58,828 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 12:05:58,843 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 12:05:58,875 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 12:05:58,875 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 12:05:58,875 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 12:05:58,875 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 12:05:59,515 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 12:05:59,968 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 12:05:59,984 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 12:06:00,109 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 12:15:42,921 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 12:15:42,937 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 12:15:42,953 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 12:15:42,953 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 12:15:43,031 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 12:15:43,031 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 12:15:43,218 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 12:15:43,468 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 12:15:43,468 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 12:15:43,500 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 12:15:43,515 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 12:15:43,531 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 12:15:43,531 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 12:15:43,531 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 12:15:43,531 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 12:15:44,140 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 12:15:44,562 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 12:15:44,578 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 12:15:44,703 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 13:15:11,859 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 13:15:12,015 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 13:15:12,031 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 13:15:12,031 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 13:15:12,218 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 13:15:12,218 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 13:15:12,828 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 13:15:13,359 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 13:15:13,359 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 13:15:13,390 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 13:15:13,437 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 13:15:13,500 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 13:15:13,500 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 13:15:13,500 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 13:15:13,531 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 13:15:15,406 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 13:15:16,328 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 13:15:16,437 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 13:15:17,468 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 13:20:27,093 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 13:20:27,140 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 13:20:27,171 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 13:20:27,171 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 13:20:27,312 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 13:20:27,312 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 13:20:27,593 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 13:20:27,937 [main] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 13:20:27,953 [main] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 13:20:27,968 [main] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 13:20:27,984 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 13:20:28,000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 13:20:28,000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 13:20:28,000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 13:20:28,015 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 13:20:28,890 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 13:20:29,375 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 13:20:29,375 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 13:20:29,515 [main] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 13:20:31,203 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/proff1]
+2015-12-22 13:21:21,140 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 13:21:21,156 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 13:21:21,156 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 13:21:21,156 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 13:21:21,218 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 13:21:21,218 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 13:21:21,406 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 13:21:21,640 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 13:21:21,640 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 13:21:21,671 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 13:21:21,687 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 13:21:21,703 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 13:21:21,703 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 13:21:21,703 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 13:21:21,703 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 13:21:22,312 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 13:21:22,734 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 13:21:22,750 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 13:21:22,890 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 17:09:48,484 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 17:09:48,703 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 17:09:48,750 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 17:09:48,750 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 17:09:49,109 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 17:09:49,109 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 17:09:51,328 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 17:09:51,921 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 17:09:51,921 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 17:09:51,953 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 17:09:52,015 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 17:09:52,078 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 17:09:52,078 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 17:09:52,078 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 17:09:52,093 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 17:09:53,765 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 17:09:54,890 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 17:09:54,984 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 17:09:55,546 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
+2015-12-22 17:11:34,984 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-22 17:11:35,031 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+2015-12-22 17:11:35,062 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2015-12-22 17:11:35,062 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2015-12-22 17:11:35,203 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-12-22 17:11:35,203 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-12-22 17:11:35,500 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 17:11:35,875 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2015-12-22 17:11:35,875 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2015-12-22 17:11:35,968 [JavaFX Application Thread] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2015-12-22 17:11:36,046 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-12-22 17:11:36,125 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/proff1]
+2015-12-22 17:11:36,125 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+2015-12-22 17:11:36,125 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2015-12-22 17:11:36,125 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-12-22 17:11:37,109 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-12-22 17:11:37,703 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-12-22 17:11:37,718 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-22 17:11:37,843 [JavaFX Application Thread] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final

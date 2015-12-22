@@ -4,12 +4,10 @@ import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-
-import dao.ContructorDaoImpl;
-import dao.EmployeeDaoImpl;
-import data.Employee;
+import dao.ProductDaoImpl;
+import dao.UserDaoImpl;
 import data.Product;
-import data.contructor;
+import data.User;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,12 +28,12 @@ import util.HibernateUtil;
 
  
 
-public class TableContructor extends Application{
-	private static Logger log = Logger.getLogger(TableContructor.class);
-	ContructorDaoImpl contruct=new ContructorDaoImpl();
-      ObservableList<contructor> list = 
+public class TableUsers extends Application{
+	private static Logger log = Logger.getLogger(TableUsers.class);
+	  UserDaoImpl user=new UserDaoImpl();
+      ObservableList<User> list = 
         FXCollections.observableArrayList(
-        		contruct.findAll()
+       		 user.findAll()
           );
        public static void main(String[] args) {
     	  
@@ -43,7 +41,7 @@ public class TableContructor extends Application{
        }
        @Override
        public void start(Stage stage) throws Exception {
-             stage.setTitle("Table of contructors");
+             stage.setTitle("Table of Users");
              stage.setScene(createScene());
              stage.show();      
        }
@@ -53,8 +51,10 @@ public class TableContructor extends Application{
            Group group = new Group();
            
            GridPane grid=new GridPane();
-           TextField text1=new TextField();
-           
+           TextField TextFieldName=new TextField();
+           TextField TextFieldLogin=new TextField();
+           TextField TextFieldPass=new TextField();
+           TextField TextFieldEmployee_id=new TextField();
            
           
        
@@ -63,18 +63,22 @@ public class TableContructor extends Application{
           
            TableColumn firstNameCol = new TableColumn("id");
            TableColumn secondNameCol = new TableColumn("name");
-         
+           TableColumn thirdNameCol = new TableColumn("login");
+           TableColumn fourthNameCol = new TableColumn("pass");
+           TableColumn fivesNameCol = new TableColumn("employee_id");
           
   
                    
-           firstNameCol.setCellValueFactory(new PropertyValueFactory<contructor,Integer>("id"));
-           secondNameCol.setCellValueFactory(new PropertyValueFactory<contructor,String>("name"));
+           firstNameCol.setCellValueFactory(new PropertyValueFactory<User,Integer>("id"));
+           secondNameCol.setCellValueFactory(new PropertyValueFactory<User,String>("name"));
+           thirdNameCol.setCellValueFactory(new PropertyValueFactory<User,String>("login"));
+           fourthNameCol.setCellValueFactory(new PropertyValueFactory<User,Integer>("pass"));
+           fivesNameCol.setCellValueFactory(new PropertyValueFactory<User,Integer>("employee_id"));
            
-          
            secondNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
-           secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<contructor, String>>() {
+           secondNameCol.setOnEditCommit(new EventHandler<CellEditEvent<User, String>>() {
         	   @Override
-        	   public void handle(CellEditEvent<contructor, String> value) {
+        	   public void handle(CellEditEvent<User, String> value) {
         	    String str = value.getNewValue();
         	    System.out.println(str);
         	    int activeRow = value.getTablePosition().getRow();
@@ -84,7 +88,7 @@ public class TableContructor extends Application{
       		  try {
 
       		   session.beginTransaction();
-      		   Query query = session.createQuery("update Contructors set name='"+ str + "' where id=" + id);
+      		   Query query = session.createQuery("update User set name='"+ str + "' where id=" + id);
       		   query.executeUpdate();
       		   session.getTransaction().commit();
       		   } catch (HibernateException e) {
@@ -98,68 +102,76 @@ public class TableContructor extends Application{
            
            table.setItems(list);
           
-           table.getColumns().addAll(firstNameCol,secondNameCol);
+           table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol,fourthNameCol,fivesNameCol);
           
 
            grid.add(table,0,0);
          
            Button btn = new Button("add");
 
-           btn.setOnAction(new MyEvent(contruct,list,text1));
+           btn.setOnAction(new MyEvent(user,list,TextFieldName,TextFieldLogin,TextFieldPass,TextFieldEmployee_id));
            
            Button delete = new Button("delete");
-           delete.setOnAction(new MyEvent2(contruct,list,table));
+           delete.setOnAction(new MyEvent2(user,list,table));
            
           
            
            grid.add(btn,1,0);
-           grid.add(text1, 2, 0);
-           
+           grid.add(TextFieldName, 2, 0);
+           grid.add(TextFieldLogin, 3, 0);
+           grid.add(TextFieldPass, 4, 0);
+           grid.add(TextFieldEmployee_id, 5, 0);
            grid.add(delete, 0, 1);
            group.getChildren().add(grid);
            
            return new Scene(group,600,400);
      }     
        class MyEvent implements EventHandler{
-    	   ContructorDaoImpl contructor;
-    	   ObservableList<contructor> list;
-    	   TextField text1;
-    	  
+    	   UserDaoImpl user;
+    	   ObservableList<User> list;
+    	   TextField TextFieldName;
+    	   TextField TextFieldLogin;
+    	   TextField TextFieldPass;
+    	   TextField TextFieldEmployee_id;
     	   
-public MyEvent(ContructorDaoImpl contructor, ObservableList<contructor> list, TextField text1) {
+    	   
+public MyEvent(UserDaoImpl user, ObservableList<User> list, TextField TextFieldName, TextField TextFieldLogin,
+		TextField TextFieldPass,TextField TextFieldEmployee_id	) {
 			super();
-			this.contructor = contructor;
+			this.user = user;
 			this.list = list;
-			this.text1 = text1;
-			
+			this.TextFieldName= TextFieldName;
+			this.TextFieldLogin = TextFieldLogin;
+			this.TextFieldPass=TextFieldPass;
+			this.TextFieldEmployee_id=TextFieldEmployee_id;
 		}
 @Override
    public void handle(Event event) {
-	contructor newContructor=new contructor(text1.getText());
-	contructor.create(newContructor);
-    list.add(newContructor); 
+	User newUser=new User(TextFieldName.getText(),TextFieldLogin.getText(),
+			new Integer(TextFieldPass.getText()),new Integer(TextFieldEmployee_id.getText()));
+	user.create(newUser);
+    list.add(newUser); 
    }
   }      
        class MyEvent2 implements EventHandler{
-    	   ContructorDaoImpl contructor;
-    	   ObservableList<contructor> list;
+    	   UserDaoImpl user;
+    	   ObservableList<User> list;
     	   TableView table;
     	 
     	   
-public MyEvent2(ContructorDaoImpl contructor, ObservableList<contructor> list,TableView table) {
+public MyEvent2(UserDaoImpl user, ObservableList<User> list,TableView table) {
 			super();
 			this.table=table;
-			this.contructor = contructor;
+			this.user = user;
 			this.list = list;
 		
 		}
 @Override
    public void handle(Event event) {
 	int row = table.getSelectionModel().getSelectedIndex();
-	Long id=list.get(row).getId();
-	
+	Long id=list.get(row).getId(); 
 	table.getItems().remove(row);
-	contructor.delete(contructor.findAll().get(row));
-   }
-  }      
+	user.delete(user.findAll().get(row));
+         }
+       }
 }

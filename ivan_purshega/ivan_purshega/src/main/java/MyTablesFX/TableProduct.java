@@ -153,21 +153,10 @@ public MyEvent2(ProductDaoImpl product, ObservableList<Product> list,TableView t
 @Override
    public void handle(Event event) {
 	int row = table.getSelectionModel().getSelectedIndex();
-	Long id=list.get(row).getId();
+	System.out.println("Number deleting row"+row);
+	Long id=list.get(row).getId(); 
 	table.getItems().remove(row);
-	Session session = HibernateUtil.getSessionFactory().openSession();
-	  try {
-
-	   session.beginTransaction();
-	   Query query = session.createQuery("DELETE FROM  Product where id="+id);
-	   query.executeUpdate();
-	   session.getTransaction().commit();
-	   } catch (HibernateException e) {
-         log.error("Transaction failed");
-         session.getTransaction().rollback();
-     } finally {
-         session.close();
-     } 
-   }
-  }      
+	product.delete(product.findAll().get(row));
+         }
+       }
 }

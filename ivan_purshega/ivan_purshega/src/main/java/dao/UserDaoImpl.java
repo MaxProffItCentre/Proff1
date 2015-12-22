@@ -70,7 +70,20 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public void delete(User user) {
-		// delete(product)
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		  try {
+
+		   session.beginTransaction();
+		   Query query = session.createQuery("DELETE FROM  User where id="+user.getId());
+		   query.executeUpdate();
+		   session.getTransaction().commit();
+		   } catch (HibernateException e) {
+	         log.error("Transaction failed");
+	         session.getTransaction().rollback();
+	     } finally {
+	         session.close();
+	     
+	   }
 	}
 
 	@Override

@@ -139,15 +139,15 @@ public MyEvent(EmployeeDaoImpl employee, ObservableList<Employee> list, TextFiel
    }
   }      
        class MyEvent2 implements EventHandler{
-    	   EmployeeDaoImpl product;
+    	   EmployeeDaoImpl employee;
     	   ObservableList<Employee> list;
     	   TableView table;
     	 
     	   
-public MyEvent2(EmployeeDaoImpl product, ObservableList<Employee> list,TableView table) {
+public MyEvent2(EmployeeDaoImpl employee, ObservableList<Employee> list,TableView table) {
 			super();
 			this.table=table;
-			this.product = product;
+			this.employee = employee;
 			this.list = list;
 		
 		}
@@ -156,19 +156,7 @@ public MyEvent2(EmployeeDaoImpl product, ObservableList<Employee> list,TableView
 	int row = table.getSelectionModel().getSelectedIndex();
 	Long id=list.get(row).getId();
 	table.getItems().remove(row);
-	Session session = HibernateUtil.getSessionFactory().openSession();
-	  try {
-
-	   session.beginTransaction();
-	   Query query = session.createQuery("DELETE FROM  Employee where id="+id);
-	   query.executeUpdate();
-	   session.getTransaction().commit();
-	   } catch (HibernateException e) {
-         log.error("Transaction failed");
-         session.getTransaction().rollback();
-     } finally {
-         session.close();
-     } 
-   }
+	employee.delete(employee.findAll().get(row));
+	}
   }      
 }
