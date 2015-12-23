@@ -22,6 +22,7 @@
 		<mapping class="data.Employee" />
 		<mapping class="data.User" />
 		<mapping class="data.Order_Position" />
+		<mapping class="data.Orders" />
 		
 	</session-factory>
 </hibernate-configuration>

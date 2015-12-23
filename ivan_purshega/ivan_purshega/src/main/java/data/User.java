@@ -42,11 +42,12 @@ public class User {
  private int employee_id;
  
 
-
-
- @OneToOne (mappedBy = "user", cascade = CascadeType.ALL)
- @JoinColumn(name="employee_id")   
+ @OneToOne (fetch=FetchType.EAGER, cascade = CascadeType.ALL)
+// @JoinColumn(name="employee_id")   
+ @PrimaryKeyJoinColumn
  private Employee employee;
+ 
+
 
  public User(String name, String login, int pass,int employee_id, Employee employee) {
   

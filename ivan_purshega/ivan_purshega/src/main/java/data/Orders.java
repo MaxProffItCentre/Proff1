@@ -1,10 +1,14 @@
 package data;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -30,6 +34,10 @@ public class Orders {
  @Column(name = "summa")
  private int summa;
  
+ 
+ @Column (name="data")
+ @Temporal(value=TemporalType.DATE)
+ private Date date;
 
  
 
@@ -40,13 +48,26 @@ public class Orders {
 	this.user_id = user_id;
 	this.summa = summa;
 }
+ 
+ public Orders(String number, Date date){
+	 this.number=number;
+	 this.date=date;
+ }
 
 public Orders() {
  }
 
  
 
- public Long getId() {
+ public Date getDate() {
+	return date;
+}
+
+public void setDate(Date date) {
+	this.date = date;
+}
+
+public Long getId() {
 	return id;
 }
 

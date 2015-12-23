@@ -43,7 +43,8 @@ public class TableOrder_Position extends Application{
        public void start(Stage stage) throws Exception {
              stage.setTitle("Table Order Position");
              stage.setScene(createScene());
-             stage.show();      
+             stage.show();  
+             stage.setOnCloseRequest(event->HibernateUtil.getSession().close());
        }
  
        @SuppressWarnings("unchecked")
@@ -58,16 +59,20 @@ public class TableOrder_Position extends Application{
           
            TableColumn firstNameCol = new TableColumn("id");
            TableColumn secondNameCol = new TableColumn("order_id");
+           TableColumn thirdNameCol = new TableColumn("product_id");
+           TableColumn fourthNameCol = new TableColumn("kol");
+           TableColumn fivesdNameCol = new TableColumn("price");
            
                    
            firstNameCol.setCellValueFactory(new PropertyValueFactory<Order_Position,Integer>("id"));
            secondNameCol.setCellValueFactory(new PropertyValueFactory<Order_Position,String>("order_id"));
-          
-          
+           thirdNameCol.setCellValueFactory(new PropertyValueFactory<Order_Position,String>("product_id"));
+           fourthNameCol.setCellValueFactory(new PropertyValueFactory<Order_Position,String>("kol"));
+           fivesdNameCol.setCellValueFactory(new PropertyValueFactory<Order_Position,String>("price"));
           
            table.setItems(list);
           
-           table.getColumns().addAll(firstNameCol,secondNameCol);
+           table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol,fourthNameCol,fivesdNameCol);
           
 
            grid.add(table,0,0);

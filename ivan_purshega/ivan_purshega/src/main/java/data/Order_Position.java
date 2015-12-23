@@ -21,8 +21,29 @@ package data;
 	 @Column(name="order_id")
 	 private Long order_id;
 	 
+	 @Column(name="product_id")
+	 private int product_id;
+	 
+	 @Column(name="kol")
+	 private int kol;
+	 
+	 @Column(name="price")
+	 private int price;
+	 
+	 @Column(name="summa")
+	 private int summa;
+	 
+	 
 
-	 public Long getId() {
+	 public int getSumma() {
+		return summa;
+	}
+
+	public void setSumma(int summa) {
+		this.summa = summa;
+	}
+
+	public Long getId() {
 	  return id;
 	 }
 
@@ -37,9 +58,35 @@ package data;
 	public void setOrder_id(Long order_id) {
 		this.order_id = order_id;
 	}
+	
+	
 
 
-	 @Override
+	 public int getProduct_id() {
+		return product_id;
+	}
+
+	public void setProduct_id(int product_id) {
+		this.product_id = product_id;
+	}
+
+	public int getKol() {
+		return kol;
+	}
+
+	public void setKol(int kol) {
+		this.kol = kol;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	@Override
 	 public String toString() {
 	  return "Order_Position [id=" + id + ", order_id=" + order_id  + "]";
 	 }
