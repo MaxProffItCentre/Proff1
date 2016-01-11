@@ -42,7 +42,7 @@ public class ProductViewer {
     	ObservableList<ProductViewer> listObserve = FXCollections.observableArrayList();
     	for (int i = 0; i < list.size(); i++) {
     		Product pr = list.get(i);
-    		listObserve.add(new ProductViewer(pr.getIntegerId(), pr.getName(), pr.getBarcode()));
+    		listObserve.add(new ProductViewer(pr.getId().intValue(), pr.getName(), pr.getBarcode()));
 			
 		}
     	

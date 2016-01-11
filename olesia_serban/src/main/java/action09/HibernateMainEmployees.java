@@ -1,7 +1,7 @@
 package action09;
 
 import dao.EmployeesDaoImpl;
-import data.Employees;
+
 import util.HibernateUtil;
 
 public class HibernateMainEmployees {

@@ -100,7 +100,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Employee findContractorsByBeginString(String begin) {
+	public List<Employee> findContractorsByBeginString(String begin) {
 		Session session = HibernateUtil.getSession();
 		Query query = session.createQuery("FROM Employees E WHERE E.name LIKE '" + begin + "%'");
 		return query.list();

@@ -2,7 +2,8 @@ package view;
 
 import java.util.List;
 
-import data.Employees;
+import data.Employee;
+
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -43,7 +44,7 @@ public class EmployeeViewer {
 		this.salary.set(salary);
 	}
 
-	public static ObservableList<EmployeeViewer> obsListFromData(List<Employees> list) {
+	public static ObservableList<EmployeeViewer> obsListFromData(List<Employee> list) {
 		
 		ObservableList<EmployeeViewer> obsList = FXCollections.observableArrayList();
 		

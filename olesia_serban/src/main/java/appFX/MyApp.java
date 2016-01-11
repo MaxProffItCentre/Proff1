@@ -4,7 +4,8 @@ import dao.ContractorDaoImpl;
 import dao.EmployeesDaoImpl;
 import dao.ProductDaoImpl;
 import data.Contractor;
-import data.Employees;
+import data.Employee;
+
 import data.Product;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -351,7 +352,7 @@ public class MyApp extends Application {
 				Product pr = new Product(str, code);
 
 				daoPr.create(pr);
-				ProductViewer prView = new ProductViewer(pr.getIntegerId(), pr.getName(), pr.getBarcode());
+				ProductViewer prView = new ProductViewer(pr.getId().intValue(), pr.getName(), pr.getBarcode());
 				table.getItems().add(prView);
 				nameField.clear();
 				codeField.clear();
@@ -401,7 +402,7 @@ public class MyApp extends Application {
 				}
 				long id = Long.parseLong(tmp);
 				Product pr = daoPr.read(id);
-				ProductViewer viewPr = new ProductViewer(pr.getIntegerId(), pr.getName(), pr.getBarcode());
+				ProductViewer viewPr = new ProductViewer(pr.getId().intValue(), pr.getName(), pr.getBarcode());
 				daoPr.delete(pr);
 				table.getItems().remove(viewPr);				
 				idTxt.clear();
@@ -555,7 +556,7 @@ public class MyApp extends Application {
 
 				// Employee id for updating
 				int id = event.getTableView().getItems().get(row).getId();
-				Employees emp = dao.read((long) id);
+				Employee emp = dao.read((long) id);
 				emp.setName(newValue);
 				dao.update(emp);
 
@@ -575,7 +576,7 @@ public class MyApp extends Application {
 
 				// Employee id for updating
 				int id = event.getTableView().getItems().get(row).getId();
-				Employees emp = dao.read((long) id);
+				Employee emp = dao.read((long) id);
 				emp.setSalary(newValue);
 				dao.update(emp);
 
