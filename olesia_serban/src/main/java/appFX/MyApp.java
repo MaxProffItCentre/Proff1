@@ -1,4 +1,4 @@
-package appFX;
+/*package appFX;
 
 import dao.ContractorDaoImpl;
 import dao.EmployeesDaoImpl;
@@ -593,3 +593,4 @@ public class MyApp extends Application {
 	}
 
 }
+*/
