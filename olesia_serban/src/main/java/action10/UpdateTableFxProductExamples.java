@@ -51,11 +51,7 @@ public class UpdateTableFxProductExamples extends Application {
 		thirdNameCol.setCellValueFactory(new PropertyValueFactory<ProductViewer, Integer>("code"));
 		
 		ProductDaoImpl daoPr = new ProductDaoImpl();
-		//create Observable list for Table
-		ObservableList<ProductViewer> list2 = ProductViewer.obsListFromData(daoPr.findAll());
 		
-		table.setItems(list2);
-
 		// table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol);
 		table.getColumns().add(firstNameCol);
 		table.getColumns().add(secondNameCol);
