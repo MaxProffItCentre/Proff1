@@ -2,8 +2,12 @@ package data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -23,12 +27,24 @@ public class Employee {
 	@Column(name="salary")
 	private int salary;
 	
+	@OneToOne (mappedBy = "employee")
+//    @JoinColumn(name = "id")
+//    @PrimaryKeyJoinColumn
+    private User user;
+	
 	public Employee () {
+		super();
 	}
 	
 	public Employee(String name, int salary) {
 		this.name = name;
 		this.salary = salary;
+	}
+	
+	public Employee(String name, int salary, User user) {
+		this.name = name;
+		this.salary = salary;
+		this.user = user;
 	}
 
 	public Long getId() {
@@ -55,11 +71,20 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	public User getUser() {
+		  return user;
+		 }
+
+	public void setUser(User user) {
+		  this.user = user;
+		 }
+
 	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
-	}
-	
+	 public String toString() {
+	  String userName = "null";
+//	  if(user==null) userName = user.getName();
+	  return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", user=" + userName + "]";
+	 }
 	
 	
 }
