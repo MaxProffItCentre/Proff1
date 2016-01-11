@@ -33,11 +33,16 @@ public class Calculator extends Application {
 	}
 
 	public Scene scene() {
+		//smile pic
 		final Text actiontarget = new Text();
+		//smile pic 2
+		final Text smailik2 = new Text ();
 		//text just for Fun Tahoma Tolkien,
 		Text scenetitle = new Text("Calculator");
 		scenetitle.setFont(Font.font("Tahoma", FontWeight.BOLD, 20));
 		scenetitle.setFill(Color.CORNFLOWERBLUE);
+	
+		
 		
 		
 		// text field for the first number
@@ -113,12 +118,26 @@ public class Calculator extends Application {
 					public void run() {
 						actiontarget.setFill(Color.FIREBRICK);
 				        actiontarget.setText("=)");
+				        
 				        actiontarget.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
 						
 						
 					}
 				});
+		        Thread th2 = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						smailik2.setFill(Color.BLUEVIOLET);
+						smailik2.setText("=)");
+						smailik2.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
+						
+					}
+				});
 		        th.start();
+		        th.interrupt();
+		        th2.start();
+		        th2.interrupt();
 				
 
 			}
@@ -137,6 +156,7 @@ public class Calculator extends Application {
 		grid.add(btn, 3, 1);
 		grid.add(result, 4, 1);
 		grid.add(actiontarget, 4, 2);
+		grid.add(smailik2,3,2);
 		
 		// setting button on action
 		btn.setOnAction(new MyEvent(number1, operation, number2, result));

@@ -224,6 +224,7 @@ public class MyApp extends Application {
 		});
 
 		thr.start();
+		thr.interrupt();
 
 		// table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol);
 		table.getColumns().add(firstNameCol);
@@ -358,9 +359,59 @@ public class MyApp extends Application {
 
 			}
 		});
+		//gridpane for delete system
+		GridPane gridDel = new GridPane();
+		gridDel.setLayoutY(400);
+		gridDel.setLayoutX(100);
+		gridDel.setHgap(50);
+		//button "delete"
+		Button delBtn = new Button("delete");
+		//text field for id input
+		IntegerTextField idTxt = new IntegerTextField();
+		idTxt.setMaxWidth(50);
+		//label for id text field
+		Label idLb = new Label("id:");
+		
+		//tool tip for id Text Field
+		Tooltip idTip = new Tooltip();
+		idTip.setText("print id and press Enter");
+		idTxt.setTooltip(idTip);
+		
+		gridDel.add(delBtn,0,1 );
+		
+		//delete button on Action
+		delBtn.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				delBtn.setMouseTransparent(true);
+				gridDel.add(idTxt, 1, 1);
+				gridDel.add(idLb, 1, 0);
+				
+			}
+		});
+		idTxt.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				//daoPr
+				String tmp = idTxt.getText();
+				if(tmp.equals("")){
+					return;
+				}
+				long id = Long.parseLong(tmp);
+				Product pr = daoPr.read(id);
+				ProductViewer viewPr = new ProductViewer(pr.getIntegerId(), pr.getName(), pr.getBarcode());
+				daoPr.delete(pr);
+				table.getItems().remove(viewPr);				
+				idTxt.clear();
+				
+			}
+		});
 		// add button to group
 		group.getChildren().add(addBtn);
 		// group.getChildren().add(boxik);
+		group.getChildren().add(gridDel);
 
 		return group;
 
@@ -399,6 +450,7 @@ public class MyApp extends Application {
 			}
 		});
 		thr.start();
+		thr.interrupt();
 		// table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol);
 		Thread th2 = new Thread(new Runnable() {
 
@@ -411,6 +463,7 @@ public class MyApp extends Application {
 			}
 		});
 		th2.start();
+		th2.interrupt();
 
 		// set name on edit
 		secondNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -475,6 +528,7 @@ public class MyApp extends Application {
 			}
 		});
 		thr.start();
+		thr.interrupt();
 		// add columns
 		Thread th2 = new Thread(new Runnable() {
 
@@ -487,6 +541,7 @@ public class MyApp extends Application {
 			}
 		});
 		th2.start();
+		th2.interrupt();
 
 		// set name column on edit
 		secondColumn.setCellFactory(TextFieldTableCell.forTableColumn());

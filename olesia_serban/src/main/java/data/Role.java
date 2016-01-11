@@ -9,20 +9,20 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="product")
-public class Product {
+@Table(name="roles")
+public class Role {
 	@Id
-	@GeneratedValue(generator = "increment2")
-	@GenericGenerator(name = "increment2", strategy = "increment")
+	@GeneratedValue(generator = "increment")
+	@GenericGenerator(name = "increment", strategy = "increment")
 	@Column(name="id")
 	private Long id;
 	
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="code")
-	private int barcode = 0;
-
+	@Column(name="comment")
+	private String comment;
+	
 	public Long getId() {
 		return id;
 	}
@@ -39,29 +39,28 @@ public class Product {
 		this.name = name;
 	}
 
-	public int getBarcode() {
-		return barcode;
+	public String getComment() {
+		return comment;
 	}
 
-	public void setBarcode(int barcode) {
-		this.barcode = barcode;
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public Role() {
+		super();
+	}
+
+	public Role(Long id, String name, String comment) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.comment = comment;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", barcode=" + barcode + "]";
-	}
-
-	public Product() {
-	}
-
-	public Product(String name, int barcode) {
-		this.name = name;
-		this.barcode = barcode;
-	}
-
-	public Product(String name) {
-		this(name,0);
+		return "Role [id=" + id + ", name=" + name + ", comment=" + comment + "]";
 	}
 	
 }

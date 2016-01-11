@@ -2,20 +2,21 @@ package dao;
 
 import java.util.List;
 
-import data.Employees;
+import data.Employee;
+
 
 
 
 public interface EmployeesDao {
-	Long create(Employees employee);
+	Long create(Employee employee);
 
-	Employees read(Long id);
+	Employee read(Long id);
 
-	void update(Employees employee);
+	void update(Employee employee);
 
-	void delete(Employees employee);
+	void delete(Employee employee);
 
-	List<Employees> findAll();
+	List<Employee> findAll();
 
-	List<Employees> findContractorsByBeginString(String begin);
+	List<Employee> findContractorsByBeginString(String begin);
 }
