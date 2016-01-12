@@ -14,7 +14,7 @@ import data.User;
 import service.ProductService;
 import service.ProductServiceImpl;
 import service.UserService;
-import service.UserServiceImpl;
+import service.UserServisImpl;
 import util.HibernateUtil;
 
 public class Test1 {
@@ -23,7 +23,7 @@ public class Test1 {
 		
 		System.out.println("******  example 1  *******************");
 		UserDao userDao = new UserDaoImpl();
-		UserService servisUser = new UserServiceImpl(userDao);
+		UserService servisUser = new UserServisImpl(userDao);
 		List<?> list = servisUser.getAllUsers();
 		list.forEach(us -> System.out.println(us));
 		//********************************************************
