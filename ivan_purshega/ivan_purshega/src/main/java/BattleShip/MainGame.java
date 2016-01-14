@@ -4,25 +4,38 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainGame {
+	
 	public static void main(String[] args) throws IOException {
+		
 		 Game game=new Game();
-		 ArrayList<Ship> ships=new ArrayList();
-		 ships.add(new Ship(4));
-		 ships.add(new Ship(3));
-		 ships.add(new Ship(3));
-		 ships.add(new Ship(2));
-		 ships.add(new Ship(2));
-		 ships.add(new Ship(2));
+		 ArrayList<Ship> Myships=new ArrayList();
+		 Myships.add(new Ship(4));
+		 Myships.add(new Ship(3));
+		 Myships.add(new Ship(3));
+		 Myships.add(new Ship(2));
+		 Myships.add(new Ship(2));
+		 Myships.add(new Ship(2));
 		 
-		 for(int i=0; i<ships.size();i++){
-			 while(game.addShip(ships.get(i))!=true);
+		 for(int i=0; i<Myships.size();i++){
+			 while(game.addShip(Myships.get(i))!=true);
 		 }
 		 
-		 for(int i=0; i<ships.size();i++) {
-			 System.out.println("Ship "+ i);
-			 ships.get(i).printLocation();		
+		 
+		 ArrayList<Ship> Enemyships=new ArrayList();
+		 Enemyships.add(new Ship(4));
+		 Enemyships.add(new Ship(3));
+		 Enemyships.add(new Ship(3));
+		 Enemyships.add(new Ship(2));
+		 Enemyships.add(new Ship(2));
+		 Enemyships.add(new Ship(2));
+		 
+		 for(int i=0; i<Enemyships.size();i++){
+			 while(game.addShip2(Enemyships.get(i))!=true);
 		 }
+		 
+		 
 		  game.goToHTML();
-		 
+		  game.goToFX(args);
 	}
 }
+
