@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class MainGame {
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		
 		 Game game=new Game();
 		 ArrayList<Ship> Myships=new ArrayList();
@@ -34,8 +34,11 @@ public class MainGame {
 		 }
 		 
 		 
+		 
 		  game.goToHTML();
 		  game.goToFX(args);
+		
+		  
 	}
 }
 

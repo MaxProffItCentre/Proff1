@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,11 +18,15 @@ import javafx.stage.Stage;
 public class Game extends Application {
 	static private int[][] pole=new int[8][8];
 	static private int[][] pole2=new int[8][8];
+	Button[] buttons=new Button[64];
+	Button[] ShootButtons=new Button[64];
+
 	
 	
 
 	
 	public boolean addShip(Ship ship){
+		
 	
 		 int count=ship.getCount();
 		 int x=(int)(0+8*Math.random());
@@ -206,7 +212,8 @@ public class Game extends Application {
 	
 	
 	
-	public void goToFX(String[] args){
+	public void goToFX(String[] args) {
+		
 		launch(args);
 	}
 	
@@ -218,7 +225,7 @@ public class Game extends Application {
 		stage.show();
 	}
 	
-	public Scene createScene(){
+	public Scene createScene() {
 		
 		
 		GridPane grid=new GridPane();
@@ -227,7 +234,7 @@ public class Game extends Application {
 		
 		
 		
-		Button[] buttons=new Button[64];
+		
 		for(int i=0; i<buttons.length;i++){
 			buttons[i]=new Button();
 			buttons[i].setMaxSize(30, 30);
@@ -239,11 +246,12 @@ public class Game extends Application {
 			for(int j=0; j<8;j++){
 				MyField.add(buttons[index], j, i);
 				if(pole[i][j]==1)buttons[index].setStyle("-fx-background-color:red");
+				if(pole[i][j]==2)buttons[index].setStyle("-fx-background-color:blue");
 				index++;
 			}
 			}
 		
-		Button[] ShootButtons=new Button[64];
+		
 		for(int i=0; i<ShootButtons.length;i++){
 			ShootButtons[i]=new Button();
 			ShootButtons[i].setMaxSize(30, 30);
@@ -265,11 +273,31 @@ public class Game extends Application {
 			ShootButtons[but].setOnAction((event) -> {
 		if(pole2[k][k1]==1)ShootButtons[but1].setStyle("-fx-background-color:red");
 		if(pole2[k][k1]!=1)ShootButtons[but1].setStyle("-fx-background-color:green");
+		try {
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+			int x=(int)(0+8*Math.random());
+			int y=(int)(0+8*Math.random());
+			System.out.println(x);
+			System.out.println(y);
+			if(pole[x][y]==1){
+				if(x==0)buttons[y].setStyle("-fx-background-color:black");
+				else buttons[8*x+y].setStyle("-fx-background-color:black");
+			}
+			if(pole[x][y]!=1){
+				if(x==0)buttons[y].setStyle("-fx-background-color:green");
+				else buttons[8*x+y].setStyle("-fx-background-color:green");
+			}
+		
 	});
 		but++;
 		}
 		}
-		
+			
 		grid.setHgap(20);
 		grid.setVgap(20);
 		Text text1 = new Text("My Base");
@@ -279,7 +307,12 @@ public class Game extends Application {
 		grid.add(MyField, 2, 1);
 		grid.add(ShooterField, 2, 4);
 		return new Scene(grid,600,600);
+		
 	}
+	
+	
+	
+
 	
 	
 	
@@ -318,6 +351,5 @@ public class Game extends Application {
 	}
 	
 }
-
 
 
