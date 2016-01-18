@@ -32,8 +32,6 @@ public class MainGame {
 		 for(int i=0; i<Enemyships.size();i++){
 			 while(game.addShip2(Enemyships.get(i))!=true);
 		 }
-		 
-		 
 		  game.goToHTML();
 		  game.goToFX(args);  
 	}
