@@ -34,7 +34,6 @@ public class MainGame {
 		 }
 		 
 		 
-		 
 		  game.goToHTML();
 		  game.goToFX(args);  
 	}
