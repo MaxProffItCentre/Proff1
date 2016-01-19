@@ -14,5 +14,8 @@ public class MainHouseLift {
         
         House house = (House) context.getBean("house");
         System.out.println(house);
+        
+        House house1 = (House) context.getBean("house1");
+        System.out.println(house1);
     }
 }
