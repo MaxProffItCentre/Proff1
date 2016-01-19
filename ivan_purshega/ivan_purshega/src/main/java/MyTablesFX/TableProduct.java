@@ -50,6 +50,8 @@ public class TableProduct extends Application{
            Group group = new Group();
            
            GridPane grid=new GridPane();
+           GridPane grid2=new GridPane();
+           GridPane grid3=new GridPane();
            TextField text1=new TextField();
            TextField text2=new TextField();
            
@@ -98,7 +100,7 @@ public class TableProduct extends Application{
            table.getColumns().addAll(firstNameCol,secondNameCol,thirdNameCol);
           
 
-           grid.add(table,0,0);
+           grid3.add(table,0,0);
          
            Button btn = new Button("add");
 
@@ -109,10 +111,12 @@ public class TableProduct extends Application{
            
           
            
-           grid.add(btn,1,0);
-           grid.add(text1, 2, 0);
-           grid.add(text2, 3, 0);
-           grid.add(delete, 0, 1);
+           grid2.add(btn,0,0);
+           grid2.add(text1, 1, 0);
+           grid2.add(text2, 2, 0);
+           grid2.add(delete, 0,1 );
+           grid.add(grid3, 0, 0);
+           grid.add(grid2,1 , 0);
            group.getChildren().add(grid);
            
            return new Scene(group,600,400);
