@@ -170,6 +170,7 @@ public class Game extends Application {
 	public void areaAroundShipXEnemy(int x, int y, int i){
 		if(y!=0) pole2[x+i][y-1]=2;
 		 if(y!=7) pole2 [x+i][y+1]=2;
+		
 	}
 	
 	public void areaAroundShipX2Enemy(int x, int y, int count){
@@ -246,7 +247,7 @@ public class Game extends Application {
 			for(int j=0; j<8;j++){
 				MyField.add(buttons[index], j, i);
 				if(pole[i][j]==1)buttons[index].setStyle("-fx-background-color:red");
-				if(pole[i][j]==2)buttons[index].setStyle("-fx-background-color:blue");
+//				if(pole[i][j]==2)buttons[index].setStyle("-fx-background-color:blue");
 				index++;
 			}
 			}
@@ -274,7 +275,7 @@ public class Game extends Application {
 		if(pole2[k][k1]==1)ShootButtons[but1].setStyle("-fx-background-color:red");
 		if(pole2[k][k1]!=1)ShootButtons[but1].setStyle("-fx-background-color:green");
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(10);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -309,11 +310,6 @@ public class Game extends Application {
 		return new Scene(grid,600,600);
 		
 	}
-	
-	
-	
-
-	
 	
 	
 	public void goToHTML() throws IOException{
