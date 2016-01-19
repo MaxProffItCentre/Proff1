@@ -31,5 +31,17 @@ http://www.springframework.org/schema/context/spring-context.xsd">
  		<constructor-arg value="Semenoff P.K."/>
  	</bean>
  	
- 	
+ 	<bean id="creatorLifta" class="action16.LiftCreator"/>
+ 	<bean id="lift2" factory-bean="creatorLifta"
+ 					factory-method="getStandartLift"/>
+ 	<bean id="lift3" factory-bean="creatorLifta"
+ 					factory-method="getSimpleLift"/>
+ 	<bean id="lift4" class="action16.Lift">
+ 		<property name="list">
+ 			<list>
+ 				<value>A1</value>
+ 				<value>B2</value>
+ 			</list>
+ 		</property>
+ 	</bean>								
 </beans>
