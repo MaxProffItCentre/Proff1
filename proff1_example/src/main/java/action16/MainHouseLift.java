@@ -17,5 +17,8 @@ public class MainHouseLift {
         
         House house1 = (House) context.getBean("house1");
         System.out.println(house1);
+        
+        Lift lift4 = (Lift) context.getBean("lift4");//указываем id нашего bean-а
+        System.out.println(lift4.getList());
     }
 }
