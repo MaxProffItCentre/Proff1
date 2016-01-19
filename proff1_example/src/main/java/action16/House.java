@@ -7,6 +7,12 @@ public class House {
 	public House(String number) {
 		this.number = number;
 	}
+	
+	public House(String number, Lift lift) {
+		this.number = number;
+		this.lift = lift;
+	}
+
 	public House() {
 	}
 	public String getNumber() {

@@ -12,6 +12,11 @@ public class Lift {
 		return operator;
 	}
 
+	public Lift(String name, String operator) {
+		this.name = name;
+		this.operator = operator;
+	}
+
 	public void setOperator(String operator) {
 		this.operator = operator;
 	}
