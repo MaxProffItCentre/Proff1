@@ -28,6 +28,7 @@ public class HibernateConnectExample {
         Session session = null;
         try {
             session = factory.openSession();
+            log.info("session opened!");
             session.beginTransaction();
             
             

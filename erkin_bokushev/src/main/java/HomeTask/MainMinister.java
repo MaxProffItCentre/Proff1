@@ -15,7 +15,7 @@ public class MainMinister {
 		Minister ministerProt = prototypeMin.copy();
 		
 		ArrayList<Deputy> deputs = new ArrayList<Deputy>();
-		Budget.setSummaBudget(15000000);
+		Budget.setSummaBudget(1000000);
 		
 		while (Budget.getSummaBudget() > 0) {
 			try {
