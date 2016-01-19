@@ -2,6 +2,7 @@ package action06;
 
 
 
+import appFX.IntegerTextField;
 import javafx.application.Application;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -32,25 +33,30 @@ public class Calculator extends Application {
 	}
 
 	public Scene scene() {
+		//smile pic
 		final Text actiontarget = new Text();
+		//smile pic 2
+		final Text smailik2 = new Text ();
 		//text just for Fun Tahoma Tolkien,
 		Text scenetitle = new Text("Calculator");
 		scenetitle.setFont(Font.font("Tahoma", FontWeight.BOLD, 20));
 		scenetitle.setFill(Color.CORNFLOWERBLUE);
+	
+		
 		
 		
 		// text field for the first number
-		TextField number1 = new TextField();
+		TextField number1 = new IntegerTextField();
 		number1.setMaxSize(100, 20);
 		number1.setEditable(true);
 		
 		// text field for operation sign
-		TextField operation = new TextField();
+		TextField operation = new MathOperationTextField();
 		operation.setMaxSize(50, 20);
 		operation.setEditable(true);
 
 		// text field for the second number
-		TextField number2 = new TextField();
+		TextField number2 = new IntegerTextField();
 		number2.setMaxSize(100, 20);
 		number2.setEditable(true);
 
@@ -100,11 +106,39 @@ public class Calculator extends Application {
 			}
 
 			public void handle(Event event) {
+				if(action.getText().equals("")|| num1.getText().equals("")||num2.getText().equals("")){
+					result.setText("Invalid Operation");
+					return;
+				}
 				result.setText(result(num1.getText(), num2.getText(), action.getText()));
-				actiontarget.setFill(Color.FIREBRICK);
-		        actiontarget.setText("=)");
-		        actiontarget.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
 				System.out.println("=)");
+		        Thread th = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						actiontarget.setFill(Color.FIREBRICK);
+				        actiontarget.setText("=)");
+				        
+				        actiontarget.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
+						
+						
+					}
+				});
+		        Thread th2 = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						smailik2.setFill(Color.BLUEVIOLET);
+						smailik2.setText("=)");
+						smailik2.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 20));
+						
+					}
+				});
+		        th.start();
+		        th.interrupt();
+		        th2.start();
+		        th2.interrupt();
+				
 
 			}
 
@@ -122,6 +156,7 @@ public class Calculator extends Application {
 		grid.add(btn, 3, 1);
 		grid.add(result, 4, 1);
 		grid.add(actiontarget, 4, 2);
+		grid.add(smailik2,3,2);
 		
 		// setting button on action
 		btn.setOnAction(new MyEvent(number1, operation, number2, result));
