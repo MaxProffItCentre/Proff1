@@ -19,7 +19,11 @@
 
 		<mapping class="data.Product" />
 		<mapping class="data.Contractor"/>
-		<mapping class="data.Employees"/>
+		<mapping class="data.Employee"/>
+		<mapping class="data.User"/>
+		<mapping class="data.Orders"/>
+		<mapping class="data.Role_User"/>
+		<mapping class="data.Role"/>
 		
 
 	</session-factory>
