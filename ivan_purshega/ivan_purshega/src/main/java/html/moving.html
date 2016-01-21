@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title> Moving </title> 
+		<style>
+		.square{		
+		position:relative;
+		left:300px;
+		width:407px;
+        height:407px;
+        border: 4px double black; 
+        background: #fc3; 
+        padding: 10px; 
+        color: red;
+        font-size: 30px;
+        font-family: Arial,Helvetica,Verdana;
+        font-weight: 300px;
+        line-height: 10px;
+		}
+		.litleSquare{
+		width:20px;
+        height:20px;
+        border: 4px double black; 
+        background: green;
+        padding: 10px; 
+        line-height: 10px;
+		 position: relative; 
+		 top:170px;
+		 left:170px;
+	
+		}
+		
+	.buttons{
+	width:100;
+	height:35;
+	border: 4px double green;
+	background: #fc3;
+	font-family: Arial,Helvetica,Verdana;
+	 font-weight: 50px;
+	 color: red;
+     font-size: 30px;
+	}
+		</style>
+		<script type="text/javascript">
+		var left=170;
+		var top1=170;
+		
+		
+		function moveLeft(element){
+		if(left>-10){
+		left=left-20;
+		document.getElementById(element).style.left=left;
+			} 
+		}
+		
+		function moveRigth(element){
+		if(left<365){
+		left=left+20;
+		document.getElementById(element).style.left=left;
+			} 
+		}
+		
+		
+		function moveUp(element){
+		if(top1>-10){
+		top1=top1-20;
+		document.getElementById(element).style.top=top1;
+			} 
+		}
+		
+		function moveDown(element){
+		if(top1<360){
+		top1=top1+20;
+		document.getElementById(element).style.top=top1;
+			} 
+		}
+		</script>
+		
+	</head>
+	
+	<body>
+		<div  class="square" id=div1> 
+			<div class="litleSquare" id=div2> </div>
+		</div>
+		<div class="buttons" style="position: relative; top:100; left:300;" 
+		onclick="moveLeft('div2')">  Left  </div>
+		<div class="buttons" style="position: relative; top:60; left:600;" 
+		onclick="moveRigth('div2')">  Rigth  </div>
+		<div class="buttons" style="position: relative; top:-30; left:450;" 
+		onclick="moveUp('div2')">  Up  </div>
+		<div class="buttons" style="position: relative; top:20; left:450;" 
+		onclick="moveDown('div2')">  Down  </div>
+	</body>
+</html>
