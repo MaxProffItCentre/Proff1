@@ -5,8 +5,16 @@ import java.util.ArrayList;
 public class Ship {
 	private int count;
 	private ArrayList<Location> location=new ArrayList();
+	private ArrayList<AreaAroundShip> areaAroundShip=new ArrayList();
 	
 	
+	public void setAreaAroundShip(int x, int y){
+		areaAroundShip.add(new AreaAroundShip(x,y));
+	}
+	
+	public ArrayList<AreaAroundShip> getAreaAroundShip(){
+		return areaAroundShip;
+	}
 	
 
 	public void printLocation(){
@@ -32,7 +40,7 @@ public class Ship {
 	}
 
 	public void addLocation(int x, int y){
-		location.add(new Location(x,y));
+		location.add(new Location(x,y,this));
 	}
 	
 	public ArrayList<Location> getLocation(){

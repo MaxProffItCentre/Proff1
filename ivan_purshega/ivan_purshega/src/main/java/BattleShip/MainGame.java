@@ -15,6 +15,10 @@ public class MainGame {
 		 Myships.add(new Ship(2));
 		 Myships.add(new Ship(2));
 		 Myships.add(new Ship(2));
+		 Myships.add(new Ship(1));
+		 Myships.add(new Ship(1));
+		 
+		 
 		 
 		 for(int i=0; i<Myships.size();i++){
 			 while(game.addShip(Myships.get(i))!=true);
@@ -28,6 +32,10 @@ public class MainGame {
 		 Enemyships.add(new Ship(2));
 		 Enemyships.add(new Ship(2));
 		 Enemyships.add(new Ship(2));
+		 Enemyships.add(new Ship(1));
+		 Enemyships.add(new Ship(1));
+		
+		 
 		 
 		 for(int i=0; i<Enemyships.size();i++){
 			 while(game.addShip2(Enemyships.get(i))!=true);

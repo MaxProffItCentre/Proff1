@@ -3,10 +3,10 @@ package BattleShip;
 public class Location {
 	private int x;
 	private int y;
+	Ship ship;
 	
-	
-	public Location(int x, int y) {
-		super();
+	public Location(int x, int y, Ship ship) {
+		this.ship=ship;
 		this.x = x;
 		this.y = y;
 	}
@@ -22,6 +22,13 @@ public class Location {
 	public void setY(int y) {
 		this.y = y;
 	}
+	public Ship getShip() {
+		return ship;
+	}
+	public void setShip(Ship ship) {
+		this.ship = ship;
+	}
+	
 	
 	
 }
