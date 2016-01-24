@@ -22,8 +22,29 @@ public class ChatServer extends Application {
 	public static void main(String[] args) {
 	int port=3129;
 	
-	new Starter<ServerSocketChat>(new ServerSocketChat(port));
-		launch(args);}
+	new Starter(new ServerSocketChat(port));
+		
+	/*try {
+		server = new ServerSocket(port);
+		System.out.println("Server started!");
+		int i=1;
+		Socket socket = server.accept();
+		System.out.println("Client accepted" + i);
+		Runnable r=new ThreadChatServer(socket);
+		Thread t=new Thread(r);
+		t.start();
+		i++;
+	} catch (IOException e) {
+		
+		e.printStackTrace();
+	} finally{
+		if(server != null){
+			try {
+				server.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}}}*/
+	launch(args);}
 	
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Chat_Server");
@@ -38,7 +59,6 @@ public class ChatServer extends Application {
 		group.getChildren().add(txt);
 		Scene scene = new Scene(group, 400, 600);
 		return scene;} 
-
 static class Starter<T extends Thread>{
 	public Starter(T obj){
 		obj.start();
@@ -55,12 +75,12 @@ static class ServerSocketChat extends Thread {
 		try {
 			server = new ServerSocket(port);
 			System.out.println("Server started!");
-			int i=1;
+			while(true){int i=1;
 			Socket socket = server.accept();
 			Runnable r=new ThreadChatServer(socket);
 			Thread t=new Thread(r);
 			t.start();
-			i++;
+			i++;}
 		} catch (IOException e) {
 			
 			e.printStackTrace();
@@ -75,7 +95,7 @@ static class ServerSocketChat extends Thread {
 
 static class ThreadChatServer implements Runnable {
 private Socket socket;
-    public ThreadChatServer(Socket socket){this.socket=socket;}
+    public ThreadChatServer(Socket i){this.socket=i;}
 	public void run() {
 		try{
 			
@@ -86,7 +106,8 @@ private Socket socket;
 		//DataOutputStream dos = new DataOutputStream(out);
 		String message=" ";
 		while(true) {message=dis.readUTF();
-		txt.appendText(message);}
+		txt.appendText(message);
+		}
 			
 			} catch (IOException e) {
 				e.printStackTrace();

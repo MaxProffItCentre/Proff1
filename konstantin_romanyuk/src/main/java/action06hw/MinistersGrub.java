@@ -35,8 +35,9 @@ public class MinistersGrub{
 		Thread th1=new Thread(gr1);
 		GrubMinBuilder gr2=new GrubMinBuilder();
 		Thread th2=new Thread(gr2);
-		th1.setPriority(2);
-		th2.setPriority(9);
+		th1.setPriority(9);
+		th2.setPriority(1);
+		
 		th1.start();
 		th2.start();
 			}
@@ -44,14 +45,14 @@ public class MinistersGrub{
 	public static class GrubMinSingle implements Runnable{
 
 		public void run() {
-			MinisterSingleton min1=new MinisterSingleton("Single",5000);	
-			Budget budget = Budget.setBudget();
+			MinisterSingleton min1=new MinisterSingleton("Single",1000);	
+			Budget.setBudget();
 			
-			while (budget.summBudget>0){
+			while (Budget.summBudget>0){
 				DeputySingleton deputy=min1.newDeputy();
 				deputy.register();
 				min1.grub();
-				budget.summBudget=budget.summBudget-min1.tarif-deputy.tarif;
+				Budget.summBudget=Budget.summBudget-min1.tarif-deputy.tarif;
 			}System.out.println(min1.summGrub);
 		}
 		
@@ -120,7 +121,7 @@ public class MinistersGrub{
 		}
 		public DeputyBuilder newDeputy() {
 			num++; 
-			DeputyBuilder deputy=new DeputyBuilder(this.name,this.tarif/2, this.num);
+			DeputyBuilder deputy=new DeputyBuilder(this);
 			list.add(deputy);
 			return deputy;
 			}
@@ -140,10 +141,10 @@ public class MinistersGrub{
         private int summGrub;
         private int number;
         
-        public DeputyBuilder(String mName, int tarif, int number){
-        	this.mName=mName;
-        	this.tarif=tarif;
-        	this.number=number;
+        public DeputyBuilder(MinisterBuilder minister){
+        	this.mName=minister.name;
+        	this.tarif=minister.tarif/2;
+        	this.number=minister.num;
 	}
         public boolean register(){
 		if(isReg=false)
@@ -159,16 +160,18 @@ public class MinistersGrub{
 
 		public void run() {
 			MinisterBuilder min2=new MinisterBuilder("Builder",10000);	
-			Budget budget = Budget.setBudget();
-			while (budget.summBudget>0){
+			Budget.setBudget();
+			while (Budget.summBudget>0){
+				
 				DeputyBuilder deputy=min2.newDeputy();
 				deputy.register();
 				min2.grub();
 				int deputyTarif=0;
 				for (DeputyBuilder db:min2.list) 
-				deputyTarif+=db.tarif;
-				budget.summBudget=budget.summBudget-min2.tarif-deputyTarif;
-			}System.out.println(min2.summGrub);
+				deputyTarif=deputyTarif+db.tarif;
+				Budget.summBudget=Budget.summBudget-min2.tarif-deputyTarif;
+			}
+			System.out.println(min2.summGrub);
 		}
 		
 	}

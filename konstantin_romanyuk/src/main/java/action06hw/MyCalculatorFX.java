@@ -63,6 +63,11 @@ public class MyCalculatorFX extends Application {
 		grid.add(button3, 0, 3);
 		grid.add(buttonRes, 0, 4);
 		grid.add(new MyButton("4"), 1, 1);
+		grid.add(new MyButton("5"), 1, 2);
+		grid.add(new MyButton("6"), 1, 3);
+		grid.add(new MyButton("7"), 2, 1);
+		grid.add(new MyButton("8"), 2,2);
+		grid.add(new MyButton("9"), 2, 3);
 		//		
 		Scene scene = new Scene(grid, 300, 250);
 		return scene;

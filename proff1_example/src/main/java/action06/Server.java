@@ -7,4 +7,4 @@ public class Server {
 	public static Server getInstance(){
 		return server;
 	}
-}
+main}

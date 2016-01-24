@@ -41,7 +41,7 @@ public class MyHashMap2 {
 		}
 		
 	
-	public Product1 get(Party part){
+	/*public Product1 get(Party part){
 		Product1 result=null;
 		int hash=part.hashCode()%capacity;
 		Iterator<Entry> iter1=map[hash].iterator();
@@ -51,7 +51,7 @@ public class MyHashMap2 {
 			result=iter1.next().prod;
 			}		
 			return result;
-	}
+	}*/
 		
 			
 	class Entry {
@@ -72,7 +72,7 @@ public class MyHashMap2 {
 				}
 		 public  Entry index(int index){
 				Entry entr=new Entry(this.hash,this.party,this.prod,this.next);
-				for(int i=0; i<index;i++){entr=entr.next;}
+				for(int i=0; i<index;i++){entr=(Entry)entr.next;}
 			return entr;}
 	}
 	}

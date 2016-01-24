@@ -10,7 +10,7 @@ public static void main(String[] args) {
 public static void method(Object obj){
 	Class temp=obj.getClass();
 	while (!(temp==null))
-	{System.out.println(temp.toString());
+	{System.out.println(temp.getSimpleName().toString());
 	temp=temp.getSuperclass();
 	}
 	
