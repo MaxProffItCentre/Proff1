@@ -1,21 +1,13 @@
 package BattleShip;
 
-import java.applet.Applet;
-import java.applet.AudioClip;
 import javafx.scene.media.Media;
+
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 
 
-import javax.sound.sampled.Clip;
-
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -24,7 +16,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Game extends Application {
+public class Game extends Application  {
 	static private int[][] pole=new int[8][8];
 	static private int[][] pole2=new int[8][8];
 	static private boolean[][] ShootField=new boolean[8][8];
@@ -253,7 +245,7 @@ public class Game extends Application {
 		 
 	}
 	
-	public void goToFX(String[] args) {
+	public void goToFX(String[] args)throws InterruptedException {
 		
 		launch(args);
 	}
@@ -268,27 +260,41 @@ public class Game extends Application {
 	
 	
 	@SuppressWarnings("restriction")
-	public Scene createScene() {
+	public Scene createScene() throws IOException   {
 		 
 		
 		GridPane grid=new GridPane();
 		GridPane MyField=new GridPane();
 		GridPane ShooterField=new GridPane();
+		GridPane grid2=new GridPane();
+		GridPane mainGrid=new GridPane();
+		
+		mainGrid.setHgap(150);
+		mainGrid.add(grid, 0, 0);
+		mainGrid.add(grid2, 1, 0);
+		mainGrid.setStyle(" -fx-background-repeat: stretch; -fx-background-size: 720 720; -fx-background-image: url('file:///d:/Img1.jpg');");  
 		
 		
 		
+		String [] str={"V","I","C","T","O","R","Y"};
+		Text [] text3=new Text[str.length];
+		
+		String [] str2={"","","F","A","I","L",""};
+		Text [] text4=new Text[str2.length];
+	
 		
 		for(int i=0; i<buttons.length;i++){
 			buttons[i]=new Button();
 			buttons[i].setMaxSize(30, 30);
 			buttons[i].setMinSize(30, 30);
+			buttons[i].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/null.jpg');");
 		}
 		int index=0;
 		
 		for(int i=0; i<8;i++){
 			for(int j=0; j<8;j++){
 				MyField.add(buttons[index], j, i);
-				if(pole[i][j]==1)buttons[index].setStyle("-fx-background-color:red");
+				if(pole[i][j]==1)buttons[index].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/ship.jpg');");
 				index++;
 			}
 			}
@@ -298,6 +304,7 @@ public class Game extends Application {
 			ShootButtons[i]=new Button();
 			ShootButtons[i].setMaxSize(30, 30);
 			ShootButtons[i].setMinSize(30, 30);
+			ShootButtons[i].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/null.jpg');");
 		}
 		int ShootIndex=0;
 		
@@ -313,14 +320,16 @@ public class Game extends Application {
 				int but1=but;
 			int k=i; int k1=j;
 			ShootButtons[but1].setOnAction((event) -> {
-//				Media music = new Media("file:///d:/pushka.mp3");
-//			     MediaPlayer mediaP = new MediaPlayer(music);
-//			     mediaP.play();	
+				
+
 			  
 		if(pole2[k][k1]==1){
+			Media music = new Media("file:///d:/ShipExplo.mp3");
+		     MediaPlayer mediaP = new MediaPlayer(music);
+		     mediaP.play();
 			EnemyLife--;
 			if(TargetEnemy!=true){
-			ShootButtons[but1].setStyle("-fx-background-color:red");
+			ShootButtons[but1].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/destroyShip.jpg');");
 			pole2[k][k1]=10;
 			
 			for(int i4=0; i4<EnemyShips.size();i4++){
@@ -334,8 +343,8 @@ public class Game extends Application {
 							for(int i3=0; i3<EnemyShips.get(NumberOfEnemyShip).getAreaAroundShip().size();i3++){
 								int xx=EnemyShips.get(NumberOfEnemyShip).getAreaAroundShip().get(i3).getX();
 								int yy=EnemyShips.get(NumberOfEnemyShip).getAreaAroundShip().get(i3).getY();
-								if(xx==0)ShootButtons[yy].setStyle("-fx-background-color:green");
-								else ShootButtons[8*xx+yy].setStyle("-fx-background-color:green");
+								if(xx==0)ShootButtons[yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
+								else ShootButtons[8*xx+yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
 								TargetEnemy=false;
 							}
 						}
@@ -346,41 +355,55 @@ public class Game extends Application {
 		}
 		else if(TargetEnemy==true){
 			if(pole2[k][k1]==1){
-				ShootButtons[but1].setStyle("-fx-background-color:red");
+				ShootButtons[but1].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/destroyShip.jpg');");
 				count2--;
 				
 				
 				if(count2==0){
 					
-					System.out.println("COUNT    ===== 0");
+					
 					for(int i3=0; i3<EnemyShips.get(NumberOfEnemyShip).getAreaAroundShip().size();i3++){
 						int xx=EnemyShips.get(NumberOfEnemyShip).getAreaAroundShip().get(i3).getX();
 						int yy=EnemyShips.get(NumberOfEnemyShip).getAreaAroundShip().get(i3).getY();
-						if(xx==0)ShootButtons[yy].setStyle("-fx-background-color:green");
-						else ShootButtons[8*xx+yy].setStyle("-fx-background-color:green");
+						if(xx==0)ShootButtons[yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
+						else ShootButtons[8*xx+yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
 						TargetEnemy=false;
 						}	
 					}	
 				}
 			}
 			if(EnemyLife==0){
-				Text text = new Text("  VICTORY");
-				text.setStyle("-fx-fill:green; -fx-font-size: 60pt;");
-				grid.add(text,2,3);
+				for(int ii=0;ii<str.length;ii++){
+					text3[ii]=new Text(str[ii]);
+					text3[ii].setStyle("-fx-fill: lime; -fx-font-size: 50pt;");
+					grid2.add(text3[ii],0,ii+1);
+				}
+				Media music3 = new Media("file:///d:/victory.mp3");
+			     MediaPlayer mediaP3 = new MediaPlayer(music3);
+			     mediaP3.play();
 			}
 		}
 		
 		else if(pole2[k][k1]!=1){
-			ShootButtons[but1].setStyle("-fx-background-color:green");
+			ShootButtons[but1].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
 			Media music2 = new Media("file:///d:/waterExplo.mp3");
 		     MediaPlayer mediaP2 = new MediaPlayer(music2);
 		     mediaP2.play();	
 		}
-		try {
-			Thread.sleep(100);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}	
+//		} try {
+//		Media music2 = new Media("file:///d:/pushka.mp3");
+//	     MediaPlayer mediaP2 = new MediaPlayer(music2);
+//	     mediaP2.play();
+//		System.out.println("before");
+//		Thread.sleep(3000);
+//		Media music3 = new Media("file:///d:/waterExplo.mp3");
+//	     MediaPlayer mediaP3 = new MediaPlayer(music3);
+//	     mediaP3.play();
+//		System.out.println("After");
+//		}  catch (Exception e1) {
+//			e1.printStackTrace();
+//		}
+		if(EnemyLife!=0){
 			if(Target==false){
 			int x=(int)(0+8*Math.random());
 			int y=(int)(0+8*Math.random());
@@ -401,40 +424,42 @@ public class Game extends Application {
 						LastY=y;
 						MyLife--;
 						if(MyLife==0){
-							Text text = new Text(" FAIL  ");
-							text.setStyle("-fx-fill:red; -fx-font-size: 60pt;");
-							grid.add(text,2,3);
+							for(int ii=0;ii<str2.length;ii++){
+								text4[ii]=new Text(str2[ii]);
+								text4[ii].setStyle("-fx-fill:red; -fx-font-size: 50pt;");
+								grid2.add(text4[ii],0,ii+1);
+							}
+							Media music = new Media("file:///d:/Fail.mp3");
+						     MediaPlayer mediaP = new MediaPlayer(music);
+						     mediaP.play();
 						}
 						if(count==0){
 							for(int i3=0; i3<Myships.get(NumberOfShip).getAreaAroundShip().size();i3++){
 								int xx=Myships.get(NumberOfShip).getAreaAroundShip().get(i3).getX();
 								int yy=Myships.get(NumberOfShip).getAreaAroundShip().get(i3).getY();
-								System.out.println("xx ="+xx+"  yy="+yy);
 								ShootField[xx][yy]=true;
-								if(xx==0)buttons[yy].setStyle("-fx-background-color:green");
-								else buttons[8*xx+yy].setStyle("-fx-background-color:green");
+								if(xx==0)buttons[yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
+								else buttons[8*xx+yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
 								Target=false;
 							}
 						}
-						
 					}
 				}
 			}
 			
 			if(pole[x][y]==1){
-				if(x==0)buttons[y].setStyle("-fx-background-color:black");
-				else buttons[8*x+y].setStyle("-fx-background-color:black");
+				if(x==0)buttons[y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/destroyShip.jpg');");
+				else buttons[8*x+y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/destroyShip.jpg');");
 			}
 			if(pole[x][y]!=1){
-				if(x==0)buttons[y].setStyle("-fx-background-color:green");
-				else buttons[8*x+y].setStyle("-fx-background-color:green");
+				if(x==0)buttons[y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
+				else buttons[8*x+y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
 			}
 			}
 			else  {
 				
 				int x=LastX;
 				int y=LastY;
-				System.out.println("Target true  x= "+x+"  y= "+y);
 				if(Left==true){y=y-1-dop;}
 				else if(Rigth==true){y=y+1+dop;}
 				else if(Up==true){x=x-1-dop;}
@@ -464,13 +489,10 @@ public class Game extends Application {
 			}
 		}
 				if(pole[x][y]==1){
-					
-					System.out.println("DA");
-					if(x==0)buttons[y].setStyle("-fx-background-color:black");
-					else buttons[8*x+y].setStyle("-fx-background-color:black");
+					if(x==0)buttons[y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/destroyShip.jpg');");
+					else buttons[8*x+y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/destroyShip.jpg');");
 					count--;
 					dop++;
-					System.out.println("Shot=  "+shot);
 					if(shot==0)Left=true;
 					if(shot==1)Rigth=true; 
 					if(shot==2)Up=true; 
@@ -498,16 +520,21 @@ public class Game extends Application {
 					}
 					MyLife--;
 					if(MyLife==0){
-						Text text = new Text("  FAIL ");
-						text.setStyle("-fx-fill:red; -fx-font-size: 60pt;");
-						grid.add(text,2,3);
+						for(int ii=0;ii<str2.length;ii++){
+							text4[ii]=new Text(str2[ii]);
+							text4[ii].setStyle("-fx-fill:red; -fx-font-size: 50pt;");
+							grid2.add(text4[ii],0,ii+1);
+						}
+						Media music = new Media("file:///d:/Fail.mp3");
+					     MediaPlayer mediaP = new MediaPlayer(music);
+					     mediaP.play();
 					}
 					
 				}
 				if(pole[x][y]!=1){
 					System.out.println("NET");
-					if(x==0)buttons[y].setStyle("-fx-background-color:green");
-					else buttons[8*x+y].setStyle("-fx-background-color:green");
+					if(x==0)buttons[y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
+					else buttons[8*x+y].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
 					dop=0;
 					yes=false;
 					Left=false;
@@ -515,17 +542,15 @@ public class Game extends Application {
 					Up=false; 
 					Down=false; 
 					ShootField[x][y]=true;
-			}
-			
+			}	
 				if(count==0){
 					for(int i3=0; i3<Myships.get(NumberOfShip).getAreaAroundShip().size();i3++){
 						int xx=Myships.get(NumberOfShip).getAreaAroundShip().get(i3).getX();
 						int yy=Myships.get(NumberOfShip).getAreaAroundShip().get(i3).getY();
 						System.out.println("xx ="+xx+"  yy="+yy);
 						ShootField[xx][yy]=true;
-						if(xx==0)buttons[yy].setStyle("-fx-background-color:green");
-						else buttons[8*xx+yy].setStyle("-fx-background-color:green");
-				
+						if(xx==0)buttons[yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");
+						else buttons[8*xx+yy].setStyle(" -fx-background-repeat: stretch; -fx-background-size: 30 30; -fx-background-image: url('file:///d:/shooting.jpg');");		
 					}
 					Target=false;
 					Left=false;
@@ -534,28 +559,27 @@ public class Game extends Application {
 					Down=false;
 					dop=0;
 				}
-			
-			
 			}	
-			
+		}
 	});
 		but++;
 		}
-		}
-			
+		}	
+		
 		grid.setHgap(20);
 		grid.setVgap(20);
 		Text text1 = new Text("My Base");
+		text1.setStyle( "-fx-font: 50px Tahoma;  -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%); -fx-stroke: black;-fx-stroke-width: 1;");
 		Text text2 = new Text("Enemy Base");
+		text2.setStyle( " -fx-font: 50px Tahoma;  -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, yellow 0%, green 50%); -fx-stroke: black;-fx-stroke-width: 1;");
 		grid.add(text1, 2, 0);
 		grid.add(text2, 2, 3);
 		grid.add(MyField, 2, 1);
 		grid.add(ShooterField, 2, 4);
-		return new Scene(grid,720,720);
 		
+		return new Scene(mainGrid,720,720);	
 	}
-	
-	
+		
 	public void goToHTML() throws IOException{
 		FileWriter fw=new FileWriter("D:/file.html");
 		fw.write("<!DOCTYPE> \n "
@@ -580,14 +604,4 @@ public class Game extends Application {
 				+"</html>");
 		fw.close();
 	}
-
-
-	public int[][] getPole() {
-		return pole;
-	}
-
-	public void setPole(int[][] pole) {
-		this.pole = pole;
-	}
-	
 }
