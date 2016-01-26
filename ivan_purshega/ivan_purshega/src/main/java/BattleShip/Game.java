@@ -577,7 +577,7 @@ public class Game extends Application  {
 		grid.add(MyField, 2, 1);
 		grid.add(ShooterField, 2, 4);
 		
-		return new Scene(mainGrid,720,720);	
+		return new Scene(mainGrid,700,690);	
 	}
 		
 	public void goToHTML() throws IOException{
