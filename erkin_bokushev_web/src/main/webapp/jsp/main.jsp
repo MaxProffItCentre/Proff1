@@ -1,7 +1,4 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="data.User"%>
 <%@page import="support.MainServlet"%>
-<%@ page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -26,7 +23,13 @@
 				<table >
 					<tr> 
 					<%
-					String text = (String)request.getAttribute("text");
+					String text = "";
+					if (request.getAttribute("text")== null) {
+						text = "";
+					} else {
+						text = (String)request.getAttribute("text");
+					}
+					
 					%>
 					<td style="padding-left: 200px">
 						<h4>Войти в систему</h4>

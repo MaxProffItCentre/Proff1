@@ -1,4 +1,4 @@
-package Support;
+package support;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,19 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.DaoImpl;
+import data.User;
+
 public class UsersServlet extends HttpServlet  {
-	private ArrayList<User> users = (ArrayList<User>)User.getUsers();
+//	private ArrayList<User> users = (ArrayList<User>)User.getUsers();
 	private String [] filtrChecked = {"0", "0", "0", "0", "0"} ;
+	private DaoImpl<User>daoIml = new DaoImpl<User>(User.class);
+//	private ArrayList<User> users = (ArrayList<User>)daoIml.findAll();
 	
 	protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-	
-		    ArrayList<User>usersAnswers = new ArrayList<User>();
+			ArrayList<User> users = (ArrayList<User>)daoIml.findAll();
+			ArrayList<User>usersAnswers = new ArrayList<User>();
 			ArrayList<User>usersManages = new ArrayList<User>();
 			ArrayList<User>usersDirectors = new ArrayList<User>();
 			ArrayList<User>usersAdmins = new ArrayList<User>(); 
 			
 			String alert = "";
-		// Добавление нового пользователя
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			if (request.getParameter("name")!=null && request.getParameter("login")!=null && request.getParameter("pass")!=null) {
 				if (request.getParameter("name")!="" && request.getParameter("login")!="" && request.getParameter("pass")!=""){
 					String name = request.getParameter("name");
@@ -32,10 +37,10 @@ public class UsersServlet extends HttpServlet  {
 					if (request.getParameter("Manage")!=null && request.getParameter("Manage").equals("Manage")) userAdd.setCanManage(true);
 					if (request.getParameter("Director")!=null && request.getParameter("Director").equals("Director")) userAdd.setDirector(true);
 					if (request.getParameter("Admin")!=null && request.getParameter("Admin").equals("Admin")) userAdd.setAdmin(true);
-					users.add(userAdd);
-					alert = "ПОЛЬЗОВАТЕЛЬ ДОБАВЛЕН!";
+					daoIml.create(userAdd);
+					alert = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
 				}else {
-					alert = "Не все поля заполнены!";
+					alert = "пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
 				}
 			} else {
 				//nothing 
@@ -44,31 +49,36 @@ public class UsersServlet extends HttpServlet  {
 			
 			
 		
-	    //Изменения роли
+	    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 	        for (int i=0; i<users.size(); i++) {  
 	        	if (request.getParameter("Answer"+i)!=null && request.getParameter("Answer"+i).equals("isCanAnswer")){
 	        			users.get(i).setCanAnswer(true);
+	        			daoIml.update(users.get(i));
 	        		
 	        	} else if (request.getParameter("Manage" + i)!=null && request.getParameter("Manage" + i).equals("isCanManage")){
 	        			users.get(i).setCanManage(true);
+	        			daoIml.update(users.get(i));
 	  
 	        	} else if (request.getParameter("Director" + i)!=null && request.getParameter("Director" + i).equals("isCanDirector")){
         			users.get(i).setDirector(true);
+        			daoIml.update(users.get(i));
         		
 	        	} else if (request.getParameter("Admin" + i)!=null && request.getParameter("Admin" + i).equals("isCanAdmin")){
         			users.get(i).setAdmin(true);
+        			daoIml.update(users.get(i));
         		
 	        	}  else if (request.getParameter("ResetAll" + i)!=null && request.getParameter("ResetAll" + i).equals("ResetAll")){
 	        		if (users.get(i).isCanAnswer()) users.get(i).setCanAnswer(false);
 	        		if (users.get(i).isCanManage())users.get(i).setCanManage(false);
 	        		if (users.get(i).isDirector())users.get(i).setDirector(false);
 	        		if(users.get(i).isAdmin())users.get(i).setAdmin(false);
+	        		daoIml.update(users.get(i));
 	        	}
 	        }
 	    
 
 	    
-	    //Фильтр по ролям
+	    //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	    String filtr = request.getParameter("roles");
 	    if (filtr != null) {
 	    	if (filtr.equals("Answers")) {   //Answers

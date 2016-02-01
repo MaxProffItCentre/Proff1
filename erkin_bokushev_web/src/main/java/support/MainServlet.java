@@ -14,11 +14,12 @@ import data.User;
 
 public class MainServlet extends HttpServlet {
 	private DaoImpl<User>daoIml = new DaoImpl<User>(User.class);
-	private ArrayList<User> users = (ArrayList<User>)daoIml.findAll();
+//	private ArrayList<User> users = (ArrayList<User>)daoIml.findAll();
+	
 		@Override
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			// TODO Auto-generated method stub
-			
+			ArrayList<User> users = (ArrayList<User>)daoIml.findAll();
 			
 			String login = req.getParameter("login");
 			String pass = req.getParameter("pass");
