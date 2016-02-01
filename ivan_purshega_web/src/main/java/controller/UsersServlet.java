@@ -13,12 +13,9 @@ public class UsersServlet extends HttpServlet{
 	
 	
 	 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 ArrayList<User> users = new ArrayList();
-		 for(int i = 0; i < 3; i++){
-				users.add(new User("Name"+i, "login"+i, "pass"));
-		 }
-		 
-		 request.setAttribute("usersList", users);
+		
+		 String str="avtomobil";
+		
 		 
 		 RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/users.jsp");
 	        dispatcher.forward(request, response);
