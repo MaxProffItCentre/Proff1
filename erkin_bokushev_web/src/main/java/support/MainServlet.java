@@ -29,7 +29,7 @@ public class MainServlet extends HttpServlet {
 			for (User user: users) {
 				if (user.getLogin().equals(login) && user.getPass().equals(pass)){
 					text = "Авторизация прошла успешно!"; 
-					if (user.isAdmin()) {
+					if (user.isAdmin()) { 
 						RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/users.jsp");
 						dispatcher.forward(req, resp);
 					} else {

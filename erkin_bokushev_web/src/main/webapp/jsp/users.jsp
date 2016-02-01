@@ -95,7 +95,7 @@
 </tr>
 <tr>
 	<td>Фильтр</td>
-</tr>
+</tr> 
 <tr>
 	<td>
 	<form action="http://localhost:8080/erkin_bokushev_web/users" method="get">
