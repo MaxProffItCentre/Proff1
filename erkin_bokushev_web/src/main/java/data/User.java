@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
-
+ 
 // - Users(name, login, pass, isCanAnswer, isCanManage, isDirector, isAdmin)
 @Entity
 @Table(name = "users")
