@@ -1,6 +1,6 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="Support.User"%>
-<%@page import="Support.UsersServlet"%>
+<%@page import="data.User"%>
+<%@page import="support.UsersServlet"%>
 <%@ page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
@@ -61,7 +61,7 @@
 			if (users.get(i).isAdmin()) var += "Admin</p>";
 			var += "</td>";
 			var +="<td>";
-			var +="<form action=\"http://localhost:8080/proff1_example_web/users\" method=\"get\">";	
+			var +="<form action=\"http://localhost:8080/erkin_bokushev_web/users\" method=\"get\">";	
 			var +="<p style=\"display:inline\"><input type = \"checkbox\" name =\"Answer" + i + "\" value = \"isCanAnswer\"/>Answer \n";
 			var +="<input type = \"checkbox\" name = \"Manage" + i + "\" value = \"isCanManage\"/>Manage \n";
 			var +="<input type = \"checkbox\" name = \"Director" + i + "\" value = \"isCanDirector\"/>Director \n"; 
@@ -98,7 +98,7 @@
 </tr>
 <tr>
 	<td>
-	<form action="http://localhost:8080/proff1_example_web/users" method="get">
+	<form action="http://localhost:8080/erkin_bokushev_web/users" method="get">
 	<input type = "radio" name = "roles" value = "Answers" />Answers
 	<input type = "radio" name = "roles" value = "Manages" />Manages
 	<input type = "radio" name = "roles" value = "Directors"/>Directors
@@ -115,7 +115,7 @@
 </tr>
 <tr>
 	<td>
-	<form action="http://localhost:8080/proff1_example_web/users" method="get">
+	<form action="http://localhost:8080/erkin_bokushev_web/users" method="get">
 	<p>Name <input type = "text" name = "name"></p>
 	<p>Login <input type = "text" name = "login"></p>
 	<p>Passw <input type = "password" name = "pass"></p>
@@ -131,8 +131,14 @@
 </tr>
 <tr>
 	<td><% 
-	String alert = (String)request.getAttribute("alert"); 
-	out.println(alert);
+	
+	if (request.getAttribute("alert")== null) {
+		out.println("");
+	} else {
+		String alert = (String)request.getAttribute("alert"); 
+		out.println(alert);
+	}
+	
 	%>
 </tr>
 <tr>
