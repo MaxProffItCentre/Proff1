@@ -1,0 +1,282 @@
+*   2a94431 2016-02-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git (HEAD -> master, origin/master) [erkin.bokushev]
+[31m|[m[32m\[m  
+[31m|[m * 6d67a41 2016-01-31 | web [Admin]
+* [32m|[m a885608 2016-02-01 | commit [erkin.bokushev]
+* [32m|[m edbd2ad 2016-02-01 | Revert "dao + main page" [erkin.bokushev]
+* [32m|[m 3764b9e 2016-02-01 | dao + main page [erkin.bokushev]
+* [32m|[m 6ce6d82 2016-02-01 | Main page [erkin.bokushev]
+[32m|[m[32m/[m  
+* 181a480 2016-01-29 | rename web project [erkin.bokushev]
+* 2692ce7 2016-01-28 | Users, web.xml, pom.xml - proffWeb [erkin.bokushev]
+* 4523257 2016-01-26 | Caput GIT [Ivan_purshega]
+* b14bb22 2016-01-25 | Battle Ship Game [Ivan_purshega]
+* 56d97e7 2016-01-24 | Battle ship [Admin]
+*   51a6a1e 2016-01-24 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [MyName]
+[33m|[m[34m\[m  
+[33m|[m * f9d56e2 2016-01-24 | game's over! [Olesia]
+[33m|[m * 4711c22 2016-01-21 | moving.html [Admin]
+[33m|[m * f6f1c3a 2016-01-21 | game skeleton [Olesia]
+[33m|[m * 2ad1601 2016-01-20 | action 16 commit [Olesia]
+[33m|[m * 3aac68a 2016-01-19 | gitignore [Alexey]
+[33m|[m *   172339e 2016-01-19 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 das [Alexey]
+[33m|[m [35m|[m[36m\[m  
+[33m|[m [35m|[m *   d78dd34 2016-01-19 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [Ivan_purshega]
+[33m|[m [35m|[m [1;31m|[m[1;32m\[m  
+[33m|[m [35m|[m * [1;32m|[m e64e2ce 2016-01-19 | action16 [Ivan_purshega]
+[33m|[m * [1;32m|[m [1;32m|[m 7b276ec 2016-01-19 | conf [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m d41a186 2016-01-19 | config [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m c9dfff0 2016-01-19 | Lift [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m 5e604e9 2016-01-19 | delete Home [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m 9f32949 2016-01-19 | action16 folder [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m 0c5cba2 2016-01-19 | action16 [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m f6c45eb 2015-12-14 | action10_dao_util [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m e53facf 2015-12-14 | res_loc [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m c53182a 2015-12-14 | action09_1 [Alexey]
+[33m|[m * [1;32m|[m [1;32m|[m a372535 2015-12-14 | data [Alexey]
+* [1;32m|[m [1;32m|[m [1;32m|[m 6f6bc63 2016-01-24 | update project [MyName]
+[1;32m|[m [1;32m|[m[1;32m_[m[1;32m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[1;32m|[m [1;32m|[m   
+* [1;32m|[m [1;32m|[m c04f8f7 2016-01-19 | last update of spring example [Name1]
+* [1;32m|[m [1;32m|[m 1ba3ada 2016-01-19 | update config of spring [Name1]
+* [1;32m|[m [1;32m|[m   d227184 2016-01-19 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Name1]
+[1;33m|[m[1;34m\[m [1;32m\[m [1;32m\[m  
+[1;33m|[m * [1;32m\[m [1;32m\[m   0d77907 2016-01-19 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [MyName]
+[1;33m|[m [1;35m|[m[1;36m\[m [1;32m\[m [1;32m\[m  
+[1;33m|[m * [1;36m|[m [1;32m|[m [1;32m|[m 7abff31 2016-01-19 | test commit [MyName]
+* [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m df1d59c 2016-01-19 | update action16-last of Spring information [Name1]
+[1;36m|[m [1;36m|[m[1;36m/[m [1;32m/[m [1;32m/[m  
+[1;36m|[m[1;36m/[m[1;36m|[m [1;32m|[m [1;32m|[m   
+* [1;36m|[m [1;32m|[m [1;32m|[m 57060bb 2016-01-19 | update action16 for nextMaterial of Spring [Name1]
+* [1;36m|[m [1;32m|[m [1;32m|[m f42efd2 2016-01-19 | update MainHouseLift [Name1]
+* [1;36m|[m [1;32m|[m [1;32m|[m d7d1beb 2016-01-19 | create action16 [Name1]
+[1;32m|[m [1;36m|[m[1;32m_[m[1;32m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[1;36m|[m [1;32m|[m   
+* [1;36m|[m [1;32m|[m   e5ffbc8 2016-01-19 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Name1]
+[31m|[m[32m\[m [1;36m\[m [1;32m\[m  
+[31m|[m * [1;36m|[m [1;32m|[m 3747662 2016-01-18 | eshe raz [Ivan_purshega]
+[31m|[m * [1;36m|[m [1;32m|[m 134976b 2016-01-18 | Commit [Ivan_purshega]
+[31m|[m * [1;36m|[m [1;32m|[m c2fe838 2016-01-18 | Eshe raz [Ivan_purshega]
+[31m|[m * [1;36m|[m [1;32m|[m 2863a0d 2016-01-18 | 1 [Ivan_purshega]
+[31m|[m * [1;36m|[m [1;32m|[m d343052 2016-01-18 | Proverka svyazi [Ivan_purshega]
+[31m|[m * [1;36m|[m [1;32m|[m 3b8da55 2016-01-17 | Battle Ship [Admin]
+[31m|[m * [1;36m|[m [1;32m|[m 4432f1f 2016-01-14 | gogogo [Admin]
+[31m|[m * [1;36m|[m [1;32m|[m 7f6fdeb 2016-01-14 | commitik [Ivan]
+* [32m|[m [1;36m|[m [1;32m|[m 9584262 2016-01-19 | hidden not actual examples by action 14 [Name1]
+[32m|[m[32m/[m [1;36m/[m [1;32m/[m  
+* [1;36m|[m [1;32m|[m 44b9156 2016-01-12 | update test1 by package-controller [admin]
+* [1;36m|[m [1;32m|[m c4ccddf 2016-01-12 | delete old files by package-controller [admin]
+* [1;36m|[m [1;32m|[m 9c21ff8 2016-01-12 | GlobalFix proff1_example [admin]
+* [1;36m|[m [1;32m|[m 6ae6e84 2016-01-12 | Text commit action07/Test1 [admin]
+* [1;36m|[m [1;32m|[m 48fa5ea 2016-01-12 | update pom.xml [admin]
+* [1;36m|[m [1;32m|[m 1410c6d 2016-01-11 | CRM [erkin27]
+* [1;36m|[m [1;32m|[m 94a444f 2016-01-11 | cmt [Olesia]
+* [1;36m|[m [1;32m|[m a9ffbd9 2016-01-11 | cmt [Olesia]
+* [1;36m|[m [1;32m|[m 713e52e 2016-01-11 | cmt [Olesia]
+* [1;36m|[m [1;32m|[m adabe37 2016-01-11 | comt [Olesia]
+* [1;36m|[m [1;32m|[m 48be342 2015-12-23 | table,table,table..... [Ivan]
+* [1;36m|[m [1;32m|[m 1fe9216 2015-12-22 | table [Admin]
+* [1;36m|[m [1;32m|[m 1044ca1 2015-12-22 | commmm [Ivan]
+* [1;36m|[m [1;32m|[m ff72b6d 2015-12-21 | commit [Admin]
+* [1;36m|[m [1;32m|[m 1fef94c 2015-12-20 | GUI [erkin27]
+* [1;36m|[m [1;32m|[m   0c4dbe7 2015-12-20 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [erkin27]
+[33m|[m[34m\[m [1;36m\[m [1;32m\[m  
+[33m|[m * [1;36m|[m [1;32m|[m 1b53d97 2015-12-20 | commit [Ivan]
+[33m|[m * [1;36m|[m [1;32m|[m f86adb4 2015-12-20 | commit [Admin]
+[33m|[m * [1;36m|[m [1;32m|[m 6c548d3 2015-12-18 | update [Olesia]
+[33m|[m * [1;36m|[m [1;32m|[m c2a3cab 2015-12-18 | update [Olesia]
+[33m|[m * [1;36m|[m [1;32m|[m 4da89b1 2015-12-18 | myApp update [Olesia]
+[33m|[m * [1;36m|[m [1;32m|[m b2214c0 2015-12-16 | hw update [Olesia]
+[33m|[m * [1;36m|[m [1;32m|[m b78d794 2015-12-16 | commit [Olesia]
+[33m|[m * [1;36m|[m [1;32m|[m 794b48e 2015-12-15 | commit! [Olesia]
+[33m|[m * [1;36m|[m [1;32m|[m 973d87c 2015-12-15 | new commit [Ivan]
+[33m|[m * [1;36m|[m [1;32m|[m   d005111 2015-12-15 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [alwizard]
+[33m|[m [35m|[m[36m\[m [1;36m\[m [1;32m\[m  
+[33m|[m [35m|[m * [1;36m|[m [1;32m|[m 88f4d36 2015-12-15 | Update .gitignore [Sergey]
+[33m|[m [35m|[m * [1;36m|[m [1;32m|[m 32f60be 2015-12-14 | commit [Администратор]
+[33m|[m [35m|[m * [1;36m|[m [1;32m|[m 7b2f786 2015-12-14 | comit [Ivan]
+[33m|[m [35m|[m * [1;36m|[m [1;32m|[m 8388dca 2015-12-14 | update hibernateConnectExample [admin]
+[33m|[m [35m|[m [1;36m|[m[1;36m/[m [1;32m/[m  
+[33m|[m * [1;36m|[m [1;32m|[m 145c934 2015-12-15 | push [alwizard]
+* [36m|[m [1;36m|[m [1;32m|[m 3ff7100 2015-12-20 | com [erkin27]
+* [36m|[m [1;36m|[m [1;32m|[m 2ff3333 2015-12-20 | commit1 [erkin27]
+* [36m|[m [1;36m|[m [1;32m|[m 5878919 2015-12-20 | commit [erkin27]
+* [36m|[m [1;36m|[m [1;32m|[m d19c387 2015-12-20 | TabPane with Products [erkin27]
+* [36m|[m [1;36m|[m [1;32m|[m 132fce0 2015-12-20 | TabPane with Products [erkin27]
+[1;36m|[m [36m|[m[1;36m/[m [1;32m/[m  
+[1;36m|[m[1;36m/[m[36m|[m [1;32m|[m   
+* [36m|[m [1;32m|[m 0b9e777 2015-12-14 | test2 [Well]
+* [36m|[m [1;32m|[m   4f00150 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Well]
+[1;31m|[m[1;32m\[m [36m\[m [1;32m\[m  
+[1;31m|[m * [36m\[m [1;32m\[m   6e21794 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [erkin27]
+[1;31m|[m [1;33m|[m[1;34m\[m [36m\[m [1;32m\[m  
+[1;31m|[m * [1;34m\[m [36m\[m [1;32m\[m   4af6cf7 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [erkin27]
+[1;31m|[m [1;35m|[m[1;36m\[m [1;34m\[m [36m\[m [1;32m\[m  
+[1;31m|[m * [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m 02de9e7 2015-12-14 | correct other pom [erkin27]
+* [1;36m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m 9eed247 2015-12-14 | test [Well]
+* [1;36m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m 2349b0a 2015-12-14 | test [Well]
+[1;34m|[m [1;36m|[m[1;34m_[m[1;36m|[m[1;34m/[m [36m/[m [1;32m/[m  
+[1;34m|[m[1;34m/[m[1;36m|[m [1;36m|[m [36m|[m [1;32m|[m   
+* [1;36m|[m [1;36m|[m [36m|[m [1;32m|[m   33ec3c8 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Well]
+[31m|[m[1;32m\[m [1;36m\[m [1;36m\[m [36m\[m [1;32m\[m  
+[31m|[m [1;32m|[m [1;36m|[m[1;32m_[m[1;36m|[m[1;32m_[m[36m|[m[1;32m/[m  
+[31m|[m [1;32m|[m[1;32m/[m[1;36m|[m [1;36m|[m [36m|[m   
+[31m|[m * [1;36m|[m [1;36m|[m [36m|[m d0ee5bd 2015-12-14 | action08 [Alexey]
+[31m|[m [1;36m|[m [1;36m|[m[1;36m/[m [36m/[m  
+[31m|[m [1;36m|[m[1;36m/[m[1;36m|[m [36m|[m   
+* [1;36m|[m [1;36m|[m [36m|[m   b6a5ef4 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Well]
+[33m|[m[1;36m\[m [1;36m\[m [1;36m\[m [36m\[m  
+[33m|[m [1;36m|[m[1;36m/[m [1;36m/[m [36m/[m  
+[33m|[m * [1;36m|[m [36m|[m 8413434 2015-12-14 | resources [Alexey]
+[33m|[m * [1;36m|[m [36m|[m   6950e5e 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Alexey]
+[33m|[m [35m|[m[36m\[m [1;36m\[m [36m\[m  
+[33m|[m [35m|[m [36m|[m [1;36m|[m[36m/[m  
+[33m|[m [35m|[m [36m|[m[36m/[m[1;36m|[m   
+[33m|[m * [36m|[m [1;36m|[m   ad8ad94 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Alexey]
+[33m|[m [1;31m|[m[1;32m\[m [36m\[m [1;36m\[m  
+[33m|[m * [1;32m\[m [36m\[m [1;36m\[m   90a5719 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Alexey]
+[33m|[m [1;33m|[m[1;34m\[m [1;32m\[m [36m\[m [1;36m\[m  
+[33m|[m * [1;34m|[m [1;32m|[m [36m|[m [1;36m|[m e28320d 2015-12-08 | action08 [Alexey]
+* [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;36m|[m 7cb6c70 2015-12-14 | update [Well]
+[36m|[m [1;34m|[m[36m_[m[1;34m|[m[36m_[m[1;32m|[m[36m/[m [1;36m/[m  
+[36m|[m[36m/[m[1;34m|[m [1;34m|[m [1;32m|[m [1;36m|[m   
+* [1;34m|[m [1;34m|[m [1;32m|[m [1;36m|[m 9e901ad 2015-12-14 | create resources [admin]
+[1;32m|[m [1;34m|[m[1;32m_[m[1;34m|[m[1;32m/[m [1;36m/[m  
+[1;32m|[m[1;32m/[m[1;34m|[m [1;34m|[m [1;36m|[m   
+* [1;34m|[m [1;34m|[m [1;36m|[m   ab420ae 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [admin]
+[1;35m|[m[1;34m\[m [1;34m\[m [1;34m\[m [1;36m\[m  
+[1;35m|[m [1;34m|[m [1;34m|[m[1;34m/[m [1;36m/[m  
+[1;35m|[m [1;34m|[m[1;34m/[m[1;34m|[m [1;36m|[m   
+[1;35m|[m * [1;34m|[m [1;36m|[m 57e09a3 2015-12-14 | commit try [Olesia]
+[1;35m|[m * [1;34m|[m [1;36m|[m   122e085 2015-12-14 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Администратор]
+[1;35m|[m [31m|[m[1;36m\[m [1;34m\[m [1;36m\[m  
+[1;35m|[m [31m|[m [1;36m|[m [1;34m|[m[1;36m/[m  
+[1;35m|[m [31m|[m [1;36m|[m[1;36m/[m[1;34m|[m   
+[1;35m|[m [31m|[m * [1;34m|[m 6eeef66 2015-12-13 | classes for DB [erkin27]
+[1;35m|[m [31m|[m * [1;34m|[m 8975b54 2015-12-13 | JDBCMySQL [erkin27]
+[1;35m|[m [31m|[m * [1;34m|[m   d28481b 2015-12-13 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [erkin27]
+[1;35m|[m [31m|[m [33m|[m[34m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [33m|[m * [1;34m|[m 798e6f1 2015-12-13 | com [Admin]
+[1;35m|[m [31m|[m * [34m|[m [1;34m|[m 17dc386 2015-12-13 | JDBC for MySQL [erkin27]
+[1;35m|[m [31m|[m [1;34m|[m [34m|[m[1;34m/[m  
+[1;35m|[m [31m|[m [1;34m|[m[1;34m/[m[34m|[m   
+[1;35m|[m * [1;34m|[m [34m|[m b7325f4 2015-12-14 | old commit [Администратор]
+[1;35m|[m [34m|[m [1;34m|[m[34m/[m  
+[1;35m|[m [34m|[m[34m/[m[1;34m|[m   
+[1;35m|[m * [1;34m|[m e9c765a 2015-12-11 | Chat_base [winPC]
+[1;35m|[m * [1;34m|[m 846f47a 2015-12-10 | CompletedTasks20-22 [winPC]
+[1;35m|[m * [1;34m|[m   5d2e97f 2015-12-09 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [winPC]
+[1;35m|[m [35m|[m[36m\[m [1;34m\[m  
+[1;35m|[m [35m|[m * [1;34m|[m dcf9a02 2015-12-08 | action08 [Ivan]
+[1;35m|[m * [36m|[m [1;34m|[m d500f15 2015-12-09 | Start_CRM [winPC]
+[1;35m|[m [1;34m|[m [36m|[m[1;34m/[m  
+[1;35m|[m [1;34m|[m[1;34m/[m[36m|[m   
+* [1;34m|[m [36m|[m 705c0e3 2015-12-14 | update pom.xml [admin]
+[36m|[m [1;34m|[m[36m/[m  
+[36m|[m[36m/[m[1;34m|[m   
+* [1;34m|[m bad5b06 2015-12-08 | update SocketsExample [admin]
+* [1;34m|[m   b307863 2015-12-08 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [admin]
+[1;31m|[m[1;32m\[m [1;34m\[m  
+[1;31m|[m * [1;34m\[m   fdb5e21 2015-12-08 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [NATALI]
+[1;31m|[m [1;33m|[m[1;34m\[m [1;34m\[m  
+[1;31m|[m [1;33m|[m * [1;34m|[m 2262cdd 2015-12-08 | update [1]
+[1;31m|[m [1;33m|[m [1;34m|[m[1;34m/[m  
+[1;31m|[m * [1;34m|[m a0491fe 2015-12-08 | ffffffffff [NATALI]
+* [1;34m|[m [1;34m|[m 5c449f7 2015-12-08 | update JDBCEXAMPLE [admin]
+[1;34m|[m [1;34m|[m[1;34m/[m  
+[1;34m|[m[1;34m/[m[1;34m|[m   
+* [1;34m|[m 10eb3a8 2015-12-08 | mini correct [admin]
+* [1;34m|[m 8ba8ec4 2015-12-08 | create sql information [admin]
+* [1;34m|[m   f983e0d 2015-12-07 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Alexey]
+[1;35m|[m[1;36m\[m [1;34m\[m  
+[1;35m|[m * [1;34m\[m   fe2d148 2015-12-07 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [админ]
+[1;35m|[m [31m|[m[32m\[m [1;34m\[m  
+[1;35m|[m [31m|[m * [1;34m|[m 262b8b9 2015-12-07 | refresh order )) [Ivan]
+[1;35m|[m [31m|[m * [1;34m|[m 316b396 2015-12-07 | Minister-Deputy [erkin27]
+[1;35m|[m [31m|[m * [1;34m|[m c752e66 2015-12-06 | Application Manager [Admin]
+[1;35m|[m [31m|[m * [1;34m|[m ac0d95c 2015-12-06 | Ministers [winPC]
+[1;35m|[m [31m|[m * [1;34m|[m 27c6d40 2015-12-06 | Government update! [Администратор]
+[1;35m|[m [31m|[m * [1;34m|[m f8ed454 2015-12-06 | Government update [Olesia]
+[1;35m|[m [31m|[m * [1;34m|[m   c8ccd27 2015-12-06 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [Admin]
+[1;35m|[m [31m|[m [33m|[m[34m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [33m|[m * [1;34m|[m c268c1a 2015-12-05 | Ministers_Start [winPC]
+[1;35m|[m [31m|[m [33m|[m * [1;34m|[m 285f03c 2015-12-05 | calc [Olesia]
+[1;35m|[m [31m|[m [33m|[m * [1;34m|[m 2c6a1a9 2015-12-05 | commit [Olesia]
+[1;35m|[m [31m|[m [33m|[m * [1;34m|[m 6fcc7ac 2015-12-05 | HomeWork 1,2,3 [erkin27]
+[1;35m|[m [31m|[m [33m|[m * [1;34m|[m 65e20b9 2015-12-05 | Changes in singleton realization [Администратор]
+[1;35m|[m [31m|[m [33m|[m * [1;34m|[m 30b5707 2015-12-04 | Calculator commit [Администратор]
+[1;35m|[m [31m|[m * [34m|[m [1;34m|[m f4b645b 2015-12-06 | Ministry done! [Admin]
+[1;35m|[m [31m|[m [34m|[m[34m/[m [1;34m/[m  
+[1;35m|[m [31m|[m * [1;34m|[m   4e03641 2015-12-04 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [Admin]
+[1;35m|[m [31m|[m [35m|[m[36m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [35m|[m * [1;34m|[m 0ad2f4d 2015-12-04 | Calculator commit! [Администратор]
+[1;35m|[m [31m|[m * [36m|[m [1;34m|[m 877f78f 2015-12-04 | I wanna die!!!! [Admin]
+[1;35m|[m [31m|[m [36m|[m[36m/[m [1;34m/[m  
+[1;35m|[m [31m|[m * [1;34m|[m 1ef99fd 2015-12-04 | Edem dalshe [Admin]
+[1;35m|[m [31m|[m * [1;34m|[m   f16426a 2015-12-04 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [katiezza]
+[1;35m|[m [31m|[m [1;31m|[m[1;32m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m 291c7ad 2015-12-04 | commit again [Администратор]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m 4e42cc2 2015-12-04 | commit [Администратор]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m   8205a24 2015-12-03 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [Admin]
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m[1;34m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m * [1;34m|[m f6f9d71 2015-12-03 | FX [winPC]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m [1;34m|[m d64ecdd 2015-12-03 | eshe [Admin]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m [1;34m|[m 80fb327 2015-12-03 | Ministry. Nachalo [Admin]
+[1;35m|[m [31m|[m [1;31m|[m [1;34m|[m[1;34m/[m [1;34m/[m  
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m 32fa683 2015-12-03 | graphic [Admin]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m e626194 2015-12-03 | hierarchy of two classes. Много текста )))) [Ivan]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m 0236c3b 2015-12-03 | Graphic hierarchy of classes [Ivan]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m 5fb734d 2015-12-03 | Applications [winPC]
+[1;35m|[m [31m|[m [1;31m|[m * [1;34m|[m   f73e41c 2015-12-02 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [Admin]
+[1;35m|[m [31m|[m [1;31m|[m [1;35m|[m[1;36m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [1;35m|[m * [1;34m\[m   4332ca0 2015-12-02 | Merge branch 'branch1' [Well]
+[1;35m|[m [31m|[m [1;31m|[m [1;35m|[m [31m|[m[32m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [1;35m|[m [31m|[m * [1;34m|[m c53006b 2015-12-02 | test branch 2 (origin/branch1) [Well]
+[1;35m|[m [31m|[m [1;31m|[m [1;35m|[m [31m|[m * [1;34m|[m 7740c8a 2015-12-02 | branch test [Well]
+[1;35m|[m [31m|[m [1;31m|[m * [31m|[m [32m|[m [1;34m|[m 29d7357 2015-12-02 | com [Admin]
+[1;35m|[m [31m|[m [1;31m|[m [31m|[m[31m/[m [32m/[m [1;34m/[m  
+[1;35m|[m [31m|[m [1;31m|[m * [32m|[m [1;34m|[m   87814fc 2015-12-02 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [Ivan]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m[34m\[m [32m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m * [32m\[m [1;34m\[m   2fd1641 2015-12-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Администратор]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m[36m\[m [32m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m * [32m|[m [1;34m|[m d5a95a5 2015-12-01 | TZ_CRM_week3 [maksimtest]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m * [32m|[m [1;34m|[m 728e7bf 2015-12-01 | Car [maksimtest]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m * [32m|[m [1;34m|[m 39fcfbb 2015-12-01 | new commit1 [maksimtest]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m * [32m|[m [1;34m|[m 53f98a0 2015-12-01 | new commit [maksimtest]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m * [32m|[m [1;34m|[m c7f3206 2015-12-01 | singlton and builder [maksimtest]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m * [32m|[m [1;34m|[m   d8b4cb9 2015-12-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [maksimtest]
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m [1;31m|[m[1;32m\[m [32m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [33m|[m [35m|[m * [1;32m|[m [32m|[m [1;34m|[m 89fcd23 2015-12-01 | privet4 simple empty symvol [maksimtest]
+[1;35m|[m [31m|[m [1;31m|[m * [35m|[m [1;32m|[m [1;32m|[m [32m|[m [1;34m|[m   0fa3944 2015-12-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1 [Ivan]
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m[35m\[m [35m\[m [1;32m\[m [1;32m\[m [32m\[m [1;34m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m [35m|[m[35m/[m [1;32m/[m [1;32m/[m [32m/[m [1;34m/[m  
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m * [1;32m|[m [1;32m|[m [32m|[m [1;34m|[m bb06bc4 2015-12-01 | commit [Администратор]
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m * [1;32m|[m [1;32m|[m [32m|[m [1;34m|[m 5a46dbd 2015-12-01 | Builder [alwizard]
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m [1;34m|[m [1;32m|[m[1;34m_[m[1;32m|[m[1;34m_[m[32m|[m[1;34m/[m  
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m [1;34m|[m[1;34m/[m[1;32m|[m [1;32m|[m [32m|[m   
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m * [1;32m|[m [1;32m|[m [32m|[m   e272288 2015-12-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [1]
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m [1;35m|[m[1;36m\[m [1;32m\[m [1;32m\[m [32m\[m  
+[1;35m|[m [31m|[m [1;31m|[m [1;33m|[m * [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m 30fc3e3 2015-12-01 | Build [ivvod]
+[1;35m|[m [31m|[m [1;31m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m c70cfd8 2015-12-01 | action06 [Ivan]
+[1;35m|[m [31m|[m * [1;36m|[m [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m f7f7b2a 2015-12-04 | Ignore Mac OS system files [katiezza]
+[1;35m|[m [31m|[m [1;36m|[m [1;36m|[m[1;36m_[m[1;36m|[m[1;36m/[m [1;32m/[m [1;32m/[m [32m/[m  
+[1;35m|[m [31m|[m [1;36m|[m[1;36m/[m[1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m   
+[1;35m|[m * [1;36m|[m [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m e499f8e 2015-12-07 | asdf [админ]
+[1;35m|[m [1;36m|[m[1;36m/[m [1;36m/[m [1;36m/[m [1;32m/[m [1;32m/[m [32m/[m  
+[1;35m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m   1af6fef 2015-12-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [katiezza]
+[1;35m|[m [31m|[m[32m\[m [1;36m\[m [1;36m\[m [1;32m\[m [1;32m\[m [32m\[m  
+[1;35m|[m [31m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m 8fd9eed 2015-12-01 | my [админ]
+[1;35m|[m * [32m|[m [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m   05fab76 2015-12-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [katiezza]
+[1;35m|[m [33m|[m[32m\[m [32m\[m [1;36m\[m [1;36m\[m [1;32m\[m [1;32m\[m [32m\[m  
+[1;35m|[m [33m|[m [32m|[m[32m/[m [1;36m/[m [1;36m/[m [1;32m/[m [1;32m/[m [32m/[m  
+[1;35m|[m [33m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m def9eda 2015-12-01 | commit0112 [winPC]
+[1;35m|[m [33m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m   614b21f 2015-12-01 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Elena]
+[1;35m|[m [33m|[m [35m|[m[1;36m\[m [1;36m\[m [1;36m\[m [1;32m\[m [1;32m\[m [32m\[m  
+[1;35m|[m [33m|[m [35m|[m [1;36m|[m [1;36m|[m[1;36m/[m [1;32m/[m [1;32m/[m [32m/[m  
+[1;35m|[m [33m|[m [35m|[m [1;36m|[m[1;36m/[m[1;36m|[m [1;32m|[m [1;32m|[m [32m|[m   
+[1;35m|[m [33m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m d1b44bf 2015-12-01 | gitignore [Elena]
+[1;35m|[m [33m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m 6e86c14 2015-12-01 | test5 [Elena]
+[1;35m|[m [33m|[m * [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [32m|[m   fcf00f1 2015-11-30 | Merge branch 'master' of https://github.com/MaxProffItCentre/Proff1.git [Elena]
+[1;35m|[m [33m|[m [1;31m|[m[32m\[m [1;36m\[m [1;36m\[m [1;32m\[m [1;32m\[m [32m\[m  
+[1;35m|[m [33m|[m [1;31m|[m [32m|[m [1;36m|[m[32m_[m[1;36m|[m[32m_[m[1;32m|[m[32m_[m[1;32m|[m[32m/[m  
+[1;35m|[m [33m|[m [1;31m|[m [32m|[m[32m/[m[1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m   
+[1;35m|[m [33m|[m * [32
