@@ -9,7 +9,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import util.HibernateUtil;
- 
+
 public class DaoImpl<T> implements Dao<T> {
 	
 	private static Logger log = Logger.getLogger(DaoImpl.class);

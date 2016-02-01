@@ -1,8 +1,7 @@
-package support;
+package Support;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,23 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DaoImpl;
-import data.User;
-
 public class UsersServlet extends HttpServlet  {
-//	private ArrayList<User> users = (ArrayList<User>)User.getUsers();
+	private ArrayList<User> users = (ArrayList<User>)User.getUsers();
 	private String [] filtrChecked = {"0", "0", "0", "0", "0"} ;
-
+	
 	protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		DaoImpl<User> daoImpl = new DaoImpl<User>(User.class); 
-		ArrayList<User> users = (ArrayList<User>)daoImpl.findAll();
+	
 		    ArrayList<User>usersAnswers = new ArrayList<User>();
 			ArrayList<User>usersManages = new ArrayList<User>();
 			ArrayList<User>usersDirectors = new ArrayList<User>();
 			ArrayList<User>usersAdmins = new ArrayList<User>(); 
 			
 			String alert = "";
-		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		// Добавление нового пользователя
 			if (request.getParameter("name")!=null && request.getParameter("login")!=null && request.getParameter("pass")!=null) {
 				if (request.getParameter("name")!="" && request.getParameter("login")!="" && request.getParameter("pass")!=""){
 					String name = request.getParameter("name");
@@ -38,10 +33,9 @@ public class UsersServlet extends HttpServlet  {
 					if (request.getParameter("Director")!=null && request.getParameter("Director").equals("Director")) userAdd.setDirector(true);
 					if (request.getParameter("Admin")!=null && request.getParameter("Admin").equals("Admin")) userAdd.setAdmin(true);
 					users.add(userAdd);
-					daoImpl.create(userAdd);
-					alert = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
+					alert = "ПОЛЬЗОВАТЕЛЬ ДОБАВЛЕН!";
 				}else {
-					alert = "пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
+					alert = "Не все поля заполнены!";
 				}
 			} else {
 				//nothing 
@@ -50,36 +44,31 @@ public class UsersServlet extends HttpServlet  {
 			
 			
 		
-	    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	    //Изменения роли
 	        for (int i=0; i<users.size(); i++) {  
 	        	if (request.getParameter("Answer"+i)!=null && request.getParameter("Answer"+i).equals("isCanAnswer")){
 	        			users.get(i).setCanAnswer(true);
-	        			daoImpl.update(users.get(i));
 	        		
 	        	} else if (request.getParameter("Manage" + i)!=null && request.getParameter("Manage" + i).equals("isCanManage")){
 	        			users.get(i).setCanManage(true);
-	        			daoImpl.update(users.get(i));
 	  
 	        	} else if (request.getParameter("Director" + i)!=null && request.getParameter("Director" + i).equals("isCanDirector")){
         			users.get(i).setDirector(true);
-        			daoImpl.update(users.get(i));
         		
 	        	} else if (request.getParameter("Admin" + i)!=null && request.getParameter("Admin" + i).equals("isCanAdmin")){
         			users.get(i).setAdmin(true);
-        			daoImpl.update(users.get(i));
         		
 	        	}  else if (request.getParameter("ResetAll" + i)!=null && request.getParameter("ResetAll" + i).equals("ResetAll")){
 	        		if (users.get(i).isCanAnswer()) users.get(i).setCanAnswer(false);
 	        		if (users.get(i).isCanManage())users.get(i).setCanManage(false);
 	        		if (users.get(i).isDirector())users.get(i).setDirector(false);
 	        		if(users.get(i).isAdmin())users.get(i).setAdmin(false);
-	        		daoImpl.update(users.get(i));
 	        	}
 	        }
 	    
 
 	    
-	    //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	    //Фильтр по ролям
 	    String filtr = request.getParameter("roles");
 	    if (filtr != null) {
 	    	if (filtr.equals("Answers")) {   //Answers

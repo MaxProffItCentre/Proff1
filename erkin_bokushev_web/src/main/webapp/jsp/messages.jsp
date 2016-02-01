@@ -12,7 +12,7 @@
 <title>Messages</title>
 </head>
 <body>
-	<table> 
+	<table>
 		<tr>
 			<td>
 			<h3>Сообщение</h3>

@@ -1,62 +1,25 @@
-package data;
+package Support;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
-
 // - Users(name, login, pass, isCanAnswer, isCanManage, isDirector, isAdmin)
-@Entity 
-@Table(name = "users")
+
 public class User {
-	@Id
-	@GeneratedValue(generator = "increment")
-	@GenericGenerator(name = "increment", strategy = "increment")
-	@Column(name="id")
-	private Long id;
-	@Column(name="name")
 	private String name;
-	@Column(name="login")
 	private String login;
-	@Column(name="pass")
 	private String pass;
-	@Column(name="isCanAnswer")
 	private boolean isCanAnswer;
-	@Column(name="isCanManage")
 	private boolean isCanManage;
-	@Column(name="isCanDirector")
 	private boolean isDirector;
-	@Column(name="isCanAdmin")
 	private boolean isAdmin;
 	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-//	public static List <User> getUsers () {
-//		List<User> users = new ArrayList<User>();
-//		users.add(new User("Pupkin V.", "v.pupkin", "333", false, false, false, false));
-//		users.add(new User("Bobrov A.", "a.bobrov", "333", false, false, false, false));
-//		users.add(new User("Lermont V.", "v.lermont", "333", false, false, false, false));
-//		return users;
-//	}
-	
-	public User() {
-		
-	}
-	
-	public User(String name, String login, String pass) {
-		this(name, login, pass, false, false, false, false);
+	public static List <User> getUsers () {
+		List<User> users = new ArrayList<User>();
+		users.add(new User("Pupkin V.", "v.pupkin", "333", false, false, false, false));
+		users.add(new User("Bobrov A.", "a.bobrov", "333", false, false, false, false));
+		users.add(new User("Lermont V.", "v.lermont", "333", false, false, false, false));
+		return users;
 	}
 	
 	public User(String name, String login, String pass, boolean isCanAnswer, boolean isCanManage, boolean isDirector,
@@ -70,8 +33,6 @@ public class User {
 		this.isDirector = isDirector;
 		this.isAdmin = isAdmin;
 	}
-	
-	
 	
 	public String toTableUsers() {
 		StringBuilder sb = new StringBuilder();
