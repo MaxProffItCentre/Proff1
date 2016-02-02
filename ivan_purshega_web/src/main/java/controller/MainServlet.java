@@ -20,13 +20,16 @@ public class MainServlet  extends HttpServlet {
 	
 	
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		     if(request.getParameter("field1") != null){	
-		    	 request.setAttribute("name", users.get(0).getName());
-		    		 RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/users.jsp"); 
-			        dispatcher.forward(request, response);   
+		     if(request.getParameter("field1")==null){	
+		    	   RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/main.jsp");
+			        dispatcher.forward(request, response);
+		    	 
 		     } else {
-		     RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/main.jsp");
-		        dispatcher.forward(request, response);
+		    	 System.out.println(request.getParameter("field1"));
+		    	 request.setAttribute("name", users.get(0).getName());
+		    	 response.sendRedirect("/ivan_purshega_web/users");
+//		    		 RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/users.jsp"); 
+//			        dispatcher.forward(request, response); 
 		     } 	
 		    }
 }

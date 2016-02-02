@@ -19,6 +19,11 @@
   <servlet-name>users</servlet-name>
   <servlet-class>controller.UsersServlet</servlet-class>
  </servlet>
+ 
+  <servlet>
+  <servlet-name>school</servlet-name>
+  <servlet-class>actionSchool.SchoolServlet</servlet-class>
+ </servlet>
 
  <!-- mapping -->
  <servlet-mapping>
@@ -35,4 +40,10 @@
   <servlet-name>main</servlet-name>
   <url-pattern>/main</url-pattern>
  </servlet-mapping>
+ 
+ <servlet-mapping>
+  <servlet-name>school</servlet-name>
+  <url-pattern>/school</url-pattern>
+ </servlet-mapping>
+ 
 </web-app>
