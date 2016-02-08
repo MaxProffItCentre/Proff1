@@ -13,16 +13,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div> Name: <% String str = (String)request.getAttribute("name");
+			 out.println(str);
+			 %></div>
+<div> Question: <% String str1=(String)request.getAttribute("question");
+		out.println(str1);%> </div>
+
 <input id="check1" type="checkbox" checked>
-<%      
-	
-		String str = (String)request.getAttribute("name");
-		out.println(str);
-
-%>
-
-
-
 
 </body>
 </html>

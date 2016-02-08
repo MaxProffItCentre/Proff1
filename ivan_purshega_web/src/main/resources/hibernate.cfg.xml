@@ -18,7 +18,8 @@
 		<property name="connection.pool_size">1</property>
 
 		<mapping class="data.User" />
-	
+		<mapping class="data.Message" />
+		<mapping class="data.TypeMessage"/>
 		
 	</session-factory>
 </hibernate-configuration>

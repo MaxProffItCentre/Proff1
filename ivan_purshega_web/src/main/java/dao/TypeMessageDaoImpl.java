@@ -8,22 +8,20 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import data.Message;
-import data.User;
+import data.TypeMessage;
 import util.Hibernate;
 
-
-	public class UserDaoImpl implements UserDao{
-	    private static Logger log = Logger.getLogger(UserDaoImpl.class);
+public class TypeMessageDaoImpl {
+	  private static Logger log = Logger.getLogger(TypeMessageDaoImpl.class);
 	    
 	    
 	   
-	    public int create(User user) {
+	    public int create(TypeMessage typeMessage) {
 	    	  Session session = Hibernate.getSessionFactory().openSession();
-	    	  int id=0;
+	    	  int idTypeMessage=0;
 	    	        try {
 	    	            session.beginTransaction();
-	    	            id = (Integer) session.save(user);
+	    	            idTypeMessage = (Integer) session.save(typeMessage);
 	    	            session.getTransaction().commit();
 	    	        } catch (HibernateException e) {
 	    	            log.error("Transaction failed");
@@ -31,30 +29,30 @@ import util.Hibernate;
 	    	        } finally {
 	    	            session.close();
 	    	        }
-	    	        return id;
+	    	        return idTypeMessage;
 	    	 }
 		
 		
-		public User read(int id) {
+		public TypeMessage  read(int idTypeMessage) {
 			Session session = Hibernate.getSessionFactory().openSession();
-			User user = null;
+			TypeMessage typeMessage = null;
 	        try {
-	            user = (User)session.get(User.class, id);
+	        typeMessage = (TypeMessage)session.get(TypeMessage.class, idTypeMessage);
 	        } catch (HibernateException e) {
 	            log.error("Transaction failed");
 	        } finally {
 	            session.close();
 	        }
-	        return user;
+	        return typeMessage;
 		}
 		
 		
-		public void update(User user) {
+		public void update(TypeMessage typeMessage) {
 			  //update(product)
 			  Session session = Hibernate.getSessionFactory().openSession();
 			  try {
 			   session.beginTransaction();
-			   Query query = session.createQuery("update User set name='"+ "lalala" + "' where id=" + user.getId());
+			   Query query = session.createQuery("update TypeMessage set name='"+ "lalala" + "' where id=" + typeMessage.getIdTypeMessage());
 			   query.executeUpdate();
 			   session.getTransaction().commit();
 			//   session.save(product);
@@ -66,16 +64,13 @@ import util.Hibernate;
 			  }	 
 		 }
 			
-		public Set<Message> getAllMessage(User user){
-			return user.getMessages();
-		}
 
 	
-		public void delete(User user) {
+		public void delete(TypeMessage typeMessage) {
 			Session session = Hibernate.getSessionFactory().openSession();
 			  try {
 			   session.beginTransaction();
-			   Query query = session.createQuery("DELETE FROM  User where id="+user.getId());
+			   Query query = session.createQuery("DELETE FROM  TypeMessage  where idTypeMessage="+typeMessage.getIdTypeMessage());
 			   query.executeUpdate();
 			   session.getTransaction().commit();
 			   } catch (HibernateException e) {
@@ -86,15 +81,15 @@ import util.Hibernate;
 		   }
 		}
 	
-		public List<User> findAll() {
+		public List<TypeMessage> findAll() {
 			Session session = Hibernate.getSessionFactory().openSession();
-	        Query query = session.createQuery("from User");
+	        Query query = session.createQuery("from TypeMessage");
 	        return query.list();
 		}
 	
-		public List<User> findProductsByBeginString(String begin) {
+		public List<TypeMessage> findProductsByBeginString(String begin) {
 			Session session = Hibernate.getSessionFactory().openSession();
-			 Query query = session.createQuery("from User where name like '"+ begin +"%'");
+			 Query query = session.createQuery("from TypeMessage where name like '"+ begin +"%'");
 			 return query.list();	
 		}
 	}
